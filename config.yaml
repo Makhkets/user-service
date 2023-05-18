@@ -1,0 +1,18 @@
+
+service:
+  is_debug: true
+  secret_key: ds@@akd12kd$xlk2@3
+
+listen:
+  address: 0.0.0.0
+  port: 8000
+
+storage:
+  host: localhost
+  port: 5432
+  database: postgres
+  username: postgres
+  password: 1324
+
+jwt:
+  duration: 10
