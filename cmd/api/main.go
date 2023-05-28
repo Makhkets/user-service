@@ -5,6 +5,7 @@ import (
 	"Makhkets/internal/configs"
 	"Makhkets/internal/user"
 	user2 "Makhkets/internal/user/db"
+	user_service "Makhkets/internal/user/service"
 	"Makhkets/pkg/logging"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -29,7 +30,8 @@ func run() error {
 	r := gin.Default()
 
 	userStorage := user2.NewStorage(&logger, pool)
-	userHandler := user.NewHandler(&logger, cfg, userStorage)
+	userService := user_service.NewUserService(userStorage, &logger)
+	userHandler := user.NewHandler(&logger, cfg, userService)
 	userHandler.Register(r)
 
 	logger.Debug("Listening this host: http://localhost:" + cfg.Listen.Port)

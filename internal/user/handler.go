@@ -4,32 +4,32 @@ import (
 	"Makhkets/internal/configs"
 	"Makhkets/internal/handlers"
 	user "Makhkets/internal/user/db"
-	UserStorage "Makhkets/internal/user/storage"
+	user_service "Makhkets/internal/user/service"
+	"Makhkets/pkg/errors"
 	"Makhkets/pkg/logging"
 	"context"
 	"github.com/gin-gonic/gin"
-	"github.com/go-playground/validator/v10"
 	"net/http"
 	"time"
 )
 
 const (
-	userURL  = "/user/:id"
-	usersURL = "/users"
+	userURL   = "/user/:id"
+	usersURL  = "/users"
+	userMeURL = "/user/me"
 )
 
 type handler struct {
-	logger     *logging.Logger
-	cfg        *configs.Config
-	validate   *validator.Validate
-	repository user.Repository
+	logger  *logging.Logger
+	service user_service.Service
+	cfg     *configs.Config
 }
 
-func NewHandler(logger *logging.Logger, config *configs.Config, repository user.Repository) handlers.Handler {
+func NewHandler(l *logging.Logger, c *configs.Config, s user_service.Service) handlers.Handler {
 	return &handler{
-		logger:     logger,
-		cfg:        config,
-		repository: repository,
+		service: s,
+		logger:  l,
+		cfg:     c,
 	}
 }
 
@@ -37,6 +37,7 @@ func (h *handler) Register(r *gin.Engine) {
 	api := r.Group("/api")
 	{
 		api.GET(usersURL, h.GetUsers)
+		api.GET(userMeURL, h.AboutMyInfo)
 		api.POST(usersURL, h.CreateUser)
 		api.GET(userURL, h.GetUser)
 		api.PATCH(userURL, h.PartialUpdateUser)
@@ -48,48 +49,48 @@ func (h *handler) GetUsers(c *gin.Context) {
 	// TODO GET_USERS
 }
 
-func (h *handler) CreateUser(c *gin.Context) {
-	var userDTO UserStorage.UserDTO
-	if err := c.BindJSON(&userDTO); err != nil {
-		h.logger.Error(err.Error())
-		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
-			"error": err.Error(),
+func (h *handler) AboutMyInfo(c *gin.Context) {
+	token := c.GetHeader("Authorization")
+	if token != "" {
+		responseData, err := h.service.AboutAccessToken(token)
+		if err != nil {
+			errors.NewResponseError(h.logger, c, err)
+			return
+		}
+		h.logger.Info("Received data from token")
+		c.JSON(http.StatusAccepted, responseData)
+	} else {
+		h.logger.Info("Did not find the token")
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": "None \"Authorization\" key in your headers",
 		})
+	}
+}
+
+func (h *handler) CreateUser(c *gin.Context) {
+	var userDTO user.UserDTO
+	c.Header("Content-Type", "application/json; charset=utf-8")
+	if err := c.BindJSON(&userDTO); err != nil {
+		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
 		return
 	}
+
 	userDTO.IsAdmin = false
-
-	h.logger.Debug(userDTO.Username)
-	h.logger.Debug(userDTO.Password)
-
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
-	id, err := h.repository.Create(ctx, &userDTO)
-	if err != nil {
-		h.logger.Error(err.Error())
-		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
-			"error": err.Error(),
-		})
-		return
-	}
 
-	tokenString, err := createJWT(id, userDTO)
+	tokenData, err := h.service.CreateUser(ctx, &userDTO)
 	if err != nil {
-		h.logger.Error(err.Error())
-		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
-			"error": err.Error(),
-		})
+		errors.NewResponseError(h.logger, c, err)
 		return
 	}
 
 	h.logger.Debug("Successfully created user")
-	c.JSON(http.StatusCreated, gin.H{
-		"access": tokenString,
-	})
+	c.JSON(http.StatusCreated, tokenData)
 }
 
 func (h *handler) GetUser(c *gin.Context) {
-	// TODO GET_USER
+	// TODO GetUser
 }
 
 func (h *handler) PartialUpdateUser(c *gin.Context) {

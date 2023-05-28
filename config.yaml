@@ -14,5 +14,11 @@ storage:
   username: postgres
   password: 1324
 
+redis:
+  address: localhost:6379
+  password:
+  db: 0
+
 jwt:
-  duration: 10
+  duration: 10000
+  refresh: 9999

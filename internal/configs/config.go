@@ -25,8 +25,15 @@ type Config struct {
 		Password string `yaml:"password"`
 	} `yaml:"storage"`
 
+	Redis struct {
+		Address  string `yaml:"address"`
+		Password string `yaml:"password"`
+		Db       int    `yaml:"db"`
+	} `yaml:"redis"`
+
 	Jwt struct {
 		Duration int `yaml:"duration"`
+		Refresh  int `yaml:"refresh"`
 	} `yaml:"jwt"`
 }
 

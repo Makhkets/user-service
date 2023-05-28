@@ -2,15 +2,15 @@ package user
 
 import (
 	"Makhkets/database/postgres"
-	user_storage "Makhkets/internal/user/storage"
 	"Makhkets/pkg/logging"
 	"Makhkets/pkg/utils"
 	"context"
 	"fmt"
+	"strconv"
 )
 
 type Repository interface {
-	Create(ctx context.Context, user *user_storage.UserDTO) (string, error)
+	Create(ctx context.Context, user *UserDTO) (*UserDTO, error)
 }
 
 type repository struct {
@@ -33,16 +33,17 @@ func (r *repository) FindAll() {
 	panic("implement me")
 }
 
-func (r *repository) Create(ctx context.Context, user *user_storage.UserDTO) (string, error) {
-	var id string
+func (r *repository) Create(ctx context.Context, user *UserDTO) (*UserDTO, error) {
+	var id int
 	q := `INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id`
 	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
 	err := r.client.QueryRow(ctx, q, user.Username, user.Password).Scan(&id)
 
 	if err != nil {
-		return "", err
+		return nil, err
 	}
-	return id, nil
+
+	return &UserDTO{Id: strconv.Itoa(id), Username: user.Username}, nil
 }
 
 func (r *repository) Update() {
