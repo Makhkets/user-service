@@ -1,4 +1,4 @@
-package user_storage
+package storage
 
 type UserDTO struct {
 	Username string `json:"username" binding:"required,min=4"`

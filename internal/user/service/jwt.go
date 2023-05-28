@@ -1,13 +1,13 @@
-package user
+package service
 
 import (
 	"Makhkets/internal/configs"
-	user_storage "Makhkets/internal/user/storage"
+	"Makhkets/internal/user/db"
 	"github.com/golang-jwt/jwt/v5"
 	"time"
 )
 
-func createJWT(userId string, user user_storage.UserDTO) (string, error) {
+func CreateJWT(userId int, user user.UserDTO) (string, error) {
 	cfg := configs.GetConfig()
 	token := jwt.New(jwt.SigningMethodES256)
 	claims := token.Claims.(jwt.MapClaims)
