@@ -8,11 +8,16 @@ import (
 )
 
 func NewResponseError(l *logging.Logger, c *gin.Context, customError *CustomError) {
-	// Надо ли логировать эту ошибку
-	if customError.IsNotWrite {
-		l.Error(customError.Err.Error(), zap.String("field", customError.Field), zap.String("file", customError.File))
-	} else {
-		l.Info(customError.Err.Error())
+	// Надо ли проигнорировать логирование
+	if !customError.IsNotWriteMessage {
+		// Надо ли логировать эту ошибку
+		if customError.IsNotWriteError {
+			l.Error(customError.Err.Error(), zap.String("field", customError.Field), zap.String("file", customError.File))
+		} else {
+			if customError.Err != nil {
+				l.Info(customError.Err.Error(), zap.String("field", customError.Field), zap.String("file", customError.File))
+			}
+		}
 	}
 
 	// Если не присутствует кастомная ошибка, то проигнорируй ее

@@ -28,7 +28,7 @@ type Config struct {
 	Redis struct {
 		Address  string `yaml:"address"`
 		Password string `yaml:"password"`
-		Db       int    `yaml:"db"`
+		Db       int    `yaml:"repository"`
 	} `yaml:"redis"`
 
 	Jwt struct {

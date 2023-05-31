@@ -3,7 +3,7 @@ package user
 import (
 	"Makhkets/internal/configs"
 	"Makhkets/internal/handlers"
-	user "Makhkets/internal/user/db"
+	user "Makhkets/internal/user/repository"
 	user_service "Makhkets/internal/user/service"
 	"Makhkets/pkg/errors"
 	"Makhkets/pkg/logging"
@@ -14,9 +14,10 @@ import (
 )
 
 const (
-	userURL   = "/user/:id"
-	usersURL  = "/users"
-	userMeURL = "/user/me"
+	userURL             = "/user/:id"
+	usersURL            = "/users"
+	userMeURL           = "/user/me"
+	userRefreshTokenURL = "/user/refresh"
 )
 
 type handler struct {
@@ -38,15 +39,12 @@ func (h *handler) Register(r *gin.Engine) {
 	{
 		api.GET(usersURL, h.GetUsers)
 		api.GET(userMeURL, h.AboutMyInfo)
-		api.POST(usersURL, h.CreateUser)
 		api.GET(userURL, h.GetUser)
+		api.POST(usersURL, h.CreateUser)
+		api.POST(userRefreshTokenURL, h.RefreshToken)
 		api.PATCH(userURL, h.PartialUpdateUser)
 		api.DELETE(userURL, h.PartialUpdateUser)
 	}
-}
-
-func (h *handler) GetUsers(c *gin.Context) {
-	// TODO GET_USERS
 }
 
 func (h *handler) AboutMyInfo(c *gin.Context) {
@@ -79,7 +77,7 @@ func (h *handler) CreateUser(c *gin.Context) {
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 
-	tokenData, err := h.service.CreateUser(ctx, &userDTO)
+	tokenData, err := h.service.CreateUser(ctx, c, &userDTO)
 	if err != nil {
 		errors.NewResponseError(h.logger, c, err)
 		return
@@ -87,6 +85,31 @@ func (h *handler) CreateUser(c *gin.Context) {
 
 	h.logger.Debug("Successfully created user")
 	c.JSON(http.StatusCreated, tokenData)
+}
+
+func (h *handler) RefreshToken(c *gin.Context) {
+	c.Header("Content-Type", "application/json; charset=utf-8")
+	var data struct {
+		Refresh string
+	}
+
+	if err := c.BindJSON(&data); err != nil {
+		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+		return
+	}
+
+	response, err := h.service.RefreshAccessToken(c, data.Refresh)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	h.logger.Info("Successfully refreshed access token")
+	c.JSON(http.StatusAccepted, response)
+}
+
+func (h *handler) GetUsers(c *gin.Context) {
+	// TODO GET_USERS
 }
 
 func (h *handler) GetUser(c *gin.Context) {

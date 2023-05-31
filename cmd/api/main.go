@@ -2,9 +2,10 @@ package main
 
 import (
 	"Makhkets/database/postgres"
+	"Makhkets/database/redis"
 	"Makhkets/internal/configs"
 	"Makhkets/internal/user"
-	user2 "Makhkets/internal/user/db"
+	user2 "Makhkets/internal/user/repository"
 	user_service "Makhkets/internal/user/service"
 	"Makhkets/pkg/logging"
 	"fmt"
@@ -24,12 +25,13 @@ func run() error {
 	logger.Info("Get Config")
 	cfg := configs.GetConfig()
 
-	logger.Info("Initialize Database")
+	logger.Info("Initialize Databases")
 	pool := postgres.InitDatabase()
+	rpool := rdb.InitRedis()
 
 	r := gin.Default()
 
-	userStorage := user2.NewStorage(&logger, pool)
+	userStorage := user2.NewStorage(&logger, pool, rpool)
 	userService := user_service.NewUserService(userStorage, &logger)
 	userHandler := user.NewHandler(&logger, cfg, userService)
 	userHandler.Register(r)

@@ -7,11 +7,12 @@ package errors
 // IsNotWrite - надо ли вывести отчет об ошибке в терминал? (по умолчанию выводит)
 
 type CustomError struct {
-	CustomErr  string
-	Field      string
-	File       string
-	Err        error
-	IsNotWrite bool
+	CustomErr         string
+	Field             string
+	File              string
+	Err               error
+	IsNotWriteError   bool
+	IsNotWriteMessage bool
 }
 
 type NotLoggingErr error

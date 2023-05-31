@@ -1,1614 +1,698 @@
-2023-05-13T14:22:35.002+0300	[34mINFO[0m	api/main.go:10	Initialize Logger
-2023-05-13T14:22:35.003+0300	[34mINFO[0m	configs/config.go:24	Read Application Config
-2023-05-13T14:24:13.787+0300	[34mINFO[0m	api/main.go:10	Initialize Logger
-2023-05-13T14:24:13.788+0300	[34mINFO[0m	configs/config.go:24	Read Application Config
-2023-05-13T14:24:13.788+0300	[34mINFO[0m	configs/config.go:30	8000
-2023-05-13T14:24:13.789+0300	[34mINFO[0m	configs/config.go:31	0.0.0.0
-2023-05-13T14:24:34.251+0300	[34mINFO[0m	api/main.go:10	Initialize Logger
-2023-05-13T14:24:34.251+0300	[34mINFO[0m	configs/config.go:24	Read Application Config
-2023-05-13T14:24:34.252+0300	[34mINFO[0m	configs/config.go:30	8000
-2023-05-13T14:24:34.252+0300	[34mINFO[0m	configs/config.go:31	0.0.0.0
-2023-05-13T14:24:59.372+0300	[34mINFO[0m	api/main.go:10	Initialize Logger
-2023-05-13T14:24:59.373+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T14:26:41.069+0300	[34mINFO[0m	api/main.go:13	Initialize Logger
-2023-05-13T14:30:59.046+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T14:30:59.046+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T14:30:59.046+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T14:43:00.761+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T14:43:00.762+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T14:43:00.762+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T14:44:01.880+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T14:44:01.880+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T14:44:01.881+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T14:44:14.098+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T14:44:14.098+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T14:44:14.099+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T14:44:27.474+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T14:44:27.474+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T14:44:27.474+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T14:44:47.683+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T14:44:47.684+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T14:44:47.684+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T14:44:47.686+0300	[35mDEBUG[0m	api/main.go:25	Listening this host: http://0.0.0.0:8000
-2023-05-13T14:45:52.723+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T14:45:52.723+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T14:45:52.723+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T14:45:52.726+0300	[35mDEBUG[0m	api/main.go:25	Listening this host: http://localhost:8000
-2023-05-13T20:53:10.486+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T20:53:10.490+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T20:53:10.490+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T20:53:10.493+0300	[35mDEBUG[0m	api/main.go:25	Listening this host: http://localhost:8000
-2023-05-13T21:11:16.307+0300	[34mINFO[0m	api/main.go:18	Initialize Logger
-2023-05-13T21:11:16.308+0300	[34mINFO[0m	api/main.go:20	Get Config
-2023-05-13T21:11:16.308+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T21:11:16.310+0300	[35mDEBUG[0m	api/main.go:25	Listening this host: http://localhost:8000
-2023-05-13T21:14:51.130+0300	[34mINFO[0m	api/main.go:19	Initialize Logger
-2023-05-13T21:14:51.131+0300	[34mINFO[0m	api/main.go:21	Get Config
-2023-05-13T21:14:51.131+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T21:14:51.136+0300	[35mDEBUG[0m	api/main.go:29	Listening this host: http://localhost:8000
-2023-05-13T21:15:01.841+0300	[34mINFO[0m	user/handler.go:36	localhost:8000
-2023-05-13T21:15:06.708+0300	[34mINFO[0m	user/handler.go:36	localhost:8000
-2023-05-13T21:15:07.057+0300	[34mINFO[0m	user/handler.go:36	localhost:8000
-2023-05-13T21:15:07.318+0300	[34mINFO[0m	user/handler.go:36	localhost:8000
-2023-05-13T21:15:15.344+0300	[34mINFO[0m	user/handler.go:36	localhost:8000
-2023-05-13T21:19:15.387+0300	[34mINFO[0m	api/main.go:19	Initialize Logger
-2023-05-13T21:19:15.388+0300	[34mINFO[0m	api/main.go:21	Get Config
-2023-05-13T21:19:15.388+0300	[34mINFO[0m	configs/config.go:23	Read Application Config
-2023-05-13T21:19:15.389+0300	[35mDEBUG[0m	api/main.go:29	Listening this host: http://localhost:8000
-2023-05-13T21:19:20.482+0300	[34mINFO[0m	user/handler.go:37	localhost:8000
-2023-05-13T21:19:21.556+0300	[34mINFO[0m	user/handler.go:37	localhost:8000
-2023-05-13T21:19:21.944+0300	[34mINFO[0m	user/handler.go:37	localhost:8000
-2023-05-13T21:19:22.561+0300	[34mINFO[0m	user/handler.go:37	localhost:8000
-2023-05-14T11:50:59.462+0300	[34mINFO[0m	api/main.go:17	Initialize Logger
-2023-05-14T11:50:59.462+0300	[34mINFO[0m	api/main.go:19	Get Config
-2023-05-14T11:50:59.462+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T11:50:59.462+0300	[34mINFO[0m	configs/config.go:37	1324
-2023-05-14T11:50:59.463+0300	[34mINFO[0m	configs/config.go:38	postgres
-2023-05-14T11:50:59.463+0300	[34mINFO[0m	configs/config.go:39	localhost
-2023-05-14T11:50:59.464+0300	[34mINFO[0m	configs/config.go:40	postgres
-2023-05-14T13:13:56.633+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T13:15:23.020+0300	[34mINFO[0m	api/main.go:15	dsds
-2023-05-14T13:15:30.544+0300	[31mERROR[0m	api/main.go:15	dsds
-main.run
-	C:/Users/makhkets/GolandProjects/Makhkets/cmd/api/main.go:15
-main.main
-	C:/Users/makhkets/GolandProjects/Makhkets/cmd/api/main.go:6
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-05-14T13:15:35.577+0300	[31mERROR[0m	api/main.go:15	dsds
-main.run
-	C:/Users/makhkets/GolandProjects/Makhkets/cmd/api/main.go:15
-main.main
-	C:/Users/makhkets/GolandProjects/Makhkets/cmd/api/main.go:6
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-05-14T13:15:35.610+0300	[34mINFO[0m	api/main.go:16	dasdas
-2023-05-14T13:16:13.821+0300	[31mFATAL[0m	api/main.go:15	dasdasdas
-main.run
-	C:/Users/makhkets/GolandProjects/Makhkets/cmd/api/main.go:15
-main.main
-	C:/Users/makhkets/GolandProjects/Makhkets/cmd/api/main.go:6
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-05-14T15:51:56.569+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T15:51:56.719+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
-2023-05-14T15:51:56.719+0300	[34mINFO[0m	api/main.go:25	Get Config
-2023-05-14T15:51:56.720+0300	[35mDEBUG[0m	api/main.go:34	Listening this host: http://localhost:8000
-2023-05-14T21:53:29.951+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T21:53:29.952+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T21:53:29.952+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T21:53:29.954+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T21:53:30.223+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T21:56:35.217+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T21:56:35.217+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T21:56:35.217+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T21:56:35.218+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T21:56:35.445+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:06:42.803+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:06:42.804+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:06:42.804+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:06:42.804+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:06:42.954+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:07:10.474+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:08:05.272+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:10:34.166+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:10:34.166+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:10:34.167+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:10:34.167+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:10:34.299+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:23:59.869+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:23:59.869+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:23:59.869+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:23:59.869+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:24:00.004+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:25:03.588+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:25:03.588+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:25:03.589+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:25:03.589+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:25:03.719+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:25:44.340+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:25:44.341+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:25:44.341+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:25:44.341+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:25:44.474+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:26:44.339+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:26:44.339+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:26:44.339+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:26:44.340+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:26:44.476+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:44:07.837+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:44:07.838+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:44:07.839+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:44:07.840+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:44:08.006+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:44:56.803+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:44:56.805+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:44:56.805+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:44:56.805+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:44:57.031+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:46:40.692+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:46:40.692+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:46:40.693+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:46:40.693+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:46:40.965+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:48:15.136+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:48:15.136+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:48:15.136+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:48:15.137+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:48:15.285+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:53:04.521+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:53:04.522+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:53:04.522+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:53:04.523+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:53:04.651+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:53:10.855+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:53:10.855+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:53:48.173+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:53:48.173+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:53:48.173+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:53:48.174+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:53:48.318+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:53:49.060+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:53:49.061+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:53:49.061+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:53:54.390+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:53:54.391+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:53:54.391+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:53:57.276+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:53:57.277+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:53:57.277+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:54:04.040+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:54:04.041+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:54:04.041+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:54:05.805+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:54:05.805+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:54:05.805+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:54:10.019+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:54:10.020+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:54:10.020+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:54:14.829+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:54:14.830+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:54:14.831+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:54:17.362+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:54:17.363+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:54:17.363+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:54:20.200+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:54:20.201+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:54:20.201+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:54:22.954+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:54:22.955+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:54:22.955+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:55:23.388+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:55:23.390+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:55:23.390+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:55:31.066+0300	[34mINFO[0m	user/handler.go:47	
-2023-05-14T22:55:31.080+0300	[34mINFO[0m	user/handler.go:48	dasdas
-2023-05-14T22:55:31.080+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:55:40.182+0300	[34mINFO[0m	user/handler.go:47	dasdasdas
-2023-05-14T22:55:40.183+0300	[34mINFO[0m	user/handler.go:48	dasdas
-2023-05-14T22:55:40.183+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:56:00.113+0300	[34mINFO[0m	user/handler.go:47	Aliev
-2023-05-14T22:56:00.113+0300	[34mINFO[0m	user/handler.go:48	123321
-2023-05-14T22:56:00.113+0300	[35mDEBUG[0m	user/handler.go:49	null
-2023-05-14T22:56:08.822+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:56:08.822+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:56:08.822+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:56:08.822+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:56:08.995+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:56:39.732+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:56:39.734+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:56:39.734+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:56:39.734+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:56:39.864+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:56:45.446+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:56:45.447+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:56:45.447+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:56:45.448+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:56:45.617+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:56:48.460+0300	[34mINFO[0m	user/handler.go:48	
-2023-05-14T22:56:48.460+0300	[34mINFO[0m	user/handler.go:49	
-2023-05-14T22:58:32.551+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T22:58:32.553+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T22:58:32.553+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T22:58:32.554+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T22:58:32.687+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T22:58:36.050+0300	[34mINFO[0m	user/handler.go:48	Aliev
-2023-05-14T22:58:36.050+0300	[34mINFO[0m	user/handler.go:49	123321
-2023-05-14T23:01:20.016+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T23:01:20.016+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T23:01:20.016+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T23:01:20.017+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T23:01:20.173+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-14T23:01:37.345+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-14T23:01:37.346+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-14T23:01:37.346+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-14T23:01:37.346+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-14T23:01:37.525+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-15T15:56:46.215+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-15T15:56:46.231+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-15T15:56:46.231+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-15T15:56:46.232+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-15T15:56:46.403+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-15T15:56:54.929+0300	[35mDEBUG[0m	db/sql.go:40	INSERT 0 1
-2023-05-15T15:56:54.938+0300	[35mDEBUG[0m	db/sql.go:41	INSERT 0 1
-2023-05-15T15:56:57.604+0300	[35mDEBUG[0m	db/sql.go:40	INSERT 0 1
-2023-05-15T15:56:57.604+0300	[35mDEBUG[0m	db/sql.go:41	INSERT 0 1
-2023-05-15T15:58:07.747+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-15T15:58:07.748+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-15T15:58:07.750+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-15T15:58:07.751+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-15T15:58:07.924+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-15T15:59:33.973+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-15T15:59:33.975+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-15T15:59:33.975+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-15T15:59:33.976+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-15T15:59:34.175+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-15T15:59:48.436+0300	[35mDEBUG[0m	db/sql.go:40	INSERT 0 1
-2023-05-15T15:59:48.437+0300	[35mDEBUG[0m	db/sql.go:41	INSERT 0 1
-2023-05-15T16:02:16.947+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-15T16:02:16.947+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-15T16:02:16.947+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-15T16:02:16.948+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-15T16:02:17.080+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-15T16:02:21.047+0300	[35mDEBUG[0m	db/sql.go:41	%!s(int64=1)
-2023-05-15T19:31:48.424+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-15T19:31:48.427+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-15T19:31:48.427+0300	[34mINFO[0m	configs/config.go:30	Read Application Config
-2023-05-15T19:31:48.428+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-15T19:31:48.651+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-15T19:32:35.098+0300	[31mERROR[0m	user/handler.go:54	invalid character 'u' looking for beginning of object key string
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:54
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-15T19:33:44.950+0300	[35mDEBUG[0m	db/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2)
-2023-05-15T19:33:44.959+0300	[35mDEBUG[0m	user/handler.go:71	Successfully created user
-2023-05-18T10:38:57.753+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-18T10:38:57.756+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-18T10:38:57.757+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T10:38:57.757+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-18T10:38:58.127+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-18T10:40:08.340+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T10:40:08.355+0300	[31mERROR[0m	errors/error.go:10	can't scan into dest[0]: cannot assign 16 into *string
-Makhkets/pkg/errors.NewError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:65
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T10:40:08.361+0300	[31mERROR[0m	errors/error.go:10	key is of invalid type
-Makhkets/pkg/errors.NewError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:70
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T10:40:08.370+0300	[35mDEBUG[0m	user/handler.go:73	Successfully created user
-2023-05-18T10:40:56.957+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T10:40:56.970+0300	[31mERROR[0m	errors/error.go:10	can't scan into dest[0]: cannot assign 17 into *string
-Makhkets/pkg/errors.NewError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:65
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T10:40:56.986+0300	[31mERROR[0m	errors/error.go:10	key is of invalid type
-Makhkets/pkg/errors.NewError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:70
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T10:40:57.000+0300	[35mDEBUG[0m	user/handler.go:73	Successfully created user
-2023-05-18T10:41:15.613+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-18T10:41:15.614+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-18T10:41:15.614+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T10:41:15.614+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-18T10:41:15.756+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-18T10:41:47.391+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T10:41:47.401+0300	[31mERROR[0m	errors/error.go:10	can't scan into dest[0]: cannot assign 18 into *string
-Makhkets/pkg/errors.NewError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:63
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T10:42:16.396+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T10:42:16.397+0300	[31mERROR[0m	errors/error.go:10	can't scan into dest[0]: cannot assign 19 into *string
-Makhkets/pkg/errors.NewError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:63
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T10:43:27.750+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-18T10:43:27.751+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-18T10:43:27.751+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T10:43:27.751+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-18T10:43:27.888+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-18T10:43:32.813+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T10:43:32.819+0300	[31mERROR[0m	user/handler.go:65	can't scan into dest[0]: cannot assign 20 into *string
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:65
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T10:44:47.444+0300	[34mINFO[0m	api/main.go:21	Initialize Logger
-2023-05-18T10:44:47.444+0300	[34mINFO[0m	api/main.go:23	Get Config
-2023-05-18T10:44:47.445+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T10:44:47.445+0300	[34mINFO[0m	api/main.go:26	Initialize Database
-2023-05-18T10:44:47.699+0300	[35mDEBUG[0m	api/main.go:35	Listening this host: http://localhost:8000
-2023-05-18T10:44:50.125+0300	[35mDEBUG[0m	user/handler.go:61	
-2023-05-18T10:44:50.128+0300	[35mDEBUG[0m	user/handler.go:62	
-2023-05-18T10:44:50.146+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T10:44:50.163+0300	[31mERROR[0m	user/handler.go:68	can't scan into dest[0]: cannot assign 21 into *string
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:68
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T16:13:51.242+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T16:13:51.244+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T16:13:51.244+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T16:13:51.245+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T16:13:51.425+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T16:14:42.037+0300	[31mERROR[0m	user/handler.go:55	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:55
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T16:30:33.293+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T16:30:33.293+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T16:30:33.293+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T16:30:33.294+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T16:30:33.449+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T16:43:21.805+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T16:43:21.806+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T16:43:21.806+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T16:43:21.807+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T16:43:21.964+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T16:51:45.588+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T16:51:45.589+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T16:51:45.590+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T16:51:45.590+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T16:51:45.721+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T16:51:49.691+0300	[31mERROR[0m	errors/error.go:10	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:56
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T16:56:33.992+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T16:56:33.993+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T16:56:33.993+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T16:56:33.994+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T16:56:34.159+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T16:57:35.626+0300	[31mERROR[0m	errors/error.go:10	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:56
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T16:57:42.948+0300	[31mERROR[0m	errors/error.go:10	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:56
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T16:58:14.078+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T16:58:14.078+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T16:58:14.078+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T16:58:14.078+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T16:58:14.207+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T16:58:19.838+0300	[31mERROR[0m	errors/error.go:10	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:53
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T17:03:50.087+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:03:50.087+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:03:50.087+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:03:50.087+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:03:50.225+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:03:51.977+0300	[31mERROR[0m	errors/error.go:10	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:56
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T17:04:07.130+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:04:07.131+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:04:07.131+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:04:07.132+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:04:07.267+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:06:25.635+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:06:25.636+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:06:25.636+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:06:25.637+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:06:25.805+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:07:06.449+0300	[35mDEBUG[0m	user/handler.go:56	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-2023-05-18T17:07:06.449+0300	[35mDEBUG[0m	user/handler.go:57	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-2023-05-18T17:07:06.449+0300	[35mDEBUG[0m	user/handler.go:58	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-2023-05-18T17:07:06.450+0300	[35mDEBUG[0m	user/handler.go:59	Key: 'UserDTO.Username' Error:Field validation for 'Username' failed on the 'required' tag
-Key: 'UserDTO.Password' Error:Field validation for 'Password' failed on the 'required' tag
-2023-05-18T17:19:22.530+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:19:22.533+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:19:22.533+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:19:22.533+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:19:22.666+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:22:26.671+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:22:26.672+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:22:26.672+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:22:26.672+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:22:26.820+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:24:24.148+0300	[35mDEBUG[0m	user/handler.go:58	Key: Key: | Error: 'UserDTO.Username' | Tag: required
-2023-05-18T17:24:24.149+0300	[35mDEBUG[0m	user/handler.go:59	Key: Key: | Error: 'UserDTO.Username' | Tag: required
-2023-05-18T17:24:24.149+0300	[35mDEBUG[0m	user/handler.go:60	Key: Key: | Error: 'UserDTO.Username' | Tag: required
-2023-05-18T17:24:24.150+0300	[35mDEBUG[0m	user/handler.go:58	Key: Key: | Error: 'UserDTO.Password' | Tag: required
-2023-05-18T17:24:24.150+0300	[35mDEBUG[0m	user/handler.go:59	Key: Key: | Error: 'UserDTO.Password' | Tag: required
-2023-05-18T17:24:24.150+0300	[35mDEBUG[0m	user/handler.go:60	Key: Key: | Error: 'UserDTO.Password' | Tag: required
-2023-05-18T17:25:56.500+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:25:56.500+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:25:56.501+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:25:56.501+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:25:56.648+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:26:08.879+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:26:08.880+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:26:08.880+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:26:08.881+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:26:09.006+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:26:18.523+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:26:18.528+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:26:18.528+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:26:18.529+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:26:18.871+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:27:11.530+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:27:11.530+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:27:11.530+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:27:11.530+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:27:11.666+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:41:50.136+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:41:50.136+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:41:50.136+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:41:50.137+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:41:50.274+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:42:32.384+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:42:32.387+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:42:32.387+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:42:32.388+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:42:32.531+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:43:30.532+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:43:30.533+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:43:30.533+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:43:30.535+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:43:30.723+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:44:25.170+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:44:25.174+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:44:25.174+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:44:25.175+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:44:25.374+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:48:50.979+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:48:50.980+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:48:50.980+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:48:50.980+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:48:51.109+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:48:59.825+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:48:59.825+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:48:59.825+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:48:59.826+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:49:00.028+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T17:49:03.578+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T17:49:03.604+0300	[31mERROR[0m	errors/error.go:10	can't scan into dest[0]: cannot assign 22 into *string
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:64
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T17:49:03.606+0300	[31mERROR[0m	user/handler.go:65	can't scan into dest[0]: cannot assign 22 into *string
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:65
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T17:50:01.323+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T17:50:01.323+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T17:50:01.323+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T17:50:01.323+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T17:50:01.718+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T22:16:09.674+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T22:16:09.674+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T22:16:09.675+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T22:16:09.676+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T22:16:09.846+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T22:32:54.419+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T22:32:54.423+0300	[31mERROR[0m	errors/error.go:10	can't scan into dest[0]: cannot assign 23 into *string
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:66
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T22:32:54.427+0300	[31mERROR[0m	user/handler.go:67	can't scan into dest[0]: cannot assign 23 into *string
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:67
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T22:36:35.017+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T22:36:35.017+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T22:36:35.017+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T22:36:35.018+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T22:36:35.142+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T22:36:37.248+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T22:36:37.252+0300	[31mERROR[0m	errors/error.go:17	Error sql query
-Makhkets/pkg/errors.NewCustomMessageError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:17
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:66
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T22:37:59.375+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T22:37:59.376+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T22:37:59.376+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T22:37:59.377+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T22:37:59.535+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T22:40:45.645+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T22:40:45.645+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T22:40:45.646+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T22:40:45.646+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T22:40:45.791+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T22:40:47.110+0300	[35mDEBUG[0m	db/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T22:40:47.110+0300	[35mDEBUG[0m	db/sql.go:39	rakhim
-2023-05-18T22:40:47.111+0300	[35mDEBUG[0m	db/sql.go:40	123321asSs
-2023-05-18T22:40:47.115+0300	[31mERROR[0m	errors/error.go:17	Error sql query
-Makhkets/pkg/errors.NewCustomMessageError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:17
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:65
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T22:42:03.893+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T22:42:03.894+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T22:42:03.894+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T22:42:03.895+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T22:42:04.122+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T22:42:05.601+0300	[35mDEBUG[0m	db/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T22:42:05.601+0300	[35mDEBUG[0m	db/sql.go:39	rakhim
-2023-05-18T22:42:05.603+0300	[35mDEBUG[0m	db/sql.go:40	123321asSs
-2023-05-18T22:42:05.606+0300	[31mERROR[0m	errors/error.go:17	can't scan into dest[0]: cannot assign 26 into *string
-Makhkets/pkg/errors.NewCustomMessageError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:17
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:65
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T22:44:18.071+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T22:44:18.071+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T22:44:18.071+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T22:44:18.072+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T22:44:18.201+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T22:44:20.401+0300	[35mDEBUG[0m	db/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T22:44:20.401+0300	[35mDEBUG[0m	db/sql.go:39	rakhim
-2023-05-18T22:44:20.402+0300	[35mDEBUG[0m	db/sql.go:40	123321asSs
-2023-05-18T22:44:20.405+0300	[31mERROR[0m	errors/error.go:10	key is of invalid type
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:10
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:71
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-18T23:08:54.431+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-18T23:08:54.431+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-18T23:08:54.431+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-18T23:08:54.432+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-18T23:08:54.563+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-18T23:08:56.148+0300	[35mDEBUG[0m	db/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-18T23:08:56.148+0300	[35mDEBUG[0m	db/sql.go:39	rakhim
-2023-05-18T23:08:56.149+0300	[35mDEBUG[0m	db/sql.go:40	123321asSs
-2023-05-18T23:08:56.154+0300	[31mERROR[0m	errors/error.go:11	key is of invalid type
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:79
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-19T14:04:41.184+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-19T14:04:41.184+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-19T14:04:41.184+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-19T14:04:41.184+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-19T14:04:41.660+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-24T14:53:11.973+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-24T14:53:11.975+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-24T14:53:11.976+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-24T14:53:11.977+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-24T14:53:12.327+0300	[35mDEBUG[0m	api/main.go:36	Listening this host: http://localhost:8000
-2023-05-26T11:40:24.200+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T11:40:24.203+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T11:40:24.203+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T11:40:24.204+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T11:40:24.375+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T11:42:43.711+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T11:42:43.712+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T11:42:43.712+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T11:42:43.713+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T11:42:43.892+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T12:35:07.586+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T12:35:07.586+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T12:35:07.587+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T12:35:07.587+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T12:35:07.729+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T12:35:48.091+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T12:35:48.120+0300	[31mERROR[0m	errors/error.go:11	number of field descriptions must equal number of destinations, got 1 and 2	{"field": "62", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:64
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-26T12:38:34.645+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T12:38:34.645+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T12:38:34.645+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T12:38:34.646+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T12:38:34.779+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T12:44:04.303+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id, username
-2023-05-26T12:44:04.306+0300	[31mERROR[0m	errors/error.go:11	can't scan into dest[0]: cannot assign 30 into *string	{"field": "62", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:64
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-26T12:45:30.037+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T12:45:30.037+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T12:45:30.037+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T12:45:30.037+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T12:45:30.176+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T12:45:39.444+0300	[35mDEBUG[0m	db/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id, username
-2023-05-26T12:45:39.448+0300	[31mERROR[0m	errors/error.go:11	key is of invalid type	{"field": "62", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:64
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-26T12:59:52.054+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T12:59:52.055+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T12:59:52.055+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T12:59:52.056+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T12:59:52.301+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T12:59:54.204+0300	[35mDEBUG[0m	db/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2)
-2023-05-26T12:59:54.208+0300	[31mERROR[0m	errors/error.go:11	no rows in result set	{"field": "62", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:64
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-26T13:15:35.439+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T13:15:35.440+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T13:15:35.440+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T13:15:35.441+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T13:15:35.589+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T13:16:31.740+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:16:31.744+0300	[31mERROR[0m	errors/error.go:11	key is of invalid type	{"field": "62", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:64
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-26T13:17:04.054+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T13:17:04.061+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T13:17:04.061+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T13:17:04.063+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T13:17:04.366+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T13:17:06.971+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:17:06.976+0300	[31mERROR[0m	errors/error.go:11	key is of invalid type	{"field": "62", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:64
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-26T13:18:08.556+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T13:18:08.556+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T13:18:08.556+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T13:18:08.557+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T13:18:08.692+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T13:18:10.394+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:18:10.397+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:18:22.288+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:18:22.289+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:18:23.443+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:18:23.448+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:18:41.074+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T13:18:41.075+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T13:18:41.075+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T13:18:41.075+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T13:18:41.214+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T13:18:43.249+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:18:43.254+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:18:44.532+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:18:44.534+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:19:33.005+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T13:19:33.006+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T13:19:33.006+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T13:19:33.006+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T13:19:33.151+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T13:19:35.012+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:19:35.017+0300	[35mDEBUG[0m	db/sql.go:46	40
-2023-05-26T13:19:35.018+0300	[35mDEBUG[0m	db/sql.go:47	40
-2023-05-26T13:19:35.018+0300	[35mDEBUG[0m	db/sql.go:48	40
-2023-05-26T13:19:35.018+0300	[35mDEBUG[0m	db/sql.go:49	40
-2023-05-26T13:19:35.019+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:19:38.576+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:19:38.577+0300	[35mDEBUG[0m	db/sql.go:46	41
-2023-05-26T13:19:38.578+0300	[35mDEBUG[0m	db/sql.go:47	41
-2023-05-26T13:19:38.578+0300	[35mDEBUG[0m	db/sql.go:48	41
-2023-05-26T13:19:38.578+0300	[35mDEBUG[0m	db/sql.go:49	41
-2023-05-26T13:19:38.578+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:19:40.932+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:19:40.933+0300	[35mDEBUG[0m	db/sql.go:46	42
-2023-05-26T13:19:40.934+0300	[35mDEBUG[0m	db/sql.go:47	42
-2023-05-26T13:19:40.934+0300	[35mDEBUG[0m	db/sql.go:48	42
-2023-05-26T13:19:40.934+0300	[35mDEBUG[0m	db/sql.go:49	42
-2023-05-26T13:19:40.936+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:19:48.791+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:19:48.792+0300	[35mDEBUG[0m	db/sql.go:46	43
-2023-05-26T13:19:48.792+0300	[35mDEBUG[0m	db/sql.go:47	43
-2023-05-26T13:19:48.792+0300	[35mDEBUG[0m	db/sql.go:48	43
-2023-05-26T13:19:48.792+0300	[35mDEBUG[0m	db/sql.go:49	43
-2023-05-26T13:19:48.793+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:22:52.431+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-26T13:22:52.432+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-26T13:22:52.432+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-26T13:22:52.433+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-26T13:22:52.565+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-26T13:22:55.169+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:22:55.173+0300	[35mDEBUG[0m	db/sql.go:46	44
-2023-05-26T13:22:55.173+0300	[35mDEBUG[0m	db/sql.go:47	44
-2023-05-26T13:22:55.173+0300	[35mDEBUG[0m	db/sql.go:48	44
-2023-05-26T13:22:55.173+0300	[35mDEBUG[0m	db/sql.go:49	44
-2023-05-26T13:22:55.174+0300	[35mDEBUG[0m	db/sql.go:50	44
-2023-05-26T13:22:55.174+0300	[35mDEBUG[0m	db/sql.go:51	44
-2023-05-26T13:22:55.174+0300	[35mDEBUG[0m	db/sql.go:52	44
-2023-05-26T13:22:55.174+0300	[35mDEBUG[0m	db/sql.go:53	44
-2023-05-26T13:22:55.174+0300	[35mDEBUG[0m	db/sql.go:54	44
-2023-05-26T13:22:55.174+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-26T13:22:58.078+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-26T13:22:58.081+0300	[35mDEBUG[0m	db/sql.go:46	45
-2023-05-26T13:22:58.081+0300	[35mDEBUG[0m	db/sql.go:47	45
-2023-05-26T13:22:58.082+0300	[35mDEBUG[0m	db/sql.go:48	45
-2023-05-26T13:22:58.082+0300	[35mDEBUG[0m	db/sql.go:49	45
-2023-05-26T13:22:58.085+0300	[35mDEBUG[0m	db/sql.go:50	45
-2023-05-26T13:22:58.085+0300	[35mDEBUG[0m	db/sql.go:51	45
-2023-05-26T13:22:58.085+0300	[35mDEBUG[0m	db/sql.go:52	45
-2023-05-26T13:22:58.089+0300	[35mDEBUG[0m	db/sql.go:53	45
-2023-05-26T13:22:58.089+0300	[35mDEBUG[0m	db/sql.go:54	45
-2023-05-26T13:22:58.089+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-27T23:11:54.922+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-27T23:11:54.924+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-27T23:11:54.925+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-27T23:11:54.925+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-27T23:11:55.185+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-27T23:13:24.449+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-27T23:13:24.449+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-27T23:13:24.450+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-27T23:13:24.450+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-27T23:13:24.637+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-27T23:13:41.266+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-27T23:13:41.314+0300	[31mERROR[0m	errors/error.go:11	key is of invalid type	{"field": "62", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).CreateUser
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:64
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-27T23:25:24.330+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-27T23:25:24.330+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-27T23:25:24.331+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-27T23:25:24.332+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-27T23:25:24.566+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-27T23:25:28.921+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-27T23:25:28.924+0300	[35mDEBUG[0m	service/service.go:47	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4MjM5MjgsInN1YiI6IjQ3In0.ee9rXQ08rdwXEmOT31wquMjnBoQ7M2m84e52Xm0e7sU
-2023-05-27T23:25:28.925+0300	[35mDEBUG[0m	service/service.go:48	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4MjM5MjgsInN1YiI6IjQ3In0.ee9rXQ08rdwXEmOT31wquMjnBoQ7M2m84e52Xm0e7sU
-2023-05-27T23:25:28.925+0300	[35mDEBUG[0m	service/service.go:49	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4MjM5MjgsInN1YiI6IjQ3In0.ee9rXQ08rdwXEmOT31wquMjnBoQ7M2m84e52Xm0e7sU
-2023-05-27T23:25:28.926+0300	[35mDEBUG[0m	service/service.go:50	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4MjM5MjgsInN1YiI6IjQ3In0.ee9rXQ08rdwXEmOT31wquMjnBoQ7M2m84e52Xm0e7sU
-2023-05-27T23:25:28.926+0300	[35mDEBUG[0m	service/service.go:51	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4MjM5MjgsInN1YiI6IjQ3In0.ee9rXQ08rdwXEmOT31wquMjnBoQ7M2m84e52Xm0e7sU
-2023-05-27T23:25:28.927+0300	[35mDEBUG[0m	service/service.go:52	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4MjM5MjgsInN1YiI6IjQ3In0.ee9rXQ08rdwXEmOT31wquMjnBoQ7M2m84e52Xm0e7sU
-2023-05-27T23:25:28.927+0300	[35mDEBUG[0m	user/handler.go:80	Successfully created user
-2023-05-27T23:33:02.737+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-27T23:33:02.739+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-27T23:33:02.739+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-27T23:33:02.740+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-27T23:33:02.927+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-27T23:33:06.436+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-27T23:33:06.439+0300	[35mDEBUG[0m	user/handler.go:68	Successfully created user
-2023-05-27T23:44:56.513+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-27T23:44:56.514+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-27T23:44:56.514+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-27T23:44:56.514+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-27T23:44:56.650+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-27T23:48:23.240+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-27T23:48:23.240+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-27T23:48:23.240+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-27T23:48:23.241+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-27T23:48:23.381+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:13:08.615+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:13:08.615+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:13:08.616+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-28T00:13:08.616+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:13:08.769+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:13:33.275+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:13:33.275+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:13:33.275+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-28T00:13:33.276+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:13:33.423+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:15:03.653+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:15:03.653+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:15:03.654+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-28T00:15:03.654+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:15:03.791+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:15:04.896+0300	[31mERROR[0m	errors/error.go:11	token is malformed: token contains an invalid number of segments	{"field": "55", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).AboutMyInfo
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:57
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-28T00:16:00.276+0300	[31mERROR[0m	errors/error.go:11	token has invalid claims: token is expired	{"field": "55", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).AboutMyInfo
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:57
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-28T00:17:09.967+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:17:09.968+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:17:09.968+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-28T00:17:09.969+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:17:10.161+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:17:12.088+0300	[35mDEBUG[0m	db/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-05-28T00:17:12.093+0300	[35mDEBUG[0m	user/handler.go:84	Successfully created user
-2023-05-28T00:17:24.365+0300	[35mDEBUG[0m	service/service.go:81	rakhim2
-2023-05-28T00:19:29.797+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:19:29.797+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:19:29.798+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-28T00:19:29.798+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:19:29.940+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:19:35.464+0300	[35mDEBUG[0m	service/service.go:82	rakhim2
-2023-05-28T00:19:35.464+0300	[35mDEBUG[0m	service/service.go:83	1.685822232e+09
-2023-05-28T00:19:35.464+0300	[35mDEBUG[0m	service/service.go:84	49
-2023-05-28T00:29:12.183+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:29:12.185+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:29:12.185+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-28T00:29:12.186+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:29:12.338+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:34:03.372+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:34:03.373+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:34:03.373+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-28T00:34:03.373+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:34:03.511+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:34:04.476+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T00:34:05.727+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T00:45:13.656+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:45:13.656+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:45:13.656+0300	[34mINFO[0m	configs/config.go:39	Read Application Config
-2023-05-28T00:45:13.657+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:45:13.805+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:45:15.482+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T00:47:43.221+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:47:43.222+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:47:43.223+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T00:47:43.223+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:47:43.365+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:47:44.593+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T00:48:08.925+0300	[31mERROR[0m	errors/error.go:11	token signature is invalid: signature is invalid	{"field": "55", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).AboutMyInfo
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:57
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-28T00:48:08.927+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T00:48:54.381+0300	[31mERROR[0m	errors/error.go:11	token signature is invalid: signature is invalid	{"field": "55", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).AboutMyInfo
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:57
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-28T00:48:54.384+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T00:49:50.143+0300	[31mERROR[0m	errors/error.go:11	token signature is invalid: signature is invalid	{"field": "55", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).AboutMyInfo
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:57
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-28T00:49:50.147+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T00:50:20.253+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T00:50:20.254+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T00:50:20.254+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T00:50:20.254+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T00:50:20.407+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T00:50:24.935+0300	[31mERROR[0m	errors/error.go:11	token signature is invalid: signature is invalid	{"field": "55", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
-Makhkets/pkg/errors.NewResponseError
-	C:/Users/makhkets/GolandProjects/Makhkets/pkg/errors/error.go:11
-Makhkets/internal/user.(*handler).AboutMyInfo
-	C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go:57
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.LoggerWithConfig.func1
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240
-github.com/gin-gonic/gin.(*Context).Next
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
-github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
-github.com/gin-gonic/gin.(*Engine).ServeHTTP
-	C:/Users/makhkets/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
-net/http.serverHandler.ServeHTTP
-	C:/Program Files/Go/src/net/http/server.go:2936
-net/http.(*conn).serve
-	C:/Program Files/Go/src/net/http/server.go:1995
-2023-05-28T00:50:24.938+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T01:19:52.528+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T01:19:52.528+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T01:19:52.528+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T01:19:52.530+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T01:19:52.672+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T01:19:59.128+0300	[34mINFO[0m	user/handler.go:59	Received data from token
-2023-05-28T01:21:37.554+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T01:21:37.555+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T01:21:37.555+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T01:21:37.555+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T01:21:37.706+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T01:22:33.981+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T01:22:33.982+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T01:22:33.983+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T01:22:33.983+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T01:22:34.264+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T01:22:36.327+0300	[34mINFO[0m	errors/error.go:15	token signature is invalid: signature is invalid
-2023-05-28T01:22:42.183+0300	[34mINFO[0m	errors/error.go:15	token signature is invalid: signature is invalid
-2023-05-28T01:23:00.133+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:30:58.794+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T12:30:58.795+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T12:30:58.796+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T12:30:58.797+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T12:30:59.202+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T12:31:05.265+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:31:49.805+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T12:31:49.815+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T12:31:49.815+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T12:31:49.817+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T12:31:49.972+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T12:31:50.959+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:31:52.124+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:33:58.528+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T12:33:58.529+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T12:33:58.529+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T12:33:58.530+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T12:33:58.751+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T12:34:00.512+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:34:41.268+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:34:42.077+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:34:49.870+0300	[34mINFO[0m	api/main.go:22	Initialize Logger
-2023-05-28T12:34:49.871+0300	[34mINFO[0m	api/main.go:24	Get Config
-2023-05-28T12:34:49.872+0300	[34mINFO[0m	configs/config.go:40	Read Application Config
-2023-05-28T12:34:49.872+0300	[34mINFO[0m	api/main.go:27	Initialize Database
-2023-05-28T12:34:50.088+0300	[35mDEBUG[0m	api/main.go:37	Listening this host: http://localhost:8000
-2023-05-28T12:34:52.437+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:34:53.355+0300	[34mINFO[0m	user/handler.go:60	Received data from token
-2023-05-28T12:34:54.415+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:29:04.108+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-28T18:29:04.109+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-28T18:29:04.109+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-28T18:29:04.111+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-28T18:29:04.582+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-28T18:30:29.428+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-28T18:30:29.428+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-28T18:30:29.429+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-28T18:30:29.431+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-28T18:30:29.939+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-28T18:30:33.062+0300	[34mINFO[0m	errors/error.go:15	redis: nil
+2023-05-28T18:31:29.301+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-28T18:31:29.301+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-28T18:31:29.301+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-28T18:31:29.301+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-28T18:31:29.747+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-28T18:31:30.414+0300	[34mINFO[0m	errors/error.go:15	redis: nil
+2023-05-28T18:32:03.350+0300	[34mINFO[0m	errors/error.go:15	token signature is invalid: signature is invalid
+2023-05-28T18:33:28.457+0300	[35mDEBUG[0m	repository/sql.go:41	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-28T18:33:28.468+0300	[35mDEBUG[0m	user/handler.go:88	Successfully created user
+2023-05-28T18:33:45.045+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:34:00.531+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:34:01.244+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:43.148+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:44.323+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:45.091+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:46.141+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:47.175+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:47.937+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:48.850+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:49.524+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:50.522+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:51.312+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:52.164+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:52.989+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:53.672+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:54.370+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:54.945+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:55.556+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:56.382+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:57.236+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:48:57.780+0300	[34mINFO[0m	user/handler.go:60	Received data from token
+2023-05-28T18:49:31.600+0300	[34mINFO[0m	errors/error.go:15	redis: nil
+2023-05-28T18:49:32.724+0300	[34mINFO[0m	errors/error.go:15	redis: nil
+2023-05-30T00:08:09.039+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T00:08:09.039+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T00:08:09.039+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T00:08:09.041+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T00:08:09.698+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T12:12:50.328+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T12:12:50.328+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T12:12:50.329+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T12:12:50.329+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T12:12:50.916+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T12:14:34.360+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T12:14:34.361+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T12:14:34.361+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T12:14:34.363+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T12:14:34.839+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T12:15:23.878+0300	[34mINFO[0m	user/handler.go:106	Successfully refreshed access token
+2023-05-30T12:15:26.034+0300	[34mINFO[0m	user/handler.go:106	Successfully refreshed access token
+2023-05-30T12:15:26.746+0300	[34mINFO[0m	user/handler.go:106	Successfully refreshed access token
+2023-05-30T12:15:27.353+0300	[34mINFO[0m	user/handler.go:106	Successfully refreshed access token
+2023-05-30T12:15:28.047+0300	[34mINFO[0m	user/handler.go:106	Successfully refreshed access token
+2023-05-30T12:15:28.612+0300	[34mINFO[0m	user/handler.go:106	Successfully refreshed access token
+2023-05-30T12:15:29.167+0300	[34mINFO[0m	user/handler.go:106	Successfully refreshed access token
+2023-05-30T12:19:14.512+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T12:19:14.513+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T12:19:14.513+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T12:19:14.514+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T12:19:14.958+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T12:19:15.684+0300	[34mINFO[0m	user/handler.go:97	
+2023-05-30T12:19:15.684+0300	[34mINFO[0m	user/handler.go:98	
+2023-05-30T12:19:15.685+0300	[34mINFO[0m	user/handler.go:99	
+2023-05-30T12:19:15.685+0300	[34mINFO[0m	user/handler.go:100	
+2023-05-30T12:19:15.685+0300	[34mINFO[0m	errors/error.go:15	token has invalid claims: token is expired
+2023-05-30T12:19:31.388+0300	[34mINFO[0m	user/handler.go:97	
+2023-05-30T12:19:31.388+0300	[34mINFO[0m	user/handler.go:98	
+2023-05-30T12:19:31.389+0300	[34mINFO[0m	user/handler.go:99	
+2023-05-30T12:19:31.389+0300	[34mINFO[0m	user/handler.go:100	
+2023-05-30T12:19:31.390+0300	[34mINFO[0m	errors/error.go:15	token has invalid claims: token is expired
+2023-05-30T12:19:37.097+0300	[34mINFO[0m	user/handler.go:97	123
+2023-05-30T12:19:37.103+0300	[34mINFO[0m	user/handler.go:98	123
+2023-05-30T12:19:37.103+0300	[34mINFO[0m	user/handler.go:99	123
+2023-05-30T12:19:37.103+0300	[34mINFO[0m	user/handler.go:100	123
+2023-05-30T12:19:37.103+0300	[34mINFO[0m	errors/error.go:15	token has invalid claims: token is expired
+2023-05-30T12:28:33.636+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T12:28:33.637+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T12:28:33.637+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T12:28:33.638+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T12:28:34.081+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T12:28:35.273+0300	[34mINFO[0m	user/handler.go:106	dsa231d12eweasjkdo123ijkjkd[13idk1io3ji
+2023-05-30T12:28:35.273+0300	[34mINFO[0m	user/handler.go:107	dsa231d12eweasjkdo123ijkjkd[13idk1io3ji
+2023-05-30T12:28:35.273+0300	[34mINFO[0m	user/handler.go:108	dsa231d12eweasjkdo123ijkjkd[13idk1io3ji
+2023-05-30T12:28:35.273+0300	[34mINFO[0m	user/handler.go:109	dsa231d12eweasjkdo123ijkjkd[13idk1io3ji
+2023-05-30T12:28:35.273+0300	[34mINFO[0m	user/handler.go:110	dsa231d12eweasjkdo123ijkjkd[13idk1io3ji
+2023-05-30T12:28:35.274+0300	[34mINFO[0m	errors/error.go:15	token has invalid claims: token is expired
+2023-05-30T13:54:08.452+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T13:54:08.453+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T13:54:08.453+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T13:54:08.454+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T13:54:09.059+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T13:56:19.274+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T13:56:19.276+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T13:56:19.276+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T13:56:19.276+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T13:56:19.760+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T13:56:50.928+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T13:56:50.929+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T13:56:50.930+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T13:56:50.931+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T13:56:51.397+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T13:57:19.605+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T13:57:19.606+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T13:57:19.606+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T13:57:19.607+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T13:57:20.047+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T13:57:40.214+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T13:57:40.215+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T13:57:40.215+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T13:57:40.216+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T13:57:40.693+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T13:58:41.626+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T13:58:41.627+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T13:58:41.627+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T13:58:41.628+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T13:58:42.062+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T14:04:51.321+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T14:04:51.324+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T14:04:51.325+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T14:04:51.325+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T14:04:51.822+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T14:08:43.039+0300	[35mDEBUG[0m	repository/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T14:08:43.057+0300	[34mINFO[0m	errors/error.go:15	redis: can't marshal map[string]interface {} (implement encoding.BinaryMarshaler)
+2023-05-30T14:12:27.400+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T14:12:27.402+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T14:12:27.402+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T14:12:27.403+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T14:12:27.857+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T14:12:31.100+0300	[35mDEBUG[0m	repository/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T14:12:31.105+0300	[34mINFO[0m	errors/error.go:15	redis: can't marshal map[string]interface {} (implement encoding.BinaryMarshaler)	{"field": "84", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T14:29:51.615+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T14:29:51.617+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T14:29:51.617+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T14:29:51.617+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T14:29:52.120+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T14:30:27.115+0300	[35mDEBUG[0m	repository/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T14:30:27.121+0300	[34mINFO[0m	errors/error.go:15	redis: can't marshal map[string]string (implement encoding.BinaryMarshaler)	{"field": "84", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T14:30:38.080+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T14:30:38.082+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T14:30:38.082+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T14:30:38.082+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T14:30:38.605+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T14:30:50.237+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T14:30:50.238+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T14:30:50.238+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T14:30:50.238+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T14:30:50.842+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T14:30:55.624+0300	[35mDEBUG[0m	repository/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T14:30:55.629+0300	[34mINFO[0m	errors/error.go:15	redis: can't marshal map[string]string (implement encoding.BinaryMarshaler)	{"field": "84", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T14:39:01.269+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T14:39:01.270+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T14:39:01.270+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T14:39:01.270+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T14:39:01.730+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T14:39:05.273+0300	[35mDEBUG[0m	repository/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T14:39:05.372+0300	[34mINFO[0m	errors/error.go:15	redis: can't marshal map[string]string (implement encoding.BinaryMarshaler)	{"field": "84", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T14:45:20.136+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T14:45:20.136+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T14:45:20.136+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T14:45:20.137+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T14:45:20.591+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T14:45:22.507+0300	[35mDEBUG[0m	repository/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T18:31:29.900+0300	[35mDEBUG[0m	repository/sql.go:38	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T18:31:47.926+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T18:31:47.927+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T18:31:47.927+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T18:31:47.928+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T18:31:48.384+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T18:31:50.588+0300	[35mDEBUG[0m	repository/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T18:31:50.592+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T18:36:47.640+0300	[34mINFO[0m	errors/error.go:15	token is malformed: token contains an invalid number of segments	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T18:37:00.303+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T18:37:06.681+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:08:01.034+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:08:01.036+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:08:01.036+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:08:01.037+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:08:01.490+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:08:09.365+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:08:09.366+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:08:09.367+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:08:09.368+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:08:09.845+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:08:12.937+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:08:18.025+0300	[35mDEBUG[0m	repository/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:08:18.031+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T19:10:45.801+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:10:47.935+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:28:21.664+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:28:21.664+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:28:21.665+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:28:21.666+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:28:22.156+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:28:47.055+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:28:52.188+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:28:58.651+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:28:58.652+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:28:58.652+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:28:58.652+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:28:59.111+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:29:01.218+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:29:02.229+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:29:02.772+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:31:13.333+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:31:13.334+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:31:13.334+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:31:13.335+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:31:13.783+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:31:15.831+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T19:34:23.866+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:34:23.868+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:34:23.868+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:34:23.869+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:34:24.355+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:34:27.199+0300	[34mINFO[0m	errors/error.go:15	redis: nil	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:35:09.193+0300	[34mINFO[0m	errors/error.go:15	token is malformed: token contains an invalid number of segments	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:35:18.554+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:35:18.566+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T19:35:20.245+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:35:20.246+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T19:35:30.963+0300	[34mINFO[0m	errors/error.go:15	redis: nil	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:37:28.027+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:37:28.027+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:37:28.027+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:37:28.028+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:37:28.499+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:37:30.699+0300	[34mINFO[0m	errors/error.go:15	redis: nil	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:37:39.391+0300	[34mINFO[0m	errors/error.go:15	redis: nil	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:37:48.588+0300	[34mINFO[0m	errors/error.go:15	redis: nil	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:37:58.833+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:37:58.837+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T19:38:09.029+0300	[34mINFO[0m	errors/error.go:15	redis: nil	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:44:41.637+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:44:41.639+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:44:41.639+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:44:41.640+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:44:42.089+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:44:55.296+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:44:55.297+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:44:55.297+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:44:55.298+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:44:55.778+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:45:17.678+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:45:17.682+0300	[35mDEBUG[0m	repository/sql.go:54	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:45:17.682+0300	[35mDEBUG[0m	repository/sql.go:55	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:45:17.682+0300	[35mDEBUG[0m	repository/sql.go:56	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:45:17.683+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T19:45:28.628+0300	[34mINFO[0m	service/service.go:112	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:45:28.628+0300	[34mINFO[0m	service/service.go:113	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:45:28.628+0300	[34mINFO[0m	service/service.go:114	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:45:28.629+0300	[34mINFO[0m	service/service.go:115	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:45:28.629+0300	[34mINFO[0m	service/service.go:116	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:45:28.630+0300	[34mINFO[0m	errors/error.go:15	redis: nil	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:52:49.662+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:52:49.666+0300	[35mDEBUG[0m	repository/sql.go:54	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:52:49.666+0300	[35mDEBUG[0m	repository/sql.go:55	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:52:49.666+0300	[35mDEBUG[0m	repository/sql.go:56	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-30T19:52:49.987+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T19:54:57.874+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:54:57.875+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:54:57.876+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:54:57.878+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:54:58.350+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:55:00.560+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:55:00.565+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T19:57:49.881+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:57:49.882+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:57:49.884+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:57:49.885+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:57:50.365+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:57:53.149+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:57:53.152+0300	[35mDEBUG[0m	repository/sql.go:54	{"RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgwOTM4NzMsInN1YiI6IjY2In0.KnJzohBhrHn4OnLYrNAamg888G_yzqb7YUBCQbxzbXg","UserId":"66","Ua":"PostmanRuntime/7.32.2","Ip":"::1","Fingerprint":"be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a","ExpiresIn":1688093873,"CreatedAt":"2023-05-30T19:57:53.152461+03:00"}
+2023-05-30T19:57:53.153+0300	[35mDEBUG[0m	repository/sql.go:55	{"RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgwOTM4NzMsInN1YiI6IjY2In0.KnJzohBhrHn4OnLYrNAamg888G_yzqb7YUBCQbxzbXg","UserId":"66","Ua":"PostmanRuntime/7.32.2","Ip":"::1","Fingerprint":"be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a","ExpiresIn":1688093873,"CreatedAt":"2023-05-30T19:57:53.152461+03:00"}
+2023-05-30T19:57:53.154+0300	[34mINFO[0m	repository/sql.go:57	set be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a {"RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgwOTM4NzMsInN1YiI6IjY2In0.KnJzohBhrHn4OnLYrNAamg888G_yzqb7YUBCQbxzbXg","UserId":"66","Ua":"PostmanRuntime/7.32.2","Ip":"::1","Fingerprint":"be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a","ExpiresIn":1688093873,"CreatedAt":"2023-05-30T19:57:53.152461+03:00"} px 1688: OK
+2023-05-30T19:57:53.155+0300	[34mINFO[0m	repository/sql.go:58	<nil>
+2023-05-30T19:57:53.155+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T19:58:04.846+0300	[34mINFO[0m	errors/error.go:15	redis: nil	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T19:58:43.663+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T19:58:43.671+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T19:58:43.671+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T19:58:43.672+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T19:58:44.236+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T19:58:51.892+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T19:58:51.896+0300	[35mDEBUG[0m	repository/sql.go:54	{"RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgwOTM5MzEsInN1YiI6IjY3In0.m2wVvRBRtbwG7dUecHaou-nrbasxcyxw13suhqUmESI","UserId":"67","Ua":"PostmanRuntime/7.32.2","Ip":"::1","Fingerprint":"be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a","ExpiresIn":1688093931,"CreatedAt":"2023-05-30T19:58:51.8960129+03:00"}
+2023-05-30T19:58:51.897+0300	[35mDEBUG[0m	repository/sql.go:55	{"RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgwOTM5MzEsInN1YiI6IjY3In0.m2wVvRBRtbwG7dUecHaou-nrbasxcyxw13suhqUmESI","UserId":"67","Ua":"PostmanRuntime/7.32.2","Ip":"::1","Fingerprint":"be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a","ExpiresIn":1688093931,"CreatedAt":"2023-05-30T19:58:51.8960129+03:00"}
+2023-05-30T19:58:51.899+0300	[34mINFO[0m	repository/sql.go:57	set be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a {"RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgwOTM5MzEsInN1YiI6IjY3In0.m2wVvRBRtbwG7dUecHaou-nrbasxcyxw13suhqUmESI","UserId":"67","Ua":"PostmanRuntime/7.32.2","Ip":"::1","Fingerprint":"be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a","ExpiresIn":1688093931,"CreatedAt":"2023-05-30T19:58:51.8960129+03:00"} px 1688: OK
+2023-05-30T19:58:51.900+0300	[34mINFO[0m	repository/sql.go:58	<nil>
+2023-05-30T19:58:51.900+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T20:15:04.018+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:15:04.020+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:15:04.020+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:15:04.021+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:15:04.492+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T20:15:47.455+0300	[35mDEBUG[0m	repository/sql.go:41	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T20:15:47.467+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T20:17:44.274+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:17:44.275+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:17:44.275+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:17:44.275+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:17:44.727+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T20:17:47.695+0300	[35mDEBUG[0m	repository/sql.go:40	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T20:17:47.699+0300	[34mINFO[0m	errors/error.go:15	redis: can't marshal *user.RefreshSession (implement encoding.BinaryMarshaler)	{"field": "84", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T20:36:50.743+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:36:50.743+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:36:50.743+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:36:50.744+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:36:51.195+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T20:36:54.991+0300	[35mDEBUG[0m	repository/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T20:36:54.997+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T20:38:04.270+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:38:04.272+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:38:04.272+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:38:04.273+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:38:04.725+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T20:38:08.780+0300	[35mDEBUG[0m	repository/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T20:38:08.786+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T20:40:29.533+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:40:29.533+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:40:29.533+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:40:29.534+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:40:30.021+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T20:40:33.231+0300	[35mDEBUG[0m	repository/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T20:40:33.235+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T20:49:47.482+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:49:47.485+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:49:47.485+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:49:47.486+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:49:47.982+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T20:49:52.729+0300	[35mDEBUG[0m	repository/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T20:49:52.732+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T20:50:12.745+0300	[35mDEBUG[0m	repository/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T20:50:12.751+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T20:51:08.718+0300	[35mDEBUG[0m	repository/sql.go:39	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-30T20:51:08.719+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-30T20:51:35.311+0300	[34mINFO[0m	errors/error.go:15	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-30T20:54:39.574+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:54:39.575+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:54:39.576+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:54:39.576+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:54:40.039+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T20:56:36.102+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:56:36.103+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:56:36.103+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:56:36.105+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:56:36.590+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T20:56:38.922+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T20:57:50.578+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T20:57:50.579+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T20:57:50.579+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T20:57:50.581+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T20:57:51.193+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:01:38.950+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T21:06:17.421+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:06:17.422+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:06:17.423+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:06:17.423+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:06:17.875+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:06:30.626+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T21:08:33.823+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:08:33.825+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:08:33.825+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:08:33.826+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:08:34.381+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:08:35.749+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T21:10:16.511+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:10:16.514+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:10:16.515+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:10:16.515+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:10:16.998+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:10:19.168+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T21:10:42.784+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:10:42.786+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:10:42.786+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:10:42.786+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:10:43.248+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:10:49.621+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T21:11:56.948+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:11:56.948+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:11:56.948+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:11:56.950+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:11:57.537+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:11:58.013+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T21:11:59.070+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T21:12:21.281+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:12:21.281+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:12:21.281+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:12:21.282+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:12:21.743+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:12:22.601+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T21:30:27.909+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:30:27.910+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:30:27.910+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:30:27.911+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:30:28.430+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:53:44.678+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:53:44.679+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:53:44.680+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:53:44.680+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:53:45.125+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T21:57:44.412+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T21:57:44.412+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T21:57:44.413+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T21:57:44.413+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T21:57:44.860+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T22:01:31.168+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T22:01:31.169+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T22:01:31.169+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T22:01:31.169+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T22:01:31.624+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T22:03:50.501+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T22:03:50.502+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T22:03:50.502+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T22:03:50.503+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T22:03:50.946+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T22:03:54.811+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T22:04:10.507+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T22:04:10.508+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T22:04:10.508+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T22:04:10.508+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T22:04:10.960+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T22:04:29.033+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-30T22:05:16.412+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-30T22:05:16.414+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-30T22:05:16.414+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-30T22:05:16.415+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-30T22:05:16.872+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-30T22:05:18.135+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T07:42:33.889+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T07:42:33.890+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T07:42:33.890+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T07:42:33.891+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T07:42:34.452+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T07:43:05.708+0300	[34mINFO[0m	service/service.go:123	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgwOTcwNjgsInN1YiI6Ijc1In0.JbKswG33Fn90mcplMYplE8WfTMNNGP4J9_RdOIEsWJw
+2023-05-31T07:43:05.709+0300	[34mINFO[0m	service/service.go:124	PostmanRuntime/7.32.2
+2023-05-31T07:43:05.709+0300	[34mINFO[0m	service/service.go:125	75
+2023-05-31T07:43:05.709+0300	[34mINFO[0m	service/service.go:126	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T07:43:05.710+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T07:44:02.976+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T07:44:02.978+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T07:44:02.978+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T07:44:02.978+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T07:44:03.465+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T07:44:06.077+0300	[34mINFO[0m	service/service.go:123	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T07:44:06.077+0300	[35mDEBUG[0m	service/service.go:124	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T07:44:06.078+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T07:57:53.137+0300	[34mINFO[0m	service/service.go:123	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T07:57:53.139+0300	[35mDEBUG[0m	service/service.go:124	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T07:57:53.139+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T08:29:36.699+0300	[34mINFO[0m	service/service.go:123	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T08:29:36.701+0300	[35mDEBUG[0m	service/service.go:124	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T08:29:36.701+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T08:29:44.464+0300	[34mINFO[0m	service/service.go:123	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T08:29:44.465+0300	[35mDEBUG[0m	service/service.go:124	be83cf21e5f4bf977da8f5a6ee13054fe1ff8a94347585e74a30fc559ec8881a
+2023-05-31T08:29:44.465+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T08:56:55.585+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T08:56:55.586+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T08:56:55.586+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T08:56:55.587+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T08:56:56.049+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T08:57:02.111+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:05:46.538+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:05:46.539+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:05:46.539+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:05:46.539+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:05:46.997+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:05:49.494+0300	[35mDEBUG[0m	repository/sql.go:88	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:05:49.497+0300	[35mDEBUG[0m	repository/sql.go:91	
+2023-05-31T09:05:49.497+0300	[35mDEBUG[0m	repository/sql.go:92	
+2023-05-31T09:08:32.404+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:08:32.406+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:08:32.406+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:08:32.406+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:08:32.859+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:08:36.071+0300	[35mDEBUG[0m	repository/sql.go:88	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:08:36.073+0300	[35mDEBUG[0m	repository/sql.go:91	
+2023-05-31T09:08:36.074+0300	[35mDEBUG[0m	repository/sql.go:92	
+2023-05-31T09:09:28.237+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:09:28.238+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:09:28.241+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:09:28.247+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:09:28.736+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:09:31.527+0300	[35mDEBUG[0m	repository/sql.go:88	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:09:31.530+0300	[35mDEBUG[0m	repository/sql.go:91	
+2023-05-31T09:09:31.531+0300	[35mDEBUG[0m	repository/sql.go:92	
+2023-05-31T09:09:36.875+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:09:36.876+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:09:36.877+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:09:36.877+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:09:37.353+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:09:39.416+0300	[35mDEBUG[0m	repository/sql.go:88	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:09:39.422+0300	[35mDEBUG[0m	repository/sql.go:91	
+2023-05-31T09:09:39.422+0300	[35mDEBUG[0m	repository/sql.go:92	
+2023-05-31T09:11:17.672+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:11:17.673+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:11:17.673+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:11:17.674+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:11:18.268+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:11:23.701+0300	[35mDEBUG[0m	repository/sql.go:88	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:11:23.704+0300	[35mDEBUG[0m	repository/sql.go:91	
+2023-05-31T09:11:23.706+0300	[35mDEBUG[0m	repository/sql.go:92	
+2023-05-31T09:11:53.809+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:11:53.809+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:11:53.810+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:11:53.811+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:11:54.261+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:11:55.251+0300	[35mDEBUG[0m	repository/sql.go:88	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:11:55.254+0300	[35mDEBUG[0m	repository/sql.go:91	
+2023-05-31T09:11:55.255+0300	[35mDEBUG[0m	repository/sql.go:92	
+2023-05-31T09:11:55.255+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T09:19:30.445+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:19:30.446+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:19:30.446+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:19:30.446+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:19:30.907+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:19:35.640+0300	[35mDEBUG[0m	repository/sql.go:88	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:19:35.645+0300	[35mDEBUG[0m	repository/sql.go:91	
+2023-05-31T09:19:35.645+0300	[35mDEBUG[0m	repository/sql.go:92	
+2023-05-31T09:19:35.645+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T09:32:29.872+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:32:29.873+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:32:29.873+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:32:29.874+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:32:30.339+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:33:02.907+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:33:02.908+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:33:02.908+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:33:02.908+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:33:03.357+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:35:07.903+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:35:07.903+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:35:07.904+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:35:07.905+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:35:08.394+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:35:42.228+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:35:42.229+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:35:42.229+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:35:42.229+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:35:42.676+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:35:57.316+0300	[34mINFO[0m	errors/error.go:18	token signature is invalid: signature is invalid	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T09:36:02.288+0300	[34mINFO[0m	errors/error.go:18	token is malformed: could not base64 decode signature: illegal base64 data at input byte 40	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T09:36:12.196+0300	[35mDEBUG[0m	repository/sql.go:42	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-31T09:36:12.200+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-31T09:36:21.322+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:36:21.324+0300	[35mDEBUG[0m	repository/sql.go:95	aliev
+2023-05-31T09:36:21.325+0300	[35mDEBUG[0m	repository/sql.go:96	
+2023-05-31T09:36:21.325+0300	[34mINFO[0m	errors/error.go:18	can't scan into dest[3]: unable to assign to *int64	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T09:36:29.425+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:36:29.426+0300	[35mDEBUG[0m	repository/sql.go:95	aliev
+2023-05-31T09:36:29.426+0300	[35mDEBUG[0m	repository/sql.go:96	
+2023-05-31T09:36:29.426+0300	[34mINFO[0m	errors/error.go:18	can't scan into dest[3]: unable to assign to *int64	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T09:39:31.989+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:39:31.989+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:39:31.989+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:39:31.990+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:39:32.485+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:39:35.431+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password_hash, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:39:35.440+0300	[35mDEBUG[0m	repository/sql.go:95	
+2023-05-31T09:39:35.440+0300	[35mDEBUG[0m	repository/sql.go:96	
+2023-05-31T09:39:35.440+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: столбец "password_hash" не существует (SQLSTATE 42703)	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T09:39:58.033+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:39:58.033+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:39:58.034+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:39:58.035+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:39:58.498+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:39:59.867+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:39:59.870+0300	[35mDEBUG[0m	repository/sql.go:95	aliev
+2023-05-31T09:39:59.871+0300	[35mDEBUG[0m	repository/sql.go:96	123321asSs
+2023-05-31T09:39:59.871+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:41:54.201+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:41:54.201+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:41:54.202+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:41:54.202+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:41:54.677+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:41:56.556+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:41:56.559+0300	[35mDEBUG[0m	repository/sql.go:95	aliev
+2023-05-31T09:41:56.560+0300	[35mDEBUG[0m	repository/sql.go:96	123321asSs
+2023-05-31T09:41:56.560+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:41:58.717+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:41:58.718+0300	[35mDEBUG[0m	repository/sql.go:95	aliev
+2023-05-31T09:41:58.718+0300	[35mDEBUG[0m	repository/sql.go:96	123321asSs
+2023-05-31T09:41:58.719+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:41:59.473+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:41:59.474+0300	[35mDEBUG[0m	repository/sql.go:95	aliev
+2023-05-31T09:41:59.474+0300	[35mDEBUG[0m	repository/sql.go:96	123321asSs
+2023-05-31T09:41:59.474+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:44:30.713+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:44:30.714+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:44:30.715+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:44:30.715+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:44:31.186+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:44:44.777+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:44:44.782+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:45:26.954+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:45:26.954+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:45:26.955+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:45:26.955+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:45:27.410+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:45:31.207+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:45:31.210+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:45:32.368+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:45:32.369+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:45:33.713+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:45:33.715+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:45:47.356+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:45:47.358+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:48:49.761+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T09:48:49.762+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T09:48:49.762+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T09:48:49.762+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T09:48:50.199+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T09:49:03.888+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:49:03.895+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T09:49:06.448+0300	[35mDEBUG[0m	repository/sql.go:92	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T09:49:06.449+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T10:19:07.006+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T10:19:07.007+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T10:19:07.007+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T10:19:07.008+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T10:19:07.478+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T10:19:09.618+0300	[35mDEBUG[0m	repository/sql.go:106	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T10:19:09.622+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T10:19:22.866+0300	[35mDEBUG[0m	repository/sql.go:106	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T10:19:22.866+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T10:33:46.641+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T10:33:46.641+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T10:33:46.641+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T10:33:46.642+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T10:33:47.104+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T10:33:51.182+0300	[35mDEBUG[0m	repository/sql.go:107	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T10:33:51.186+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T10:49:51.464+0300	[35mDEBUG[0m	repository/sql.go:43	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-31T10:49:51.469+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-31T10:50:01.122+0300	[35mDEBUG[0m	repository/sql.go:107	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T10:50:01.123+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T10:50:25.871+0300	[35mDEBUG[0m	repository/sql.go:107	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T10:50:25.873+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T10:50:35.032+0300	[34mINFO[0m	user/handler.go:65	Did not find the token
+2023-05-31T10:51:11.948+0300	[34mINFO[0m	user/handler.go:65	Did not find the token
+2023-05-31T10:52:03.655+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T10:59:31.837+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T10:59:31.838+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T10:59:31.838+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T10:59:31.838+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T10:59:32.489+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T10:59:32.951+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:01:51.240+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:01:52.242+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:01:52.994+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:01:58.254+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T11:01:58.255+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T11:01:58.255+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T11:01:58.255+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T11:01:58.803+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T11:02:25.822+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:26.895+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:27.561+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:28.075+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:28.561+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:28.971+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:29.413+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:29.773+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:30.217+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:30.632+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:30.974+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:31.363+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:31.738+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:32.068+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:32.393+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:33.290+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:43.736+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:44.458+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:02:45.120+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:04.024+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:04.818+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:05.270+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:05.731+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:06.194+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:06.853+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:15.631+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T11:03:15.633+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T11:03:15.633+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T11:03:15.633+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T11:03:16.072+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T11:03:19.128+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:33.555+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:35.940+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:03:40.613+0300	[34mINFO[0m	user/handler.go:62	Received data from token

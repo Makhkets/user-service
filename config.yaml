@@ -20,5 +20,5 @@ redis:
   db: 0
 
 jwt:
-  duration: 10000
-  refresh: 9999
+  duration: 1
+  refresh: 43800
