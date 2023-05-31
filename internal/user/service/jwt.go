@@ -4,8 +4,10 @@ import (
 	"Makhkets/internal/configs"
 	user "Makhkets/internal/user/repository"
 	"Makhkets/pkg/errors"
+	"Makhkets/pkg/utils"
 	"context"
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
 	"runtime"
 	"strconv"
@@ -56,7 +58,7 @@ func (s *service) GenerateRefreshToken(user *user.UserDTO) (string, int64, error
 	return refreshToken, exp, nil
 }
 
-func (s *service) CreateTokenPair(dto *user.UserDTO, fingerprint string) (map[string]string, int64, *errors.CustomError) {
+func (s *service) CreateTokenPair(dto *user.UserDTO, c *gin.Context) (map[string]string, int64, *errors.CustomError) {
 	// Создаем access токен
 	accessToken, err := s.GenerateAccessToken(dto)
 	if err != nil {
@@ -83,7 +85,15 @@ func (s *service) CreateTokenPair(dto *user.UserDTO, fingerprint string) (map[st
 
 	// Обновляем refresh в Redis'e
 	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
-	if err := s.repository.ChangeRefreshInCache(ctx, fingerprint, refreshToken); err != nil {
+	if err := s.repository.SaveRefreshSession(ctx, &user.RefreshSession{
+		RefreshToken: refreshToken,
+		UserId:       dto.Id,
+		Ua:           c.Request.UserAgent(),
+		Ip:           c.ClientIP(),
+		Fingerprint:  utils.GetFingerprint(c.Request.Header),
+		ExpiresIn:    time.Duration(exp),
+		CreatedAt:    time.Now(),
+	}); err != nil {
 		_, file, line, _ := runtime.Caller(1)
 		return nil, 0, &errors.CustomError{
 			CustomErr: "",

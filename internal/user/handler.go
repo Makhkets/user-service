@@ -18,6 +18,7 @@ const (
 	usersURL            = "/users"
 	userMeURL           = "/user/me"
 	userRefreshTokenURL = "/user/refresh"
+	userLoginURL        = "/user/login"
 )
 
 type handler struct {
@@ -40,8 +41,11 @@ func (h *handler) Register(r *gin.Engine) {
 		api.GET(usersURL, h.GetUsers)
 		api.GET(userMeURL, h.AboutMyInfo)
 		api.GET(userURL, h.GetUser)
+
 		api.POST(usersURL, h.CreateUser)
+		api.POST(userLoginURL, h.Login)
 		api.POST(userRefreshTokenURL, h.RefreshToken)
+
 		api.PATCH(userURL, h.PartialUpdateUser)
 		api.DELETE(userURL, h.PartialUpdateUser)
 	}
@@ -63,6 +67,27 @@ func (h *handler) AboutMyInfo(c *gin.Context) {
 			"error": "None \"Authorization\" key in your headers",
 		})
 	}
+}
+
+func (h *handler) RefreshToken(c *gin.Context) {
+	c.Header("Content-Type", "application/json; charset=utf-8")
+	var data struct {
+		Refresh string
+	}
+
+	if err := c.BindJSON(&data); err != nil {
+		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+		return
+	}
+
+	response, err := h.service.RefreshAccessToken(c, data.Refresh)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	h.logger.Info("Successfully refreshed access token")
+	c.JSON(http.StatusAccepted, response)
 }
 
 func (h *handler) CreateUser(c *gin.Context) {
@@ -87,10 +112,11 @@ func (h *handler) CreateUser(c *gin.Context) {
 	c.JSON(http.StatusCreated, tokenData)
 }
 
-func (h *handler) RefreshToken(c *gin.Context) {
+func (h *handler) Login(c *gin.Context) {
 	c.Header("Content-Type", "application/json; charset=utf-8")
 	var data struct {
-		Refresh string
+		Username string `binding:"required,min=4"`
+		Password string `binding:"required,min=8"`
 	}
 
 	if err := c.BindJSON(&data); err != nil {
@@ -98,14 +124,14 @@ func (h *handler) RefreshToken(c *gin.Context) {
 		return
 	}
 
-	response, err := h.service.RefreshAccessToken(c, data.Refresh)
+	response, err := h.service.LoginUser(c, data.Username, data.Password)
 	if err != nil {
 		errors.NewResponseError(h.logger, c, err)
 		return
 	}
 
-	h.logger.Info("Successfully refreshed access token")
-	c.JSON(http.StatusAccepted, response)
+	h.logger.Info("Successfully Login in Account")
+	c.JSON(http.StatusCreated, response)
 }
 
 func (h *handler) GetUsers(c *gin.Context) {

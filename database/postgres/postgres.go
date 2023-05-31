@@ -11,9 +11,16 @@ import (
 )
 
 type Client interface {
+	// Exec INSERT, UPDATE, DELETE
 	Exec(ctx context.Context, sql string, arguments ...interface{}) (pgconn.CommandTag, error)
+
+	// Query Select
 	Query(ctx context.Context, sql string, args ...interface{}) (pgx.Rows, error)
+
+	// QueryRow Query one select
 	QueryRow(ctx context.Context, sql string, args ...interface{}) pgx.Row
+
+	// Begin transaction
 	Begin(ctx context.Context) (pgx.Tx, error)
 }
 

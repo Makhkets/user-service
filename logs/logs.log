@@ -696,3 +696,160 @@
 2023-05-31T11:03:33.555+0300	[34mINFO[0m	user/handler.go:62	Received data from token
 2023-05-31T11:03:35.940+0300	[34mINFO[0m	user/handler.go:62	Received data from token
 2023-05-31T11:03:40.613+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:04:26.069+0300	[35mDEBUG[0m	repository/sql.go:43	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-31T11:04:26.078+0300	[35mDEBUG[0m	user/handler.go:90	Successfully created user
+2023-05-31T11:04:42.692+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:04:45.630+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:04:46.522+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:04:47.345+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:04:47.985+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:04:48.704+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:06:42.240+0300	[34mINFO[0m	errors/error.go:18	token has invalid claims: token is expired	{"field": "57", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T11:06:46.032+0300	[34mINFO[0m	errors/error.go:18	token has invalid claims: token is expired	{"field": "57", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T11:07:00.576+0300	[35mDEBUG[0m	repository/sql.go:108	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T11:07:00.581+0300	[34mINFO[0m	user/handler.go:111	Successfully refreshed access token
+2023-05-31T11:07:08.672+0300	[34mINFO[0m	user/handler.go:62	Received data from token
+2023-05-31T11:10:50.899+0300	[34mINFO[0m	errors/error.go:18	token has invalid claims: token is expired	{"field": "57", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T11:11:02.695+0300	[35mDEBUG[0m	repository/sql.go:108	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T11:11:02.696+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T11:11:28.203+0300	[35mDEBUG[0m	repository/sql.go:108	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1
+2023-05-31T11:11:28.204+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "105", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T13:31:27.180+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T13:31:27.180+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T13:31:27.181+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T13:31:27.182+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T13:31:27.655+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T13:31:47.344+0300	[35mDEBUG[0m	user/handler.go:127	
+2023-05-31T13:31:47.345+0300	[35mDEBUG[0m	user/handler.go:128	
+2023-05-31T13:32:00.112+0300	[35mDEBUG[0m	user/handler.go:127	
+2023-05-31T13:32:00.113+0300	[35mDEBUG[0m	user/handler.go:128	
+2023-05-31T13:32:32.713+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T13:32:32.713+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T13:32:32.713+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T13:32:32.714+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T13:32:33.160+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T13:32:38.322+0300	[35mDEBUG[0m	user/handler.go:127	
+2023-05-31T13:32:38.322+0300	[35mDEBUG[0m	user/handler.go:128	
+2023-05-31T13:32:51.023+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T13:32:51.023+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T13:32:51.024+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T13:32:51.025+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T13:32:51.465+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T13:32:53.591+0300	[35mDEBUG[0m	user/handler.go:127	aliev
+2023-05-31T13:32:53.592+0300	[35mDEBUG[0m	user/handler.go:128	123321asSs
+2023-05-31T13:32:55.455+0300	[35mDEBUG[0m	user/handler.go:127	aliev
+2023-05-31T13:32:55.458+0300	[35mDEBUG[0m	user/handler.go:128	123321asSs
+2023-05-31T13:32:56.260+0300	[35mDEBUG[0m	user/handler.go:127	aliev
+2023-05-31T13:32:56.261+0300	[35mDEBUG[0m	user/handler.go:128	123321asSs
+2023-05-31T13:32:56.798+0300	[35mDEBUG[0m	user/handler.go:127	aliev
+2023-05-31T13:32:56.802+0300	[35mDEBUG[0m	user/handler.go:128	123321asSs
+2023-05-31T13:34:31.141+0300	[35mDEBUG[0m	user/handler.go:127	aliev
+2023-05-31T13:34:31.142+0300	[35mDEBUG[0m	user/handler.go:128	123321asSs
+2023-05-31T13:34:58.018+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T13:34:58.019+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T13:34:58.019+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T13:34:58.020+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T13:34:58.471+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T13:35:00.076+0300	[35mDEBUG[0m	user/handler.go:127	aliev
+2023-05-31T13:35:00.077+0300	[35mDEBUG[0m	user/handler.go:128	123321asSs
+2023-05-31T13:35:03.798+0300	[35mDEBUG[0m	user/handler.go:127	
+2023-05-31T13:35:03.799+0300	[35mDEBUG[0m	user/handler.go:128	123321asSs
+2023-05-31T13:36:12.252+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T13:36:12.253+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T13:36:12.253+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T13:36:12.254+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T13:36:12.710+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T13:36:31.038+0300	[35mDEBUG[0m	user/handler.go:127	12345678
+2023-05-31T13:36:31.038+0300	[35mDEBUG[0m	user/handler.go:128	123321asSs
+2023-05-31T23:36:25.418+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T23:36:25.419+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T23:36:25.419+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T23:36:25.419+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T23:36:26.155+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T23:40:19.476+0300	[35mDEBUG[0m	repository/sql.go:96	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-05-31T23:40:19.488+0300	[35mDEBUG[0m	user/handler.go:111	Successfully created user
+2023-05-31T23:50:08.984+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T23:50:08.985+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T23:50:08.985+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T23:50:08.985+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T23:50:09.456+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T23:50:18.366+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1, password=$2
+2023-05-31T23:51:13.785+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1, password=$2
+2023-05-31T23:51:20.370+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T23:51:20.372+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T23:51:20.372+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T23:51:20.372+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T23:51:20.971+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T23:51:22.665+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1, password=$2
+2023-05-31T23:52:01.996+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T23:52:01.996+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T23:52:01.996+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T23:52:01.997+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T23:52:02.594+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T23:52:04.751+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1, password=$2
+2023-05-31T23:52:04.753+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: ошибка синтаксиса (примерное положение: ",") (SQLSTATE 42601)	{"field": "127", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T23:52:35.290+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T23:52:35.290+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T23:52:35.290+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T23:52:35.292+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T23:52:35.747+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T23:52:37.183+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-05-31T23:52:37.190+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "127", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T23:53:21.415+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T23:53:21.415+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T23:53:21.416+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T23:53:21.417+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T23:53:21.870+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T23:53:22.835+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-05-31T23:53:22.839+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "127", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T23:53:38.922+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-05-31T23:53:38.922+0300	[34mINFO[0m	errors/error.go:18	number of field descriptions must equal number of destinations, got 7 and 1	{"field": "127", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T23:54:44.699+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-05-31T23:54:44.699+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-05-31T23:54:44.699+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-05-31T23:54:44.700+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-05-31T23:54:45.139+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-05-31T23:54:47.679+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-05-31T23:54:47.683+0300	[35mDEBUG[0m	repository/sql.go:123	aliev
+2023-05-31T23:54:47.684+0300	[35mDEBUG[0m	repository/sql.go:124	123321asSs
+2023-05-31T23:54:47.685+0300	[34mINFO[0m	user/handler.go:133	Successfully Login in Account
+2023-05-31T23:54:56.315+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-05-31T23:54:56.317+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "127", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/handler.go"}
+2023-05-31T23:55:00.606+0300	[35mDEBUG[0m	repository/sql.go:116	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-05-31T23:55:00.612+0300	[35mDEBUG[0m	repository/sql.go:123	aliev
+2023-05-31T23:55:00.612+0300	[35mDEBUG[0m	repository/sql.go:124	123321asSs
+2023-05-31T23:55:00.612+0300	[34mINFO[0m	user/handler.go:133	Successfully Login in Account
+2023-06-01T00:05:47.270+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-06-01T00:05:47.271+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-06-01T00:05:47.271+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-01T00:05:47.272+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-06-01T00:05:47.740+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-06-01T00:05:54.339+0300	[35mDEBUG[0m	repository/sql.go:121	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:05:54.340+0300	[35mDEBUG[0m	repository/sql.go:128	aliev
+2023-06-01T00:05:54.343+0300	[35mDEBUG[0m	repository/sql.go:129	123321asSs
+2023-06-01T00:05:54.344+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account
+2023-06-01T00:06:02.675+0300	[35mDEBUG[0m	repository/sql.go:121	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:06:02.677+0300	[35mDEBUG[0m	repository/sql.go:128	aliev
+2023-06-01T00:06:02.678+0300	[35mDEBUG[0m	repository/sql.go:129	123321asSs
+2023-06-01T00:06:02.678+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account
+2023-06-01T00:06:03.772+0300	[35mDEBUG[0m	repository/sql.go:121	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:06:03.778+0300	[35mDEBUG[0m	repository/sql.go:128	aliev
+2023-06-01T00:06:03.778+0300	[35mDEBUG[0m	repository/sql.go:129	123321asSs
+2023-06-01T00:06:03.779+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account
+2023-06-01T00:11:59.089+0300	[34mINFO[0m	api/main.go:23	Initialize Logger
+2023-06-01T00:11:59.090+0300	[34mINFO[0m	api/main.go:25	Get Config
+2023-06-01T00:11:59.090+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-01T00:11:59.091+0300	[34mINFO[0m	api/main.go:28	Initialize Databases
+2023-06-01T00:11:59.699+0300	[35mDEBUG[0m	api/main.go:39	Listening this host: http://localhost:8000
+2023-06-01T00:12:02.469+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:12:02.474+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account
+2023-06-01T00:12:05.266+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:12:05.269+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account
+2023-06-01T00:12:06.112+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:12:06.114+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account
+2023-06-01T00:12:06.999+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:12:07.001+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account
+2023-06-01T00:12:23.804+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:12:23.808+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account
+2023-06-01T00:12:35.929+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-01T00:12:35.932+0300	[34mINFO[0m	user/handler.go:134	Successfully Login in Account

@@ -14,6 +14,8 @@ import (
 
 type Service interface {
 	CreateUser(ctx context.Context, c *gin.Context, u *user.UserDTO) (map[string]string, *errors.CustomError)
+	LoginUser(c *gin.Context, username, password string) (map[string]string, *errors.CustomError)
+
 	AboutAccessToken(token string) (map[string]any, *errors.CustomError)
 	RefreshAccessToken(c *gin.Context, refreshToken string) (map[string]string, *errors.CustomError)
 }
@@ -28,6 +30,46 @@ func NewUserService(r user.Repository, l *logging.Logger) Service {
 		repository: r,
 		logger:     l,
 	}
+}
+
+func (s *service) LoginUser(c *gin.Context, username, password string) (map[string]string, *errors.CustomError) {
+	// Находим юзера по login и password
+	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
+	dto, err := s.repository.FindLoginUser(ctx, username, password)
+	if err != nil {
+		_, file, line, _ := runtime.Caller(1)
+		return nil, &errors.CustomError{
+			CustomErr: "Invalid data",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	// Удаляем из redis токен refresh
+	ctx, _ = context.WithTimeout(context.Background(), 3*time.Second)
+	if err := s.repository.DeleteRefreshSession(ctx, utils.GetFingerprint(c.Request.Header)); err != nil {
+		_, file, line, _ := runtime.Caller(1)
+		return nil, &errors.CustomError{
+			CustomErr: "",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	// Генерируем access и refresh токен, попутно занеся в redis
+	tokenPair, _, error := s.CreateTokenPair(&user.UserDTO{
+		Id:       strconv.Itoa(dto.Id),
+		Username: dto.Username,
+		Password: dto.PasswordHash,
+		IsAdmin:  dto.IsAdmin,
+		IsBanned: dto.IsBanned,
+	}, c)
+	if error != nil {
+		return nil, error
+	}
+	return tokenPair, nil
 }
 
 func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDTO) (map[string]string, *errors.CustomError) {
@@ -45,7 +87,7 @@ func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDT
 		}
 	}
 
-	tokenPair, exp, error := s.CreateTokenPair(dto, fingerprint)
+	tokenPair, exp, error := s.CreateTokenPair(dto, c)
 	if error != nil {
 		return nil, error
 	}
@@ -98,18 +140,6 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 		}
 	}
 
-	//// Приводим id к int типу
-	//id, err := strconv.Atoi(jwt["sub"].(string))
-	//if err != nil {
-	//	_, file, line, _ := runtime.Caller(1)
-	//	return nil, &errors.CustomError{
-	//		CustomErr: "",
-	//		Field:     strconv.Itoa(line),
-	//		File:      file,
-	//		Err:       err,
-	//	}
-	//}
-
 	// Проверяем fingerprint, user-agent и т.п юзера
 	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
 	refreshSession, err := s.repository.GetRefreshSession(ctx, utils.GetFingerprint(c.Request.Header))
@@ -148,14 +178,14 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 		}
 	}
 
-	// todo Обновляем access и refresh токен
+	// Обновляем access и refresh токен
 	tokenPair, _, error := s.CreateTokenPair(&user.UserDTO{
 		Id:       strconv.Itoa(dto.Id),
 		Username: dto.Username,
 		Password: dto.PasswordHash,
 		IsAdmin:  dto.IsAdmin,
 		IsBanned: dto.IsBanned,
-	}, fingerprint)
+	}, c)
 	if error != nil {
 		return nil, error
 	}
