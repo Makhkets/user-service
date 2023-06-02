@@ -32,7 +32,7 @@ func run() error {
 	r := gin.Default()
 
 	userStorage := user2.NewStorage(&logger, pool, rpool)
-	userService := user_service.NewUserService(userStorage, &logger)
+	userService := user_service.NewUserService(userStorage, &logger, cfg)
 	userHandler := user.NewHandler(&logger, cfg, userService)
 	userHandler.Register(r)
 

@@ -19,6 +19,7 @@ const (
 	userMeURL           = "/user/me"
 	userRefreshTokenURL = "/user/refresh"
 	userLoginURL        = "/user/login"
+	userSessionUrl      = "user/:id/sessions"
 )
 
 type handler struct {
@@ -38,16 +39,18 @@ func NewHandler(l *logging.Logger, c *configs.Config, s user_service.Service) ha
 func (h *handler) Register(r *gin.Engine) {
 	api := r.Group("/api")
 	{
-		api.GET(usersURL, h.GetUsers)
+		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers)
+		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
+		api.Handle(http.MethodGet, userSessionUrl, h.AuthMiddleware(), h.GetSessions)
+
 		api.GET(userMeURL, h.AboutMyInfo)
-		api.GET(userURL, h.GetUser)
 
 		api.POST(usersURL, h.CreateUser)
 		api.POST(userLoginURL, h.Login)
 		api.POST(userRefreshTokenURL, h.RefreshToken)
 
-		api.PATCH(userURL, h.PartialUpdateUser)
-		api.DELETE(userURL, h.PartialUpdateUser)
+		api.Handle(http.MethodPatch, userURL, h.AuthMiddleware(), h.PartialUpdateUser)
+		api.Handle(http.MethodDelete, userURL, h.AuthMiddleware(), h.PartialUpdateUser)
 	}
 }
 
@@ -113,7 +116,6 @@ func (h *handler) CreateUser(c *gin.Context) {
 }
 
 func (h *handler) Login(c *gin.Context) {
-	c.Header("Content-Type", "application/json; charset=utf-8")
 	var data struct {
 		Username string `binding:"required,min=4"`
 		Password string `binding:"required,min=8"`
@@ -144,4 +146,8 @@ func (h *handler) GetUser(c *gin.Context) {
 
 func (h *handler) PartialUpdateUser(c *gin.Context) {
 	// TODO PartialUpdateUser
+}
+
+func (h *handler) GetSessions(c *gin.Context) {
+	// TODO GetSessions
 }

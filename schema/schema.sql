@@ -2,7 +2,7 @@
 CREATE TABLE users (
         id SERIAL PRIMARY KEY,
         username VARCHAR(20) UNIQUE NOT NULL,
-        password VARCHAR(50) NOT NULL,
+        password VARCHAR(200) NOT NULL,
         is_admin BOOLEAN NOT NULL DEFAULT false,
         is_banned BOOL NOT NULL DEFAULT false;
         created_at TIMESTAMP NOT NULL DEFAULT now(),

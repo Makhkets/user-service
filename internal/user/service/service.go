@@ -1,6 +1,7 @@
 package user_service
 
 import (
+	"Makhkets/internal/configs"
 	user "Makhkets/internal/user/repository"
 	"Makhkets/pkg/errors"
 	"Makhkets/pkg/logging"
@@ -23,19 +24,21 @@ type Service interface {
 type service struct {
 	repository user.Repository
 	logger     *logging.Logger
+	config     *configs.Config
 }
 
-func NewUserService(r user.Repository, l *logging.Logger) Service {
+func NewUserService(r user.Repository, l *logging.Logger, cfg *configs.Config) Service {
 	return &service{
 		repository: r,
 		logger:     l,
+		config:     cfg,
 	}
 }
 
 func (s *service) LoginUser(c *gin.Context, username, password string) (map[string]string, *errors.CustomError) {
 	// Находим юзера по login и password
 	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
-	dto, err := s.repository.FindLoginUser(ctx, username, password)
+	dto, err := s.repository.FindLoginUser(ctx, username, utils.PasswordToHash(password, s.config.Service.SecretKey))
 	if err != nil {
 		_, file, line, _ := runtime.Caller(1)
 		return nil, &errors.CustomError{
@@ -62,7 +65,7 @@ func (s *service) LoginUser(c *gin.Context, username, password string) (map[stri
 	tokenPair, _, error := s.CreateTokenPair(&user.UserDTO{
 		Id:       strconv.Itoa(dto.Id),
 		Username: dto.Username,
-		Password: dto.PasswordHash,
+		Password: utils.PasswordToHash(dto.PasswordHash, s.config.Service.SecretKey),
 		IsAdmin:  dto.IsAdmin,
 		IsBanned: dto.IsBanned,
 	}, c)
@@ -75,8 +78,8 @@ func (s *service) LoginUser(c *gin.Context, username, password string) (map[stri
 func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDTO) (map[string]string, *errors.CustomError) {
 	// Создаем пользователя
 	fingerprint := utils.GetFingerprint(c.Request.Header)
-	dto, err := s.repository.
-		CreateUser(ctx, u)
+	u.Password = utils.PasswordToHash(u.Password, s.config.Service.SecretKey)
+	dto, err := s.repository.CreateUser(ctx, u)
 	if err != nil {
 		_, file, line, _ := runtime.Caller(1)
 		return nil, &errors.CustomError{
@@ -87,6 +90,7 @@ func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDT
 		}
 	}
 
+	dto.Password = utils.PasswordToHash(dto.Password, s.config.Service.SecretKey)
 	tokenPair, exp, error := s.CreateTokenPair(dto, c)
 	if error != nil {
 		return nil, error
@@ -117,6 +121,7 @@ func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDT
 
 func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[string]string, *errors.CustomError) {
 	// Проверяем на валидность refresh token и вытаскиваем id юзера
+	cfg := configs.GetConfig()
 	fingerprint := utils.GetFingerprint(c.Request.Header)
 	jwt, err := s.ParseToken(refreshToken, false)
 	if err != nil {
@@ -182,7 +187,7 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 	tokenPair, _, error := s.CreateTokenPair(&user.UserDTO{
 		Id:       strconv.Itoa(dto.Id),
 		Username: dto.Username,
-		Password: dto.PasswordHash,
+		Password: utils.PasswordToHash(dto.PasswordHash, cfg.Service.SecretKey),
 		IsAdmin:  dto.IsAdmin,
 		IsBanned: dto.IsBanned,
 	}, c)
