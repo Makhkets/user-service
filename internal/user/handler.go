@@ -43,14 +43,14 @@ func (h *handler) Register(r *gin.Engine) {
 		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
 		api.Handle(http.MethodGet, userSessionUrl, h.AuthMiddleware(), h.GetSessions)
 
-		api.GET(userMeURL, h.AboutMyInfo)
+		api.Handle(http.MethodPatch, userURL, h.AdminMiddleware(), h.PartialUpdateUser)
+		api.Handle(http.MethodDelete, userURL, h.AdminMiddleware(), h.DeleteUser)
 
+		api.GET(userMeURL, h.AboutMyInfo)
 		api.POST(usersURL, h.CreateUser)
 		api.POST(userLoginURL, h.Login)
 		api.POST(userRefreshTokenURL, h.RefreshToken)
 
-		api.Handle(http.MethodPatch, userURL, h.AuthMiddleware(), h.PartialUpdateUser)
-		api.Handle(http.MethodDelete, userURL, h.AuthMiddleware(), h.PartialUpdateUser)
 	}
 }
 
@@ -134,6 +134,10 @@ func (h *handler) Login(c *gin.Context) {
 
 	h.logger.Info("Successfully Login in Account")
 	c.JSON(http.StatusCreated, response)
+}
+
+func (h *handler) DeleteUser(c *gin.Context) {
+	h.logger.Info("Выполнился код из DeleteUser")
 }
 
 func (h *handler) GetUsers(c *gin.Context) {

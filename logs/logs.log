@@ -947,3 +947,205 @@
 2023-06-02T23:36:40.097+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
 2023-06-02T23:36:40.097+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
 2023-06-02T23:36:40.551+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:08:34.414+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:08:34.433+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:08:34.437+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:08:34.438+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:08:35.601+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:09:36.747+0300	[34mINFO[0m	user/middleware.go:16	1111111111
+2023-06-04T00:09:36.747+0300	[34mINFO[0m	user/middleware.go:23	2222222
+2023-06-04T00:09:46.838+0300	[34mINFO[0m	user/middleware.go:23	2222222
+2023-06-04T00:09:53.749+0300	[34mINFO[0m	user/middleware.go:23	2222222
+2023-06-04T00:10:04.739+0300	[34mINFO[0m	user/middleware.go:23	2222222
+2023-06-04T00:10:05.481+0300	[34mINFO[0m	user/middleware.go:23	2222222
+2023-06-04T00:12:04.017+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:12:04.017+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:12:04.017+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:12:04.017+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:12:04.557+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:12:09.013+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:12:25.470+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:12:25.470+0300	[34mINFO[0m	user/middleware.go:16	1111111111
+2023-06-04T00:12:25.472+0300	[34mINFO[0m	user/middleware.go:29	2222222
+2023-06-04T00:12:53.047+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:12:55.480+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:12:56.397+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:12:57.239+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:12:57.939+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:12:58.639+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:15:14.660+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:15:14.660+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:15:14.661+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:15:14.661+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:15:15.180+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:15:28.320+0300	[34mINFO[0m	user/middleware.go:22	2222222
+2023-06-04T00:15:28.320+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:15:54.105+0300	[34mINFO[0m	user/middleware.go:22	2222222
+2023-06-04T00:15:54.106+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:15:55.583+0300	[34mINFO[0m	user/middleware.go:22	2222222
+2023-06-04T00:15:55.584+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:15:56.219+0300	[34mINFO[0m	user/middleware.go:22	2222222
+2023-06-04T00:15:56.221+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:17:06.833+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:17:06.835+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:17:06.835+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:17:06.835+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:17:07.306+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:17:09.381+0300	[34mINFO[0m	user/middleware.go:22	2222222
+2023-06-04T00:17:09.382+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:17:14.598+0300	[34mINFO[0m	user/middleware.go:22	2222222
+2023-06-04T00:17:14.598+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:17:19.838+0300	[34mINFO[0m	user/middleware.go:22	2222222
+2023-06-04T00:17:19.838+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:17:21.185+0300	[34mINFO[0m	user/middleware.go:22	2222222
+2023-06-04T00:17:21.200+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:18:17.693+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:18:17.694+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:18:17.694+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:18:17.697+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:18:18.155+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:18:22.512+0300	[34mINFO[0m	user/middleware.go:24	2222222
+2023-06-04T00:18:22.512+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:19:04.622+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:19:04.623+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:19:04.623+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:19:04.625+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:19:05.130+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:19:06.628+0300	[34mINFO[0m	user/middleware.go:25	2222222
+2023-06-04T00:19:06.628+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:19:15.685+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:19:15.686+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:19:15.687+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:19:15.687+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:19:16.179+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:19:32.002+0300	[34mINFO[0m	user/middleware.go:25	2222222
+2023-06-04T00:19:32.002+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:19:39.068+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:19:39.069+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:19:39.069+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:19:39.070+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:19:39.518+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:19:41.184+0300	[34mINFO[0m	user/middleware.go:12	NOT JSON
+2023-06-04T00:19:41.184+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:23:05.384+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:23:05.385+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:23:05.385+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:23:05.386+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:23:05.862+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:23:08.846+0300	[34mINFO[0m	user/middleware.go:14	11111111111
+2023-06-04T00:23:08.846+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:23:23.416+0300	[34mINFO[0m	user/middleware.go:14	11111111111
+2023-06-04T00:23:23.416+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:23:23.416+0300	[34mINFO[0m	user/middleware.go:23	2222222
+2023-06-04T00:24:14.256+0300	[34mINFO[0m	user/middleware.go:14	11111111111
+2023-06-04T00:24:14.257+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:34:51.137+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:34:51.137+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:34:51.137+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:34:51.138+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:34:51.615+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:34:57.411+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:35:25.402+0300	[34mINFO[0m	user/middleware.go:36	2222222
+2023-06-04T00:35:25.403+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:36:08.935+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:38:05.655+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:38:05.655+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:38:05.655+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:38:05.656+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:38:06.146+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:38:06.846+0300	[34mINFO[0m	user/middleware.go:30	2222222
+2023-06-04T00:38:06.847+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:38:25.500+0300	[34mINFO[0m	user/middleware.go:30	2222222
+2023-06-04T00:38:25.500+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:38:26.490+0300	[34mINFO[0m	user/middleware.go:30	2222222
+2023-06-04T00:38:26.490+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:38:37.984+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:38:37.986+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:38:37.986+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:38:37.987+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:38:38.522+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:38:40.239+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:38:46.074+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:38:46.074+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:38:46.076+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:38:46.077+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:38:46.687+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:38:52.148+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:39:29.213+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:39:29.216+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:39:29.216+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:39:29.217+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:39:29.783+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:39:32.515+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:39:33.782+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:39:55.830+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:39:55.830+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:39:55.830+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:39:55.832+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:39:56.413+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T00:40:02.321+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:40:03.839+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:40:09.637+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:40:12.429+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T00:40:17.096+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T00:40:17.097+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T00:40:17.097+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T00:40:17.097+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T00:40:17.576+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T10:53:55.584+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T10:53:55.587+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T10:53:55.587+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T10:53:55.588+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T10:53:56.147+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T10:54:53.550+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T10:55:01.469+0300	[34mINFO[0m	errors/error.go:18	token is malformed: token contains an invalid number of segments	{"field": "20", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/middleware.go"}
+2023-06-04T10:55:35.323+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-04T10:55:35.339+0300	[34mINFO[0m	user/handler.go:135	Successfully Login in Account
+2023-06-04T10:55:46.615+0300	[34mINFO[0m	user/middleware.go:48	2222222
+2023-06-04T10:55:46.615+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T10:57:15.635+0300	[34mINFO[0m	errors/error.go:18	token has invalid claims: token is expired	{"field": "20", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/middleware.go"}
+2023-06-04T10:57:44.603+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-04T10:57:44.623+0300	[34mINFO[0m	user/handler.go:135	Successfully Login in Account
+2023-06-04T10:57:54.900+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T11:07:06.636+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T11:07:07.496+0300	[34mINFO[0m	user/handler.go:140	333333333333
+2023-06-04T11:07:18.444+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T11:07:18.445+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T11:07:18.445+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T11:07:18.446+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T11:07:19.004+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:19:30.881+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T13:19:30.882+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T13:19:30.882+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T13:19:30.883+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T13:19:31.442+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:19:38.144+0300	[34mINFO[0m	errors/error.go:18	token has invalid claims: token is expired	{"field": "21", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/middleware.go"}
+2023-06-04T13:19:59.568+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-04T13:19:59.585+0300	[34mINFO[0m	user/handler.go:135	Successfully Login in Account
+2023-06-04T13:20:24.242+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-04T13:20:24.246+0300	[34mINFO[0m	user/handler.go:135	Successfully Login in Account
+2023-06-04T13:20:37.613+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T13:20:37.614+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T13:20:37.614+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T13:20:37.615+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T13:20:38.096+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:20:40.366+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-04T13:20:40.375+0300	[34mINFO[0m	user/handler.go:135	Successfully Login in Account
+2023-06-04T13:20:57.437+0300	[34mINFO[0m	user/handler.go:140	Выполнился код из DeleteUser
+2023-06-04T13:22:06.265+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T13:22:06.265+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T13:22:06.265+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T13:22:06.267+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T13:22:06.717+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:22:09.781+0300	[34mINFO[0m	user/handler.go:140	Выполнился код из DeleteUser
+2023-06-04T13:22:33.176+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T13:22:33.178+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T13:22:33.178+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T13:22:33.181+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T13:22:33.688+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:22:35.186+0300	[34mINFO[0m	user/handler.go:140	Выполнился код из DeleteUser
+2023-06-04T13:23:37.346+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T13:23:37.347+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T13:23:37.347+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T13:23:37.348+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T13:23:37.857+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
