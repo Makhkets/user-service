@@ -41,10 +41,13 @@ func (h *handler) Register(r *gin.Engine) {
 	{
 		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers)
 		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
-		api.Handle(http.MethodGet, userSessionUrl, h.AuthMiddleware(), h.GetSessions)
 
-		api.Handle(http.MethodPatch, userURL, h.AdminMiddleware(), h.PartialUpdateUser)
-		api.Handle(http.MethodDelete, userURL, h.AdminMiddleware(), h.DeleteUser)
+		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions)
+		api.Handle(http.MethodPatch, userURL, h.SelfUserMiddleware(), h.PartialUpdateUser)
+		api.Handle(http.MethodDelete, userURL, h.SelfUserMiddleware(), h.DeleteUser)
+
+		// Тест админского Middleware
+		api.Handle(http.MethodGet, "/user/test", h.AdminMiddleware())
 
 		api.GET(userMeURL, h.AboutMyInfo)
 		api.POST(usersURL, h.CreateUser)

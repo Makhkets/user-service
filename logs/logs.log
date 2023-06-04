@@ -1149,3 +1149,48 @@
 2023-06-04T13:23:37.347+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
 2023-06-04T13:23:37.348+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
 2023-06-04T13:23:37.857+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:23:48.386+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T13:23:48.389+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T13:23:48.389+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T13:23:48.390+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T13:23:49.015+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:54:36.619+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T13:54:36.619+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T13:54:36.619+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T13:54:36.620+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T13:54:37.072+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:54:39.090+0300	[34mINFO[0m	user/handler.go:143	Выполнился код из DeleteUser
+2023-06-04T13:55:15.091+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T13:55:15.092+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T13:55:15.092+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T13:55:15.093+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T13:55:15.571+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T13:55:32.774+0300	[34mINFO[0m	user/middleware.go:69	1
+2023-06-04T13:55:32.774+0300	[35mDEBUG[0m	user/middleware.go:70	81
+2023-06-04T13:55:32.775+0300	[34mINFO[0m	user/handler.go:143	Выполнился код из DeleteUser
+2023-06-04T14:00:47.141+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T14:00:47.143+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T14:00:47.143+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T14:00:47.145+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T14:00:47.638+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T14:01:39.538+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-04T14:01:39.543+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-04T14:01:39.544+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-04T14:01:39.549+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-04T14:01:40.216+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-04T14:01:40.654+0300	[34mINFO[0m	user/middleware.go:68	1
+2023-06-04T14:01:40.654+0300	[35mDEBUG[0m	user/middleware.go:69	81
+2023-06-04T14:01:45.869+0300	[34mINFO[0m	user/middleware.go:68	81
+2023-06-04T14:01:45.869+0300	[35mDEBUG[0m	user/middleware.go:69	81
+2023-06-04T14:01:45.869+0300	[34mINFO[0m	user/handler.go:143	Выполнился код из DeleteUser
+2023-06-04T14:01:50.727+0300	[34mINFO[0m	user/middleware.go:68	2
+2023-06-04T14:01:50.728+0300	[35mDEBUG[0m	user/middleware.go:69	81
+2023-06-04T14:01:54.412+0300	[34mINFO[0m	user/middleware.go:68	2
+2023-06-04T14:01:54.412+0300	[35mDEBUG[0m	user/middleware.go:69	81
+2023-06-04T14:02:02.959+0300	[34mINFO[0m	user/middleware.go:68	2
+2023-06-04T14:02:02.959+0300	[35mDEBUG[0m	user/middleware.go:69	81
+2023-06-04T14:02:06.803+0300	[35mDEBUG[0m	repository/sql.go:120	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-04T14:02:06.809+0300	[34mINFO[0m	user/handler.go:138	Successfully Login in Account
+2023-06-04T14:02:15.268+0300	[34mINFO[0m	user/middleware.go:68	2
+2023-06-04T14:02:15.268+0300	[35mDEBUG[0m	user/middleware.go:69	81
+2023-06-04T14:02:15.268+0300	[34mINFO[0m	user/handler.go:143	Выполнился код из DeleteUser

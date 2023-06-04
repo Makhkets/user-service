@@ -109,11 +109,6 @@ func (s *service) CreateTokenPair(dto *user.UserDTO, c *gin.Context) (map[string
 	}, exp, nil
 }
 
-func (s *service) UpdateToken(id int) (string, string, error) {
-
-	return "", "", nil
-}
-
 func (s *service) ParseToken(tokenString string, isAccessToken bool) (jwt.MapClaims, error) {
 	cfg := configs.GetConfig()
 

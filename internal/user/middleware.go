@@ -53,8 +53,35 @@ func (h *handler) AdminMiddleware() gin.HandlerFunc {
 			c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
 				"error": "This resource is not available to users",
 			})
+			return
 		}
+
+		c.Next()
 	}
 }
 
-// Написать middleware, для выполнения юзером действий над своим же аккаунтом
+func (h *handler) SelfUserMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		// Проверяем на ввод правильного access токена
+		c.Set("outsideCall", true)
+		h.AuthMiddleware()(c)
+
+		data, _ := c.Get("tokenData")
+		tokenUserId := data.(map[string]any)["id"].(string)
+
+		if tokenUserId == c.Param("id") {
+			c.Next()
+			return
+		}
+
+		// Если человек имеет роль Админа, то разрешаем доступ
+		if data.(map[string]any)["isAdmin"].(bool) {
+			c.Next()
+			return
+		}
+
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
+			"error": "This resource is not available to users",
+		})
+	}
+}
