@@ -14,12 +14,19 @@ import (
 )
 
 const (
-	userURL             = "/user/:id"
-	usersURL            = "/users"
+	usersURL = "/users"
+
 	userMeURL           = "/user/me"
 	userRefreshTokenURL = "/user/refresh"
 	userLoginURL        = "/user/login"
-	userSessionUrl      = "user/:id/sessions"
+
+	userURL        = "/user/:id"
+	userSessionUrl = "/user/:id/sessions"
+
+	userUpdateUsernameURL = "/user/:id/change_username"
+	userUpdatePasswordURL = "/user/:id/change_password"
+	userChangeRole        = "/user/:id/change_role"
+	userChangePermission  = "/user/:id/change_permission"
 )
 
 type handler struct {
@@ -42,9 +49,14 @@ func (h *handler) Register(r *gin.Engine) {
 		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers)
 		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
 
-		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions)
-		api.Handle(http.MethodPatch, userURL, h.SelfUserMiddleware(), h.PartialUpdateUser)
 		api.Handle(http.MethodDelete, userURL, h.SelfUserMiddleware(), h.DeleteUser)
+		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions)
+
+		// TODO
+		api.Handle(http.MethodPost, userUpdateUsernameURL, h.SelfUserMiddleware(), h.UsernameUpdate)    // TODO
+		api.Handle(http.MethodPost, userUpdatePasswordURL, h.SelfUserMiddleware(), h.PartialUpdateUser) // TODO
+		api.Handle(http.MethodPost, userChangeRole, h.SelfUserMiddleware(), h.PartialUpdateUser)        // TODO
+		api.Handle(http.MethodPost, userChangePermission, h.SelfUserMiddleware(), h.PartialUpdateUser)  // TODO
 
 		// Тест админского Middleware
 		api.Handle(http.MethodGet, "/user/test", h.AdminMiddleware())
@@ -140,7 +152,36 @@ func (h *handler) Login(c *gin.Context) {
 }
 
 func (h *handler) DeleteUser(c *gin.Context) {
-	h.logger.Info("Выполнился код из DeleteUser")
+	id := c.Param("id")
+	response, err := h.service.DeleteAccount(id)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	h.logger.Info("Deleted User with id: " + id)
+	c.JSON(http.StatusOK, response)
+}
+
+func (h *handler) PartialUpdateUser(c *gin.Context) {
+	// Извлекаем идентификатор пользователя из пути запроса
+	// Привязываем JSON-запрос к структуре пользователя
+	id := c.Param("id")
+	var u user.User
+	if err := c.BindJSON(&u); err != nil {
+		c.AbortWithStatusJSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+		return
+	}
+
+	// Обновляем данные пользователя
+	response, err := h.service.UpdateAccount(id, &u)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	// Возвращаем успешный ответ
+	c.JSON(http.StatusAccepted, response)
 }
 
 func (h *handler) GetUsers(c *gin.Context) {
@@ -151,10 +192,27 @@ func (h *handler) GetUser(c *gin.Context) {
 	// TODO GetUser
 }
 
-func (h *handler) PartialUpdateUser(c *gin.Context) {
-	// TODO PartialUpdateUser
-}
-
 func (h *handler) GetSessions(c *gin.Context) {
 	// TODO GetSessions
+}
+
+func (h *handler) UsernameUpdate(c *gin.Context) {
+	accessToken := c.GetHeader("Authorization")
+	var data struct {
+		Username string `json:"username" binding:"required,min=4"`
+	}
+
+	if err := c.BindJSON(&data); err != nil {
+		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+		return
+	}
+
+	response, err := h.service.UsernameUpdate(data.Username, accessToken)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	h.logger.Info("Username " + response["old"] + " updated his nickname to " + response["new"])
+	c.JSON(http.StatusAccepted, response)
 }

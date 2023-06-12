@@ -1,6 +1,9 @@
 package user
 
-import "time"
+import (
+	"strings"
+	"time"
+)
 
 type UserDTO struct {
 	Id       string `json:"id"`
@@ -11,13 +14,13 @@ type UserDTO struct {
 }
 
 type User struct {
-	Id           int
-	Username     string
-	PasswordHash string
-	CreatedAt    time.Time
-	UpdatedAt    time.Time
-	IsAdmin      bool
-	IsBanned     bool
+	Id           int       `json:"-"`
+	Username     string    `json:"username" binding:"omitempty,min=4"`
+	PasswordHash string    `json:"password" binding:"omitempty,min=8"`
+	CreatedAt    time.Time `json:"-"`
+	UpdatedAt    time.Time `json:"-"`
+	IsAdmin      bool      `json:"isAdmin,omitempty"`
+	IsBanned     bool      `json:"isBanned,omitempty"`
 }
 
 type RefreshSession struct {
@@ -35,3 +38,17 @@ type RefreshSession struct {
 //password VARCHAR(50) NOT NULL,
 //created_at TIMESTAMP NOT NULL DEFAULT now(),
 //updated_at TIMESTAMP NOT NULL DEFAULT now()
+
+var blackListFields []string = []string{
+	"Id", "Password", "PasswordHash", "IsAdmin",
+	"IsBanned", "CreatedAt", "UpdatedAt",
+}
+
+func BlackListCheck(word string) bool {
+	for _, field := range blackListFields {
+		if strings.ToLower(word) == strings.ToLower(field) {
+			return true
+		}
+	}
+	return false
+}

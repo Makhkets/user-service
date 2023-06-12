@@ -7,9 +7,11 @@ import (
 	"Makhkets/pkg/logging"
 	"Makhkets/pkg/utils"
 	"context"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"runtime"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -17,8 +19,13 @@ type Service interface {
 	CreateUser(ctx context.Context, c *gin.Context, u *user.UserDTO) (map[string]string, *errors.CustomError)
 	LoginUser(c *gin.Context, username, password string) (map[string]string, *errors.CustomError)
 
+	DeleteAccount(id string) (map[string]any, *errors.CustomError)
+	UpdateAccount(id string, u *user.User) (map[string]any, *errors.CustomError)
+
 	AboutAccessToken(token string) (map[string]any, *errors.CustomError)
 	RefreshAccessToken(c *gin.Context, refreshToken string) (map[string]string, *errors.CustomError)
+
+	UsernameUpdate(username, accessToken string) (map[string]string, *errors.CustomError)
 }
 
 type service struct {
@@ -40,7 +47,7 @@ func (s *service) LoginUser(c *gin.Context, username, password string) (map[stri
 	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
 	dto, err := s.repository.FindLoginUser(ctx, username, utils.PasswordToHash(password, s.config.Service.SecretKey))
 	if err != nil {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
 			CustomErr: "Invalid data",
 			Field:     strconv.Itoa(line),
@@ -52,7 +59,7 @@ func (s *service) LoginUser(c *gin.Context, username, password string) (map[stri
 	// Удаляем из redis токен refresh
 	ctx, _ = context.WithTimeout(context.Background(), 3*time.Second)
 	if err := s.repository.DeleteRefreshSession(ctx, utils.GetFingerprint(c.Request.Header)); err != nil {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
 			CustomErr: "",
 			Field:     strconv.Itoa(line),
@@ -81,7 +88,7 @@ func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDT
 	u.Password = utils.PasswordToHash(u.Password, s.config.Service.SecretKey)
 	dto, err := s.repository.CreateUser(ctx, u)
 	if err != nil {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
 			CustomErr: "SQL Query Error",
 			Field:     strconv.Itoa(line),
@@ -107,7 +114,7 @@ func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDT
 		ExpiresIn:    time.Duration(exp),
 		CreatedAt:    time.Now(),
 	}); err != nil {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
 			CustomErr: "",
 			Field:     strconv.Itoa(line),
@@ -125,7 +132,7 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 	fingerprint := utils.GetFingerprint(c.Request.Header)
 	jwt, err := s.ParseToken(refreshToken, false)
 	if err != nil {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		switch err.(type) {
 		case error:
 			return nil, &errors.CustomError{
@@ -149,7 +156,7 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
 	refreshSession, err := s.repository.GetRefreshSession(ctx, utils.GetFingerprint(c.Request.Header))
 	if err != nil {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
 			CustomErr:         "",
 			Field:             strconv.Itoa(line),
@@ -161,7 +168,7 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 
 	// Проверяем FingerPrint, если они не равны, то возвращаем ошибку
 	if refreshSession.Fingerprint != fingerprint || refreshSession.RefreshToken != refreshToken {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
 			CustomErr: "Fingerprint or refresh token invalid",
 			Field:     strconv.Itoa(line),
@@ -174,7 +181,7 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 	ctx, _ = context.WithTimeout(context.Background(), 3*time.Second)
 	dto, err := s.repository.FindOne(ctx, jwt["sub"].(string))
 	if err != nil {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
 			CustomErr: "Token is invalid",
 			Field:     strconv.Itoa(line),
@@ -202,7 +209,7 @@ func (s *service) AboutAccessToken(token string) (map[string]any, *errors.Custom
 	// Проверяем токен на валидность
 	jwt, err := s.ParseToken(token, true)
 	if err != nil {
-		_, file, line, _ := runtime.Caller(1)
+		_, file, line, _ := runtime.Caller(0)
 		switch err.(type) {
 		case error:
 			return nil, &errors.CustomError{
@@ -229,4 +236,92 @@ func (s *service) AboutAccessToken(token string) (map[string]any, *errors.Custom
 		"isBanned": jwt["isBanned"],
 	}, nil
 
+}
+
+func (s *service) DeleteAccount(id string) (map[string]any, *errors.CustomError) {
+	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
+	if err := s.repository.Delete(ctx, id); err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		custErr := ""
+		if !strings.Contains(err.Error(), "user with ID") {
+			custErr = "SQL Query Error"
+		}
+		return nil, &errors.CustomError{
+			CustomErr: custErr,
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	return map[string]any{
+		"message": fmt.Sprintf("user with id %s deleted", id),
+	}, nil
+}
+
+func (s *service) UpdateAccount(id string, u *user.User) (map[string]any, *errors.CustomError) {
+	// Определяем какие поля были запрошены для изменения
+	// Если получили поле, которое может изменить только админ, возвращаем ошибку, еслиэ то не админ
+	fields := utils.CheckEmptyFields(*u)
+	if len(fields) <= 0 {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "Empty data",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       nil,
+		}
+	}
+
+	// Проверяем на запрещенные поля в отправленной форме
+	for _, field := range fields {
+		if user.BlackListCheck(field) {
+			_, file, line, _ := runtime.Caller(0)
+			return nil, &errors.CustomError{
+				CustomErr: "",
+				Field:     strconv.Itoa(line),
+				File:      file,
+				Err:       nil,
+			}
+		}
+	}
+
+	return nil, nil
+}
+
+func (s *service) UsernameUpdate(username, accessToken string) (map[string]string, *errors.CustomError) {
+	// Парсим токен
+	data, err := s.ParseToken(accessToken, true)
+	if err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	if strings.ToLower(data["username"].(string)) == strings.ToLower(username) {
+		return map[string]string{
+			"new": username,
+			"old": data["username"].(string),
+		}, nil
+	}
+
+	ctx, _ := context.WithTimeout(context.Background(), 5*time.Second)
+	if err = s.repository.UpdateUsername(ctx, data["sub"].(string), username); err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	return map[string]string{
+		"new": username,
+		"old": data["username"].(string),
+	}, nil
 }

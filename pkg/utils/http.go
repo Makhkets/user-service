@@ -29,3 +29,18 @@ func shouldIncludeHeader(key string) bool {
 		return false
 	}
 }
+
+//func CheckRequestJson(c *gin.Context) error {
+//	var data map[string]interface{}
+//	err := c.BindJSON(&data)
+//	if err != nil {
+//		return err
+//	}
+//
+//	// Проверяем на пустоту
+//	if len(data) == 0 {
+//		return fmt.Errorf("JSON is empty")
+//	}
+//
+//	return nil
+//}

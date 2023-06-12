@@ -66,7 +66,12 @@ func (h *handler) SelfUserMiddleware() gin.HandlerFunc {
 		c.Set("outsideCall", true)
 		h.AuthMiddleware()(c)
 
-		data, _ := c.Get("tokenData")
+		data, exists := c.Get("tokenData")
+		if !exists {
+			c.Abort()
+			return
+		}
+
 		tokenUserId := data.(map[string]any)["id"].(string)
 
 		if tokenUserId == c.Param("id") {

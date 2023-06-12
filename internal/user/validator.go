@@ -12,7 +12,7 @@ type ValidationError struct {
 }
 
 func ResponseErrors(errMsg string) map[string]interface{} {
-	//"invalid character 'u' looking for beginning of object key string"
+	// "invalid character 'u' looking for beginning of object key string"
 	responseError := make(gin.H)
 
 	if strings.Contains(errMsg, "Key: '") && strings.Contains(errMsg, "Error:") {

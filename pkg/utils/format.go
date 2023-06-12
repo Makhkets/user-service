@@ -4,6 +4,7 @@ import (
 	"crypto/hmac"
 	"crypto/sha256"
 	"encoding/hex"
+	"reflect"
 	"strings"
 )
 
@@ -19,9 +20,32 @@ func PasswordToHash(password, secretKey string) string {
 	return hashedPassword
 }
 
-func HasNil(slice []interface{}) bool {
+func HasNil(slice ...interface{}) bool {
 	for _, v := range slice {
 		if v == nil {
+			return true
+		}
+	}
+	return false
+}
+
+func CheckEmptyFields(s interface{}) []string {
+	detectedFields := []string{}
+	v := reflect.ValueOf(s)
+	t := v.Type()
+	for i := 0; i < v.NumField(); i++ {
+		field := v.Field(i)
+		fieldType := t.Field(i)
+		if field.Interface() != reflect.Zero(fieldType.Type).Interface() {
+			detectedFields = append(detectedFields, fieldType.Name)
+		}
+	}
+	return detectedFields
+}
+
+func ContainsStringInArray(substr string, arr []string) bool {
+	for _, field := range arr {
+		if strings.ToLower(substr) == strings.ToLower(field) {
 			return true
 		}
 	}

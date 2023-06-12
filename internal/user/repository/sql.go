@@ -8,6 +8,7 @@ import (
 	"Makhkets/pkg/utils"
 	"context"
 	"fmt"
+	"github.com/jackc/pgx/v4"
 	"strconv"
 	"time"
 )
@@ -15,7 +16,10 @@ import (
 type Repository interface {
 	CreateUser(ctx context.Context, user *UserDTO) (*UserDTO, error)
 	FindOne(ctx context.Context, id string) (*User, error)
+	Delete(ctx context.Context, id string) error
 	FindLoginUser(ctx context.Context, username, password string) (*User, error)
+
+	UpdateUsername(ctx context.Context, id, username string) error
 
 	//ChangeRefreshInCache(ctx context.Context, fingerprint, newRefreshToken string) error
 	GetRefreshSession(ctx context.Context, fingerprint string) (*RefreshSession, error)
@@ -78,18 +82,6 @@ func (r *repository) GetRefreshSession(ctx context.Context, fingerprint string) 
 	}, nil
 }
 
-//func (r *repository) ChangeRefreshInCache(ctx context.Context, fingerprint, newRefreshToken string) error {
-//	_, err := r.rdb.HMSet(ctx, fingerprint, map[string]interface{}{
-//		"refreshToken": newRefreshToken,
-//		"expiresIn":    time.Now().Add(time.Minute * time.Duration(r.cfg.Jwt.Refresh)).Unix(),
-//	}).Result()
-//	if err != nil {
-//		panic(err)
-//	}
-//
-//	return nil
-//}
-
 func (r *repository) DeleteRefreshSession(ctx context.Context, key string) error {
 	return r.rdb.Del(ctx, key).Err()
 }
@@ -131,10 +123,41 @@ func (r *repository) FindAll() {
 	panic("implement me")
 }
 
-func (r *repository) Update() {
-	panic("implement me")
+func (r *repository) UpdateUsername(ctx context.Context, id, username string) error {
+	// Update the username for the specified user, checking for uniqueness in a single query
+	q := `
+		UPDATE users
+		SET username = $1
+		WHERE id = $2 AND NOT EXISTS (
+			SELECT 1 FROM users WHERE username = $1 AND id != $2
+		)
+	`
+	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
+	result, err := r.client.Exec(ctx, q, username, id)
+	if err != nil {
+		return err
+	}
+
+	// Check how many rows were affected by the update
+	rowsAffected := result.RowsAffected()
+
+	// If no rows were affected by the update, it means either the user doesn't exist or the new username is already taken
+	if rowsAffected == 0 {
+		return fmt.Errorf("user not found or username already taken")
+	}
+
+	return nil
 }
 
-func (r *repository) Delete() {
-	panic("implement me")
+func (r *repository) Delete(ctx context.Context, id string) error {
+	query := "DELETE FROM users WHERE id = $1 RETURNING id"
+	var deletedID int
+	err := r.client.QueryRow(ctx, query, id).Scan(&deletedID)
+	if err != nil {
+		if err == pgx.ErrNoRows {
+			return fmt.Errorf("user with ID %s doesn't exist", id)
+		}
+		return err
+	}
+	return nil
 }

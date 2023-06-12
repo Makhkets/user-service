@@ -1,6 +1,7 @@
 package logging
 
 import (
+	"fmt"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"os"
@@ -33,4 +34,8 @@ func GetLogger() Logger {
 	})
 
 	return logger
+}
+
+func (l *Logger) PrintInterface(v ...interface{}) {
+	l.Info(fmt.Sprintf("%v", v))
 }
