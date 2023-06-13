@@ -26,6 +26,7 @@ type Service interface {
 	RefreshAccessToken(c *gin.Context, refreshToken string) (map[string]string, *errors.CustomError)
 
 	UsernameUpdate(username, accessToken string) (map[string]string, *errors.CustomError)
+	PasswordUpdate(old_password, new_password, accessToken string) (map[string]any, *errors.CustomError)
 }
 
 type service struct {
@@ -323,5 +324,39 @@ func (s *service) UsernameUpdate(username, accessToken string) (map[string]strin
 	return map[string]string{
 		"new": username,
 		"old": data["username"].(string),
+	}, nil
+}
+
+func (s *service) PasswordUpdate(oldPassword, newPassword, accessToken string) (map[string]any, *errors.CustomError) {
+	// Парсим токен
+	data, err := s.ParseToken(accessToken, true)
+	if err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	// Переводим пароль, в хэш пароль
+	oldPasswordHash := utils.PasswordToHash(oldPassword, s.config.Service.SecretKey)
+	newPasswordHash := utils.PasswordToHash(newPassword, s.config.Service.SecretKey)
+
+	ctx, _ := context.WithTimeout(context.Background(), 5*time.Second)
+	if err = s.repository.UpdatePassword(ctx, data["sub"].(string), oldPasswordHash, newPasswordHash); err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	return map[string]any{
+		"new_password": newPassword,
+		"old_password": oldPassword,
 	}, nil
 }

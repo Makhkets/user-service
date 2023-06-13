@@ -20,6 +20,7 @@ type Repository interface {
 	FindLoginUser(ctx context.Context, username, password string) (*User, error)
 
 	UpdateUsername(ctx context.Context, id, username string) error
+	UpdatePassword(ctx context.Context, id, oldPassword, newPassword string) error
 
 	//ChangeRefreshInCache(ctx context.Context, fingerprint, newRefreshToken string) error
 	GetRefreshSession(ctx context.Context, fingerprint string) (*RefreshSession, error)
@@ -123,6 +124,19 @@ func (r *repository) FindAll() {
 	panic("implement me")
 }
 
+func (r *repository) Delete(ctx context.Context, id string) error {
+	query := "DELETE FROM users WHERE id = $1 RETURNING id"
+	var deletedID int
+	err := r.client.QueryRow(ctx, query, id).Scan(&deletedID)
+	if err != nil {
+		if err == pgx.ErrNoRows {
+			return fmt.Errorf("user with ID %s doesn't exist", id)
+		}
+		return err
+	}
+	return nil
+}
+
 func (r *repository) UpdateUsername(ctx context.Context, id, username string) error {
 	// Update the username for the specified user, checking for uniqueness in a single query
 	q := `
@@ -149,15 +163,18 @@ func (r *repository) UpdateUsername(ctx context.Context, id, username string) er
 	return nil
 }
 
-func (r *repository) Delete(ctx context.Context, id string) error {
-	query := "DELETE FROM users WHERE id = $1 RETURNING id"
-	var deletedID int
-	err := r.client.QueryRow(ctx, query, id).Scan(&deletedID)
+func (r *repository) UpdatePassword(ctx context.Context, id, oldPassword, newPassword string) error {
+	var dbPassword string
+	q := "UPDATE users SET password = $1 WHERE id = $2 AND password = $3 RETURNING password"
+	err := r.client.QueryRow(ctx, q, newPassword, id, oldPassword).Scan(&dbPassword)
 	if err != nil {
 		if err == pgx.ErrNoRows {
-			return fmt.Errorf("user with ID %s doesn't exist", id)
+			return fmt.Errorf("user with id %s not found or wrong passsword", id)
 		}
-		return err
+		return fmt.Errorf("error updating password in database: %w", err)
+	}
+	if dbPassword != newPassword {
+		return fmt.Errorf("old password does not match current password")
 	}
 	return nil
 }

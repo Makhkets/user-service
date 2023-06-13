@@ -52,11 +52,12 @@ func (h *handler) Register(r *gin.Engine) {
 		api.Handle(http.MethodDelete, userURL, h.SelfUserMiddleware(), h.DeleteUser)
 		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions)
 
+		api.Handle(http.MethodPost, userUpdateUsernameURL, h.SelfUserMiddleware(), h.UsernameUpdate)
+
 		// TODO
-		api.Handle(http.MethodPost, userUpdateUsernameURL, h.SelfUserMiddleware(), h.UsernameUpdate)    // TODO
-		api.Handle(http.MethodPost, userUpdatePasswordURL, h.SelfUserMiddleware(), h.PartialUpdateUser) // TODO
-		api.Handle(http.MethodPost, userChangeRole, h.SelfUserMiddleware(), h.PartialUpdateUser)        // TODO
-		api.Handle(http.MethodPost, userChangePermission, h.SelfUserMiddleware(), h.PartialUpdateUser)  // TODO
+		api.Handle(http.MethodPost, userUpdatePasswordURL, h.SelfUserMiddleware(), h.PasswordUpdate)
+		api.Handle(http.MethodPost, userChangeRole, h.SelfUserMiddleware(), h.PartialUpdateUser)
+		api.Handle(http.MethodPost, userChangePermission, h.SelfUserMiddleware(), h.PartialUpdateUser)
 
 		// Тест админского Middleware
 		api.Handle(http.MethodGet, "/user/test", h.AdminMiddleware())
@@ -214,5 +215,27 @@ func (h *handler) UsernameUpdate(c *gin.Context) {
 	}
 
 	h.logger.Info("Username " + response["old"] + " updated his nickname to " + response["new"])
+	c.JSON(http.StatusAccepted, response)
+}
+
+func (h *handler) PasswordUpdate(c *gin.Context) {
+	accessToken := c.GetHeader("Authorization")
+	var data struct {
+		OldPassword string `json:"old_password" binding:"required,min=8"`
+		NewPassword string `json:"new_password" binding:"required,min=8"`
+	}
+
+	if err := c.BindJSON(&data); err != nil {
+		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+		return
+	}
+
+	response, err := h.service.PasswordUpdate(data.OldPassword, data.NewPassword, accessToken)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	h.logger.Info(data.OldPassword + " password has been changed to " + data.NewPassword)
 	c.JSON(http.StatusAccepted, response)
 }
