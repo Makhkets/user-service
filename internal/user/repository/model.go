@@ -9,7 +9,7 @@ type UserDTO struct {
 	Id       string `json:"id"`
 	Username string `json:"username" binding:"required,min=4"`
 	Password string `json:"password" binding:"required,min=8"`
-	IsAdmin  bool   `json:"isAdmin,omitempty"`
+	Status   string `json:"status,omitempty"`
 	IsBanned bool   `json:"is_banned"`
 }
 
@@ -19,7 +19,7 @@ type User struct {
 	PasswordHash string    `json:"password" binding:"omitempty,min=8"`
 	CreatedAt    time.Time `json:"-"`
 	UpdatedAt    time.Time `json:"-"`
-	IsAdmin      bool      `json:"isAdmin,omitempty"`
+	Status       string    `json:"status,omitempty"`
 	IsBanned     bool      `json:"isBanned,omitempty"`
 }
 
@@ -39,8 +39,12 @@ type RefreshSession struct {
 //created_at TIMESTAMP NOT NULL DEFAULT now(),
 //updated_at TIMESTAMP NOT NULL DEFAULT now()
 
+var Roles []string = []string{
+	"admin", "moderator", "user",
+}
+
 var blackListFields []string = []string{
-	"Id", "Password", "PasswordHash", "IsAdmin",
+	"Id", "Password", "PasswordHash", "status",
 	"IsBanned", "CreatedAt", "UpdatedAt",
 }
 

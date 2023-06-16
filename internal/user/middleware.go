@@ -49,7 +49,7 @@ func (h *handler) AdminMiddleware() gin.HandlerFunc {
 
 		// Проверяем человека на admin
 		data, _ := c.Get("tokenData")
-		if !data.(map[string]any)["isAdmin"].(bool) {
+		if data.(map[string]any)["status"].(string) != "admin" {
 			c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
 				"error": "This resource is not available to users",
 			})
@@ -80,7 +80,7 @@ func (h *handler) SelfUserMiddleware() gin.HandlerFunc {
 		}
 
 		// Если человек имеет роль Админа, то разрешаем доступ
-		if data.(map[string]any)["isAdmin"].(bool) {
+		if data.(map[string]any)["status"].(string) == "admin" {
 			c.Next()
 			return
 		}

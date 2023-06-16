@@ -22,6 +22,8 @@ type Repository interface {
 	UpdateUsername(ctx context.Context, id, username string) error
 	UpdatePassword(ctx context.Context, id, oldPassword, newPassword string) error
 
+	ChangeStatus(ctx context.Context, id, status string) error
+
 	//ChangeRefreshInCache(ctx context.Context, fingerprint, newRefreshToken string) error
 	GetRefreshSession(ctx context.Context, fingerprint string) (*RefreshSession, error)
 	SaveRefreshSession(ctx context.Context, rs *RefreshSession) error
@@ -100,20 +102,20 @@ func (r *repository) CreateUser(ctx context.Context, user *UserDTO) (*UserDTO, e
 
 func (r *repository) FindOne(ctx context.Context, id string) (*User, error) {
 	var dto = &User{}
-	var q = `SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE id=$1`
+	var q = `SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE id=$1`
 	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
 	err := r.client.QueryRow(ctx, q, id).
-		Scan(&dto.Id, &dto.Username, &dto.PasswordHash, &dto.CreatedAt, &dto.UpdatedAt, &dto.IsAdmin, &dto.IsBanned)
+		Scan(&dto.Id, &dto.Username, &dto.PasswordHash, &dto.CreatedAt, &dto.UpdatedAt, &dto.Status, &dto.IsBanned)
 	return dto, err
 }
 
 func (r *repository) FindLoginUser(ctx context.Context, username, password string) (*User, error) {
 	var dto = &User{}
-	var q = `SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2`
+	var q = `SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2`
 	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
 
 	if err := r.client.QueryRow(ctx, q, username, password).
-		Scan(&dto.Id, &dto.Username, &dto.PasswordHash, &dto.CreatedAt, &dto.UpdatedAt, &dto.IsAdmin, &dto.IsBanned); err != nil {
+		Scan(&dto.Id, &dto.Username, &dto.PasswordHash, &dto.CreatedAt, &dto.UpdatedAt, &dto.Status, &dto.IsBanned); err != nil {
 		return nil, err
 	}
 
@@ -126,6 +128,7 @@ func (r *repository) FindAll() {
 
 func (r *repository) Delete(ctx context.Context, id string) error {
 	query := "DELETE FROM users WHERE id = $1 RETURNING id"
+	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(query)))
 	var deletedID int
 	err := r.client.QueryRow(ctx, query, id).Scan(&deletedID)
 	if err != nil {
@@ -166,6 +169,7 @@ func (r *repository) UpdateUsername(ctx context.Context, id, username string) er
 func (r *repository) UpdatePassword(ctx context.Context, id, oldPassword, newPassword string) error {
 	var dbPassword string
 	q := "UPDATE users SET password = $1 WHERE id = $2 AND password = $3 RETURNING password"
+	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
 	err := r.client.QueryRow(ctx, q, newPassword, id, oldPassword).Scan(&dbPassword)
 	if err != nil {
 		if err == pgx.ErrNoRows {
@@ -177,4 +181,12 @@ func (r *repository) UpdatePassword(ctx context.Context, id, oldPassword, newPas
 		return fmt.Errorf("old password does not match current password")
 	}
 	return nil
+}
+
+func (r *repository) ChangeStatus(ctx context.Context, id, status string) error {
+	// Выполнение SQL запроса на изменение роли пользователя
+	q := "UPDATE users SET status = $1 WHERE id = $2"
+	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
+	_, err := r.client.Exec(ctx, q, status, id)
+	return err
 }

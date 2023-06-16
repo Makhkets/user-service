@@ -24,7 +24,7 @@ func (s *service) GenerateAccessToken(user *user.UserDTO) (string, error) {
 	claims := token.Claims.(jwt.MapClaims)
 	claims["sub"] = user.Id
 	claims["username"] = user.Username
-	claims["isAdmin"] = user.IsAdmin
+	claims["status"] = user.Status
 	claims["isBanned"] = user.IsBanned
 	claims["exp"] = time.Now().Add(time.Minute * time.Duration(cfg.Jwt.Duration)).Unix()
 

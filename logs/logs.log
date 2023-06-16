@@ -1646,3 +1646,166 @@ Key: 'User.PasswordHash' Error:Field validation for 'PasswordHash' failed on the
 2023-06-13T11:57:57.171+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
 2023-06-13T11:58:42.163+0300	[34mINFO[0m	errors/error.go:18	user with id 87 not found	{"field": "349", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
 2023-06-13T11:58:54.872+0300	[34mINFO[0m	errors/error.go:18	user with id 87 not found	{"field": "349", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-06-13T12:00:29.516+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-13T12:00:29.516+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-13T12:00:29.516+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-13T12:00:29.517+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-13T12:00:30.002+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-13T12:00:35.378+0300	[34mINFO[0m	errors/error.go:18	user with id 87 not found or wrong passsword	{"field": "349", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-06-13T12:00:45.813+0300	[34mINFO[0m	user/handler.go:239	123321asSs password has been changed to new_password_123321asSs
+2023-06-13T12:00:56.663+0300	[34mINFO[0m	user/handler.go:239	new_password_123321asSs password has been changed to 123321asSs
+2023-06-15T21:26:35.462+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T21:26:35.464+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T21:26:35.464+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T21:26:35.470+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T21:26:36.358+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:38:57.330+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:38:57.331+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:38:57.331+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:38:57.332+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:38:57.775+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:40:12.015+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:40:12.015+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:40:12.016+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:40:12.018+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:40:12.455+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:40:17.606+0300	[35mDEBUG[0m	repository/sql.go:115	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-15T22:40:17.610+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: столбец "is_admin" не существует (SQLSTATE 42703)	{"field": "52", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-06-15T22:40:46.463+0300	[35mDEBUG[0m	repository/sql.go:115	SQL Query: SELECT id, username, password, created_at, updated_at, is_admin, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-15T22:40:46.464+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: столбец "is_admin" не существует (SQLSTATE 42703)	{"field": "52", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-06-15T22:41:40.297+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:41:40.297+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:41:40.297+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:41:40.298+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:41:40.723+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:41:44.225+0300	[35mDEBUG[0m	repository/sql.go:115	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-15T22:41:44.232+0300	[34mINFO[0m	user/handler.go:151	Successfully Login in Account
+2023-06-15T22:41:48.377+0300	[35mDEBUG[0m	repository/sql.go:115	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-15T22:41:48.380+0300	[34mINFO[0m	user/handler.go:151	Successfully Login in Account
+2023-06-15T22:42:36.826+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:42:36.827+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:42:36.827+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:42:36.827+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:42:37.379+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:44:08.628+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:44:08.628+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:44:08.628+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:44:08.629+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:44:09.069+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:44:54.310+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:44:54.311+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:44:54.311+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:44:54.312+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:44:54.748+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:45:13.261+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:45:13.262+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:45:13.263+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:45:13.266+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:45:13.687+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:46:37.124+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:46:37.125+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:46:37.125+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:46:37.126+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:46:37.574+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:47:09.531+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:47:09.532+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:47:09.532+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:47:09.533+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:47:09.950+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:47:26.197+0300	[35mDEBUG[0m	repository/sql.go:115	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-15T22:47:26.201+0300	[34mINFO[0m	user/handler.go:151	Successfully Login in Account
+2023-06-15T22:53:12.721+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:53:12.721+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:53:12.721+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:53:12.722+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:53:13.168+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:54:41.936+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:54:41.936+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:54:41.936+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:54:41.937+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:54:42.496+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T22:54:44.894+0300	[35mDEBUG[0m	repository/sql.go:115	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-15T22:54:44.896+0300	[34mINFO[0m	service/service.go:61	user
+2023-06-15T22:54:44.897+0300	[34mINFO[0m	service/service.go:62	user
+2023-06-15T22:54:44.897+0300	[34mINFO[0m	service/service.go:63	user
+2023-06-15T22:54:44.898+0300	[34mINFO[0m	user/handler.go:151	Successfully Login in Account
+2023-06-15T22:56:15.358+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T22:56:15.360+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T22:56:15.360+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T22:56:15.361+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T22:56:15.812+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:00:15.489+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:00:15.489+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:00:15.489+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:00:15.490+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:00:15.914+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:01:15.241+0300	[35mDEBUG[0m	repository/sql.go:115	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-06-15T23:01:15.244+0300	[34mINFO[0m	service/service.go:61	admin
+2023-06-15T23:01:15.245+0300	[34mINFO[0m	service/service.go:62	admin
+2023-06-15T23:01:15.246+0300	[34mINFO[0m	service/service.go:63	admin
+2023-06-15T23:01:15.247+0300	[34mINFO[0m	user/handler.go:150	Successfully Login in Account
+2023-06-15T23:01:41.572+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:01:41.573+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:01:41.573+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:01:41.573+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:01:42.007+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:01:43.977+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: новая строка в отношении "users" нарушает ограничение-проверку "check_status" (SQLSTATE 23514)	{"field": "396", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-06-15T23:03:16.467+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:03:16.467+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:03:16.467+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:03:16.468+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:03:16.889+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:03:18.429+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: новая строка в отношении "users" нарушает ограничение-проверку "check_status" (SQLSTATE 23514)	{"field": "388", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-06-15T23:03:43.247+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:03:43.248+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:03:43.248+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:03:43.249+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:03:43.846+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:03:44.641+0300	[34mINFO[0m	service/service.go:387	
+2023-06-15T23:03:44.641+0300	[34mINFO[0m	service/service.go:388	
+2023-06-15T23:03:44.642+0300	[34mINFO[0m	service/service.go:389	
+2023-06-15T23:03:44.642+0300	[34mINFO[0m	service/service.go:390	
+2023-06-15T23:03:44.646+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: новая строка в отношении "users" нарушает ограничение-проверку "check_status" (SQLSTATE 23514)	{"field": "392", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-06-15T23:04:06.897+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:04:06.900+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:04:06.900+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:04:06.901+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:04:07.339+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:04:57.796+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:04:57.796+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:04:57.796+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:04:57.797+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:04:58.296+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:05:55.272+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:05:55.273+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:05:55.273+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:05:55.274+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:05:56.051+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:05:57.284+0300	[34mINFO[0m	service/service.go:387	ssss
+2023-06-15T23:05:57.285+0300	[34mINFO[0m	service/service.go:388	ssss
+2023-06-15T23:05:57.285+0300	[34mINFO[0m	service/service.go:389	ssss
+2023-06-15T23:05:57.285+0300	[34mINFO[0m	service/service.go:390	ssss
+2023-06-15T23:05:57.293+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: новая строка в отношении "users" нарушает ограничение-проверку "check_status" (SQLSTATE 23514)	{"field": "392", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-06-15T23:08:45.185+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:08:45.186+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:08:45.186+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:08:45.186+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:08:45.601+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:08:52.282+0300	[34mINFO[0m	user/handler.go:259	Changed status to: ssss
+2023-06-15T23:09:19.544+0300	[34mINFO[0m	user/handler.go:259	Changed status to: moderator
+2023-06-15T23:10:07.698+0300	[34mINFO[0m	user/handler.go:259	Changed status to: admin
+2023-06-15T23:10:16.631+0300	[34mINFO[0m	user/handler.go:259	Changed status to: admin
+2023-06-15T23:10:31.557+0300	[34mINFO[0m	user/handler.go:259	Changed status to: admin
+2023-06-15T23:14:29.936+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-15T23:14:29.938+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-15T23:14:29.938+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-15T23:14:29.938+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-15T23:14:30.474+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-15T23:14:42.972+0300	[35mDEBUG[0m	repository/sql.go:189	SQL Query: UPDATE users SET status = $1 WHERE id = $2
+2023-06-15T23:14:42.975+0300	[34mINFO[0m	user/handler.go:259	Changed status to: moderator
+2023-06-15T23:14:56.515+0300	[35mDEBUG[0m	repository/sql.go:189	SQL Query: UPDATE users SET status = $1 WHERE id = $2
+2023-06-15T23:14:56.517+0300	[34mINFO[0m	user/handler.go:259	Changed status to: user
+2023-06-15T23:15:09.762+0300	[35mDEBUG[0m	repository/sql.go:189	SQL Query: UPDATE users SET status = $1 WHERE id = $2
+2023-06-15T23:15:09.764+0300	[34mINFO[0m	user/handler.go:259	Changed status to: moderator
+2023-06-15T23:15:18.204+0300	[35mDEBUG[0m	repository/sql.go:189	SQL Query: UPDATE users SET status = $1 WHERE id = $2
+2023-06-15T23:15:18.213+0300	[34mINFO[0m	user/handler.go:259	Changed status to: user

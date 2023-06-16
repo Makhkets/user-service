@@ -27,6 +27,7 @@ type Service interface {
 
 	UsernameUpdate(username, accessToken string) (map[string]string, *errors.CustomError)
 	PasswordUpdate(old_password, new_password, accessToken string) (map[string]any, *errors.CustomError)
+	StatusUpdate(accessToken, status string) (map[string]string, *errors.CustomError)
 }
 
 type service struct {
@@ -74,7 +75,7 @@ func (s *service) LoginUser(c *gin.Context, username, password string) (map[stri
 		Id:       strconv.Itoa(dto.Id),
 		Username: dto.Username,
 		Password: utils.PasswordToHash(dto.PasswordHash, s.config.Service.SecretKey),
-		IsAdmin:  dto.IsAdmin,
+		Status:   dto.Status,
 		IsBanned: dto.IsBanned,
 	}, c)
 	if error != nil {
@@ -196,7 +197,7 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 		Id:       strconv.Itoa(dto.Id),
 		Username: dto.Username,
 		Password: utils.PasswordToHash(dto.PasswordHash, cfg.Service.SecretKey),
-		IsAdmin:  dto.IsAdmin,
+		Status:   dto.Status,
 		IsBanned: dto.IsBanned,
 	}, c)
 	if error != nil {
@@ -233,7 +234,7 @@ func (s *service) AboutAccessToken(token string) (map[string]any, *errors.Custom
 	return map[string]any{
 		"id":       jwt["sub"],
 		"username": jwt["username"],
-		"isAdmin":  jwt["isAdmin"],
+		"status":   jwt["status"],
 		"isBanned": jwt["isBanned"],
 	}, nil
 
@@ -358,5 +359,28 @@ func (s *service) PasswordUpdate(oldPassword, newPassword, accessToken string) (
 	return map[string]any{
 		"new_password": newPassword,
 		"old_password": oldPassword,
+	}, nil
+}
+
+func (s *service) StatusUpdate(id, status string) (map[string]string, *errors.CustomError) {
+	// Проверяем какой статус к нам пришел, есть ли он в нашем списке статусов
+	if !utils.ContainsStringInArray(status, user.Roles) {
+		return map[string]string{"error": "status undefined"}, nil
+	}
+
+	// Изменяем роль юзера
+	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
+	if err := s.repository.ChangeStatus(ctx, id, status); err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "SQL Query Error",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	return map[string]string{
+		"status": status,
 	}, nil
 }

@@ -14,8 +14,7 @@ import (
 )
 
 const (
-	usersURL = "/users"
-
+	usersURL            = "/users"
 	userMeURL           = "/user/me"
 	userRefreshTokenURL = "/user/refresh"
 	userLoginURL        = "/user/login"
@@ -25,7 +24,7 @@ const (
 
 	userUpdateUsernameURL = "/user/:id/change_username"
 	userUpdatePasswordURL = "/user/:id/change_password"
-	userChangeRole        = "/user/:id/change_role"
+	userChangeStatus      = "/user/:id/change_status"
 	userChangePermission  = "/user/:id/change_permission"
 )
 
@@ -46,18 +45,18 @@ func NewHandler(l *logging.Logger, c *configs.Config, s user_service.Service) ha
 func (h *handler) Register(r *gin.Engine) {
 	api := r.Group("/api")
 	{
-		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers)
-		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
+		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers) // TODO
+		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)   // TODO
 
 		api.Handle(http.MethodDelete, userURL, h.SelfUserMiddleware(), h.DeleteUser)
-		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions)
+		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions) // TODO
 
 		api.Handle(http.MethodPost, userUpdateUsernameURL, h.SelfUserMiddleware(), h.UsernameUpdate)
+		api.Handle(http.MethodPost, userUpdatePasswordURL, h.SelfUserMiddleware(), h.PasswordUpdate)
 
 		// TODO
-		api.Handle(http.MethodPost, userUpdatePasswordURL, h.SelfUserMiddleware(), h.PasswordUpdate)
-		api.Handle(http.MethodPost, userChangeRole, h.SelfUserMiddleware(), h.PartialUpdateUser)
-		api.Handle(http.MethodPost, userChangePermission, h.SelfUserMiddleware(), h.PartialUpdateUser)
+		api.Handle(http.MethodPost, userChangeStatus, h.AdminMiddleware(), h.StatusChange)
+		api.Handle(http.MethodPost, userChangePermission, h.AdminMiddleware(), h.PartialUpdateUser)
 
 		// Тест админского Middleware
 		api.Handle(http.MethodGet, "/user/test", h.AdminMiddleware())
@@ -117,7 +116,7 @@ func (h *handler) CreateUser(c *gin.Context) {
 		return
 	}
 
-	userDTO.IsAdmin = false
+	userDTO.Status = "user"
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 
@@ -237,5 +236,26 @@ func (h *handler) PasswordUpdate(c *gin.Context) {
 	}
 
 	h.logger.Info(data.OldPassword + " password has been changed to " + data.NewPassword)
+	c.JSON(http.StatusAccepted, response)
+}
+
+func (h *handler) StatusChange(c *gin.Context) {
+	id := c.Param("id")
+	var data struct {
+		Status string `json:"status" binding:"required,min=4"`
+	}
+
+	if err := c.BindJSON(&data); err != nil {
+		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+		return
+	}
+
+	response, err := h.service.StatusUpdate(id, data.Status)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	h.logger.Info("Changed status to: " + data.Status) // todo
 	c.JSON(http.StatusAccepted, response)
 }
