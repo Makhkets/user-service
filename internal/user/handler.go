@@ -8,6 +8,7 @@ import (
 	"Makhkets/pkg/errors"
 	"Makhkets/pkg/logging"
 	"context"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"time"
@@ -53,10 +54,10 @@ func (h *handler) Register(r *gin.Engine) {
 
 		api.Handle(http.MethodPost, userUpdateUsernameURL, h.SelfUserMiddleware(), h.UsernameUpdate)
 		api.Handle(http.MethodPost, userUpdatePasswordURL, h.SelfUserMiddleware(), h.PasswordUpdate)
+		api.Handle(http.MethodPost, userChangeStatus, h.AdminMiddleware(), h.StatusChange)
 
 		// TODO
-		api.Handle(http.MethodPost, userChangeStatus, h.AdminMiddleware(), h.StatusChange)
-		api.Handle(http.MethodPost, userChangePermission, h.AdminMiddleware(), h.PartialUpdateUser)
+		api.Handle(http.MethodPost, userChangePermission, h.AdminMiddleware(), h.PermissionChange)
 
 		// Тест админского Middleware
 		api.Handle(http.MethodGet, "/user/test", h.AdminMiddleware())
@@ -257,5 +258,26 @@ func (h *handler) StatusChange(c *gin.Context) {
 	}
 
 	h.logger.Info("Changed status to: " + data.Status) // todo
+	c.JSON(http.StatusAccepted, response)
+}
+
+func (h *handler) PermissionChange(c *gin.Context) {
+	id := c.Param("id")
+	var data struct {
+		Permission *bool `json:"permission" binding:"required"`
+	}
+
+	if err := c.BindJSON(&data); err != nil {
+		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+		return
+	}
+
+	response, err := h.service.PermissionUpdate(id, *data.Permission)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	h.logger.Info("Changed permission to: " + fmt.Sprintf("%v", *data.Permission))
 	c.JSON(http.StatusAccepted, response)
 }

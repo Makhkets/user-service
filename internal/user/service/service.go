@@ -28,6 +28,7 @@ type Service interface {
 	UsernameUpdate(username, accessToken string) (map[string]string, *errors.CustomError)
 	PasswordUpdate(old_password, new_password, accessToken string) (map[string]any, *errors.CustomError)
 	StatusUpdate(accessToken, status string) (map[string]string, *errors.CustomError)
+	PermissionUpdate(id string, permission bool) (map[string]bool, *errors.CustomError)
 }
 
 type service struct {
@@ -382,5 +383,23 @@ func (s *service) StatusUpdate(id, status string) (map[string]string, *errors.Cu
 
 	return map[string]string{
 		"status": status,
+	}, nil
+}
+
+func (s *service) PermissionUpdate(id string, permission bool) (map[string]bool, *errors.CustomError) {
+	// Изменяем роль юзера
+	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
+	if err := s.repository.ChangePermission(ctx, id, permission); err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "SQL Query Error",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	return map[string]bool{
+		"permission": permission,
 	}, nil
 }

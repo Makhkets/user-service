@@ -23,6 +23,7 @@ type Repository interface {
 	UpdatePassword(ctx context.Context, id, oldPassword, newPassword string) error
 
 	ChangeStatus(ctx context.Context, id, status string) error
+	ChangePermission(ctx context.Context, id string, permission bool) error
 
 	//ChangeRefreshInCache(ctx context.Context, fingerprint, newRefreshToken string) error
 	GetRefreshSession(ctx context.Context, fingerprint string) (*RefreshSession, error)
@@ -188,5 +189,12 @@ func (r *repository) ChangeStatus(ctx context.Context, id, status string) error 
 	q := "UPDATE users SET status = $1 WHERE id = $2"
 	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
 	_, err := r.client.Exec(ctx, q, status, id)
+	return err
+}
+
+func (r *repository) ChangePermission(ctx context.Context, id string, permission bool) error {
+	q := "UPDATE users SET is_banned=$1 WHERE id=$2"
+	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
+	_, err := r.client.Exec(ctx, q, permission, id)
 	return err
 }

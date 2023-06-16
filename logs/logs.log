@@ -1809,3 +1809,37 @@ Key: 'User.PasswordHash' Error:Field validation for 'PasswordHash' failed on the
 2023-06-15T23:15:09.764+0300	[34mINFO[0m	user/handler.go:259	Changed status to: moderator
 2023-06-15T23:15:18.204+0300	[35mDEBUG[0m	repository/sql.go:189	SQL Query: UPDATE users SET status = $1 WHERE id = $2
 2023-06-15T23:15:18.213+0300	[34mINFO[0m	user/handler.go:259	Changed status to: user
+2023-06-16T10:40:35.209+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-16T10:40:35.215+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-16T10:40:35.216+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-16T10:40:35.219+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-16T10:40:36.610+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-16T10:56:45.284+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-16T10:56:45.285+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-16T10:56:45.287+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-16T10:56:45.289+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-16T10:56:45.870+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-16T10:59:33.649+0300	[35mDEBUG[0m	repository/sql.go:197	SQL Query: UPDATE users SET is_banned=$1 WHERE id=$2
+2023-06-16T10:59:33.654+0300	[34mINFO[0m	user/handler.go:281	Changed permission to:true
+2023-06-16T10:59:51.466+0300	[35mDEBUG[0m	repository/sql.go:197	SQL Query: UPDATE users SET is_banned=$1 WHERE id=$2
+2023-06-16T10:59:51.467+0300	[34mINFO[0m	user/handler.go:281	Changed permission to:true
+2023-06-16T11:12:56.919+0300	[35mDEBUG[0m	repository/sql.go:197	SQL Query: UPDATE users SET is_banned=$1 WHERE id=$2
+2023-06-16T11:12:56.927+0300	[34mINFO[0m	user/handler.go:281	Changed permission to:true
+2023-06-16T11:20:44.776+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-16T11:20:44.777+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-16T11:20:44.778+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-16T11:20:44.779+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-16T11:20:45.209+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-16T11:20:49.363+0300	[35mDEBUG[0m	repository/sql.go:197	SQL Query: UPDATE users SET is_banned=$1 WHERE id=$2
+2023-06-16T11:20:49.365+0300	[34mINFO[0m	user/handler.go:281	Changed permission to:0xc000098178
+2023-06-16T11:21:13.519+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-16T11:21:13.520+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-16T11:21:13.520+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-16T11:21:13.521+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-16T11:21:13.954+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-16T11:21:14.871+0300	[35mDEBUG[0m	repository/sql.go:197	SQL Query: UPDATE users SET is_banned=$1 WHERE id=$2
+2023-06-16T11:21:14.875+0300	[34mINFO[0m	user/handler.go:281	Changed permission to:false
+2023-06-16T11:21:27.763+0300	[35mDEBUG[0m	repository/sql.go:197	SQL Query: UPDATE users SET is_banned=$1 WHERE id=$2
+2023-06-16T11:21:27.765+0300	[34mINFO[0m	user/handler.go:281	Changed permission to:true
+2023-06-16T11:21:34.877+0300	[35mDEBUG[0m	repository/sql.go:197	SQL Query: UPDATE users SET is_banned=$1 WHERE id=$2
+2023-06-16T11:21:34.879+0300	[34mINFO[0m	user/handler.go:281	Changed permission to:false
