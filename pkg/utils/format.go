@@ -22,8 +22,10 @@ func PasswordToHash(password, secretKey string) string {
 
 func HasNil(slice ...interface{}) bool {
 	for _, v := range slice {
-		if v == nil {
-			return true
+		for _, j := range v.([]interface{}) {
+			if j == nil {
+				return true
+			}
 		}
 	}
 	return false

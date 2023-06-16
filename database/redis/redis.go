@@ -28,7 +28,7 @@ func InitRedis() Client {
 		Password: cfg.Redis.Password,
 		DB:       cfg.Redis.Db,
 	})
-	// проверяем, что соединение установлено
+
 	_, err := rdb.Ping(context.Background()).Result()
 	if err != nil {
 		panic(err)

@@ -22,6 +22,9 @@ type Service interface {
 	DeleteAccount(id string) (map[string]any, *errors.CustomError)
 	UpdateAccount(id string, u *user.User) (map[string]any, *errors.CustomError)
 
+	GetUser(id string) (map[string]any, *errors.CustomError)
+	GetUserSessions(id string) (*user.RefreshSession, *errors.CustomError)
+
 	AboutAccessToken(token string) (map[string]any, *errors.CustomError)
 	RefreshAccessToken(c *gin.Context, refreshToken string) (map[string]string, *errors.CustomError)
 
@@ -402,4 +405,41 @@ func (s *service) PermissionUpdate(id string, permission bool) (map[string]bool,
 	return map[string]bool{
 		"permission": permission,
 	}, nil
+}
+
+func (s *service) GetUser(id string) (map[string]any, *errors.CustomError) {
+	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
+	user, err := s.repository.GetUser(ctx, id)
+	if err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "SQL Query Error",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	return map[string]any{
+		"id":        user.Id,
+		"username":  user.Username,
+		"status":    user.Status,
+		"is_banned": user.IsBanned,
+	}, nil
+}
+
+func (s *service) GetUserSessions(id string) (*user.RefreshSession, *errors.CustomError) {
+	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
+	data, err := s.repository.GetRefreshSessionWithID(ctx, id)
+	if err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return nil, &errors.CustomError{
+			CustomErr: "",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	return data, nil
 }

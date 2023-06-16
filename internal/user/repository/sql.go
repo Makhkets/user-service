@@ -7,6 +7,7 @@ import (
 	"Makhkets/pkg/logging"
 	"Makhkets/pkg/utils"
 	"context"
+	"database/sql"
 	"fmt"
 	"github.com/jackc/pgx/v4"
 	"strconv"
@@ -21,6 +22,9 @@ type Repository interface {
 
 	UpdateUsername(ctx context.Context, id, username string) error
 	UpdatePassword(ctx context.Context, id, oldPassword, newPassword string) error
+
+	GetUser(ctx context.Context, id string) (*User, error)
+	GetRefreshSessionsByUserId(ctx context.Context, userId string) ([]*RefreshSession, error)
 
 	ChangeStatus(ctx context.Context, id, status string) error
 	ChangePermission(ctx context.Context, id string, permission bool) error
@@ -84,6 +88,10 @@ func (r *repository) GetRefreshSession(ctx context.Context, fingerprint string) 
 		UserId:       result[5].(string),
 		Ip:           result[6].(string),
 	}, nil
+}
+
+func (r *repository) GetRefreshSessionsByUserId(ctx context.Context, userId string) ([]*RefreshSession, error) {
+	return nil, nil
 }
 
 func (r *repository) DeleteRefreshSession(ctx context.Context, key string) error {
@@ -197,4 +205,22 @@ func (r *repository) ChangePermission(ctx context.Context, id string, permission
 	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
 	_, err := r.client.Exec(ctx, q, permission, id)
 	return err
+}
+
+func (r *repository) GetUser(ctx context.Context, id string) (*User, error) {
+	q := "SELECT id, username, is_banned, status FROM users WHERE id = $1"
+	r.logger.Debug(fmt.Sprintf("SQL Query: %s", utils.FormatQuery(q)))
+
+	row := r.client.QueryRow(ctx, q, id)
+
+	u := &User{}
+	err := row.Scan(&u.Id, &u.Username, &u.IsBanned, &u.Status)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, fmt.Errorf("user not found")
+		}
+		return nil, err
+	}
+
+	return u, nil
 }

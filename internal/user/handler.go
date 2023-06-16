@@ -46,8 +46,8 @@ func NewHandler(l *logging.Logger, c *configs.Config, s user_service.Service) ha
 func (h *handler) Register(r *gin.Engine) {
 	api := r.Group("/api")
 	{
-		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers) // TODO
-		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)   // TODO
+		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers) // Под себя реализовать надо с offset'ами
+		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
 
 		api.Handle(http.MethodDelete, userURL, h.SelfUserMiddleware(), h.DeleteUser)
 		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions) // TODO
@@ -55,8 +55,6 @@ func (h *handler) Register(r *gin.Engine) {
 		api.Handle(http.MethodPost, userUpdateUsernameURL, h.SelfUserMiddleware(), h.UsernameUpdate)
 		api.Handle(http.MethodPost, userUpdatePasswordURL, h.SelfUserMiddleware(), h.PasswordUpdate)
 		api.Handle(http.MethodPost, userChangeStatus, h.AdminMiddleware(), h.StatusChange)
-
-		// TODO
 		api.Handle(http.MethodPost, userChangePermission, h.AdminMiddleware(), h.PermissionChange)
 
 		// Тест админского Middleware
@@ -185,16 +183,28 @@ func (h *handler) PartialUpdateUser(c *gin.Context) {
 	c.JSON(http.StatusAccepted, response)
 }
 
-func (h *handler) GetUsers(c *gin.Context) {
-	// TODO GET_USERS
-}
-
 func (h *handler) GetUser(c *gin.Context) {
-	// TODO GetUser
+	id := c.Param("id")
+
+	response, err := h.service.GetUser(id)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	c.JSON(http.StatusOK, response)
 }
 
 func (h *handler) GetSessions(c *gin.Context) {
-	// TODO GetSessions
+	id := c.Param("id")
+
+	response, err := h.service.GetUserSessions(id)
+	if err != nil {
+		errors.NewResponseError(h.logger, c, err)
+		return
+	}
+
+	c.JSON(http.StatusOK, response)
 }
 
 func (h *handler) UsernameUpdate(c *gin.Context) {
@@ -280,4 +290,9 @@ func (h *handler) PermissionChange(c *gin.Context) {
 
 	h.logger.Info("Changed permission to: " + fmt.Sprintf("%v", *data.Permission))
 	c.JSON(http.StatusAccepted, response)
+}
+
+func (h *handler) GetUsers(c *gin.Context) {
+	// Реализовать под себя, с offset'амм
+	panic("implement me")
 }
