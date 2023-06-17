@@ -23,7 +23,7 @@ type Service interface {
 	UpdateAccount(id string, u *user.User) (map[string]any, *errors.CustomError)
 
 	GetUser(id string) (map[string]any, *errors.CustomError)
-	GetUserSessions(id string) (*user.RefreshSession, *errors.CustomError)
+	GetUserSessions(id string) (map[string][]map[string]any, *errors.CustomError)
 
 	AboutAccessToken(token string) (map[string]any, *errors.CustomError)
 	RefreshAccessToken(c *gin.Context, refreshToken string) (map[string]string, *errors.CustomError)
@@ -64,7 +64,7 @@ func (s *service) LoginUser(c *gin.Context, username, password string) (map[stri
 
 	// Удаляем из redis токен refresh
 	ctx, _ = context.WithTimeout(context.Background(), 3*time.Second)
-	if err := s.repository.DeleteRefreshSession(ctx, utils.GetFingerprint(c.Request.Header)); err != nil {
+	if err := s.repository.DeleteRefreshSession(ctx, utils.GetFingerprint(c.Request.Header), strconv.Itoa(dto.Id)); err != nil {
 		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
 			CustomErr: "",
@@ -110,7 +110,7 @@ func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDT
 	}
 
 	// Заносим Refresh Token в Redis хранилище
-	ctx, _ = context.WithTimeout(context.Background(), 3*time.Second)
+	ctx, _ = context.WithTimeout(context.Background(), 5*time.Second)
 	if err := s.repository.SaveRefreshSession(ctx, &user.RefreshSession{
 		RefreshToken: tokenPair["refresh"],
 		UserId:       dto.Id,
@@ -428,9 +428,9 @@ func (s *service) GetUser(id string) (map[string]any, *errors.CustomError) {
 	}, nil
 }
 
-func (s *service) GetUserSessions(id string) (*user.RefreshSession, *errors.CustomError) {
+func (s *service) GetUserSessions(id string) (map[string][]map[string]any, *errors.CustomError) {
 	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
-	data, err := s.repository.GetRefreshSessionWithID(ctx, id)
+	sessions, err := s.repository.GetRefreshSessionsByUserId(ctx, id)
 	if err != nil {
 		_, file, line, _ := runtime.Caller(0)
 		return nil, &errors.CustomError{
@@ -439,6 +439,22 @@ func (s *service) GetUserSessions(id string) (*user.RefreshSession, *errors.Cust
 			File:      file,
 			Err:       err,
 		}
+	}
+
+	data := map[string][]map[string]any{
+		id: []map[string]any{},
+	}
+
+	for _, session := range sessions {
+		data[id] = append(data[id], map[string]any{
+			"id":           session.UserId,
+			"ip":           session.Ip,
+			"user-agent":   session.Ua,
+			"fingerprint":  session.Fingerprint,
+			"refreshToken": session.RefreshToken,
+			"createdAt":    session.CreatedAt,
+			"ExpiresIn":    session.ExpiresIn,
+		})
 	}
 
 	return data, nil

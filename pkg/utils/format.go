@@ -4,6 +4,7 @@ import (
 	"crypto/hmac"
 	"crypto/sha256"
 	"encoding/hex"
+	"fmt"
 	"reflect"
 	"strings"
 )
@@ -52,4 +53,8 @@ func ContainsStringInArray(substr string, arr []string) bool {
 		}
 	}
 	return false
+}
+
+func GetIdField(id any) string {
+	return fmt.Sprintf("user%v", id)
 }

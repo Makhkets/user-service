@@ -1,39 +1,28 @@
 package main
 
-import "fmt"
-
-type Animal interface {
-	sound()
-}
-
-type Dog struct {
-	Animal
-}
-
-type Cat struct {
-	Animal
-}
-
-func (d *Dog) sound() {
-	fmt.Println("Гав гав гав")
-}
-
-func (c *Cat) sound() {
-	fmt.Println("Мяу мяу мяу")
-}
-
-func (d *Dog) soun321d() {
-	fmt.Println("Гав гав гав")
-}
-
-func (c *Cat) sou312nd() {
-	fmt.Println("Мяу мяу мяу")
-}
+import (
+	"context"
+	"fmt"
+	"time"
+)
 
 func main() {
-	var dog Animal = &Dog{}
-	var cat Animal = &Cat{}
+	ctx, _ := context.WithTimeout(context.Background(), 2*time.Second)
+	doSomething(ctx)
+}
 
-	dog.sound()
-	cat.sound()
+func doSomething(ctx context.Context) {
+	for {
+		select {
+		case <-ctx.Done():
+			fmt.Println("Истекло время")
+			return
+		default:
+			go func() {
+				time.Sleep(2 * time.Second)
+				fmt.Println("Работаю")
+				return
+			}()
+		}
+	}
 }

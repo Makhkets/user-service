@@ -84,7 +84,7 @@ func (s *service) CreateTokenPair(dto *user.UserDTO, c *gin.Context) (map[string
 	}
 
 	// Обновляем refresh в Redis'e
-	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
+	ctx, _ := context.WithTimeout(context.Background(), 5*time.Second)
 	if err := s.repository.SaveRefreshSession(ctx, &user.RefreshSession{
 		RefreshToken: refreshToken,
 		UserId:       dto.Id,

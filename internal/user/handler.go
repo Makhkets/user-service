@@ -50,7 +50,7 @@ func (h *handler) Register(r *gin.Engine) {
 		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
 
 		api.Handle(http.MethodDelete, userURL, h.SelfUserMiddleware(), h.DeleteUser)
-		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions) // TODO
+		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions)
 
 		api.Handle(http.MethodPost, userUpdateUsernameURL, h.SelfUserMiddleware(), h.UsernameUpdate)
 		api.Handle(http.MethodPost, userUpdatePasswordURL, h.SelfUserMiddleware(), h.PasswordUpdate)

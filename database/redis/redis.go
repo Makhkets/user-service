@@ -12,8 +12,18 @@ type Client interface {
 	Get(ctx context.Context, key string) *redis.StringCmd
 	Del(ctx context.Context, keys ...string) *redis.IntCmd
 
+	SAdd(ctx context.Context, key string, members ...interface{}) *redis.IntCmd
+	LRem(ctx context.Context, key string, count int64, value interface{}) *redis.IntCmd
+	LRange(ctx context.Context, key string, start, stop int64) *redis.StringSliceCmd
+
+	SMembers(ctx context.Context, key string) *redis.StringSliceCmd
+
 	HMSet(ctx context.Context, key string, values ...interface{}) *redis.BoolCmd
 	HMGet(ctx context.Context, key string, fields ...string) *redis.SliceCmd
+	HGetAll(ctx context.Context, key string) *redis.StringStringMapCmd
+
+	Expire(ctx context.Context, key string, expiration time.Duration) *redis.BoolCmd
+	Exists(ctx context.Context, keys ...string) *redis.IntCmd
 
 	Append(ctx context.Context, key, value string) *redis.IntCmd
 	Ping(ctx context.Context) *redis.StatusCmd

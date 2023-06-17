@@ -24,7 +24,6 @@ type Repository interface {
 	UpdatePassword(ctx context.Context, id, oldPassword, newPassword string) error
 
 	GetUser(ctx context.Context, id string) (*User, error)
-	GetRefreshSessionsByUserId(ctx context.Context, userId string) ([]*RefreshSession, error)
 
 	ChangeStatus(ctx context.Context, id, status string) error
 	ChangePermission(ctx context.Context, id string, permission bool) error
@@ -32,7 +31,8 @@ type Repository interface {
 	//ChangeRefreshInCache(ctx context.Context, fingerprint, newRefreshToken string) error
 	GetRefreshSession(ctx context.Context, fingerprint string) (*RefreshSession, error)
 	SaveRefreshSession(ctx context.Context, rs *RefreshSession) error
-	DeleteRefreshSession(ctx context.Context, key string) error
+	DeleteRefreshSession(ctx context.Context, key, id string) error
+	GetRefreshSessionsByUserId(ctx context.Context, userId string) ([]*RefreshSession, error)
 }
 
 type repository struct {
@@ -52,7 +52,29 @@ func NewStorage(logger *logging.Logger, client postgres.Client, rdb rdb.Client) 
 }
 
 func (r *repository) SaveRefreshSession(ctx context.Context, rs *RefreshSession) error {
-	return r.rdb.HMSet(ctx, rs.Fingerprint, map[string]interface{}{
+	// First, check if an array exists under the key "id"
+	key := rs.UserId
+	exists, err := r.rdb.Exists(ctx, key).Result()
+	if err != nil {
+		return err
+	}
+
+	if exists == 0 {
+		// If the array doesn't exist, create a new one with "fingerprint" as the first element
+		response := r.rdb.SAdd(ctx, utils.GetIdField(key), rs.Fingerprint)
+		if response.Err() != nil {
+			return response.Err()
+		}
+	} else {
+		// If the array exists, add "fingerprint" to it
+		response := r.rdb.SAdd(ctx, utils.GetIdField(key), rs.Fingerprint)
+		if response.Err() != nil {
+			return response.Err()
+		}
+	}
+
+	// Save the refresh session data
+	response := r.rdb.HMSet(ctx, rs.Fingerprint, map[string]interface{}{
 		"refreshToken": rs.RefreshToken,
 		"userId":       rs.UserId,
 		"ua":           rs.Ua,
@@ -61,6 +83,11 @@ func (r *repository) SaveRefreshSession(ctx context.Context, rs *RefreshSession)
 		"expiresIn":    rs.ExpiresIn,
 		"createdAt":    rs.CreatedAt,
 	}).Err()
+
+	r.rdb.Expire(ctx, rs.Fingerprint, time.Duration(r.cfg.Jwt.Refresh)*time.Minute)
+	r.rdb.Expire(ctx, utils.GetIdField(key), time.Duration(r.cfg.Jwt.Refresh)*time.Minute)
+
+	return response
 }
 
 func (r *repository) GetRefreshSession(ctx context.Context, fingerprint string) (*RefreshSession, error) {
@@ -90,12 +117,35 @@ func (r *repository) GetRefreshSession(ctx context.Context, fingerprint string) 
 	}, nil
 }
 
-func (r *repository) GetRefreshSessionsByUserId(ctx context.Context, userId string) ([]*RefreshSession, error) {
-	return nil, nil
+func (r *repository) GetRefreshSessionsByUserId(ctx context.Context, id string) ([]*RefreshSession, error) {
+	// Делаем запрос, на получение всех ключей, на сессии
+	var refreshSessions []*RefreshSession = []*RefreshSession{}
+	result := r.rdb.SMembers(ctx, utils.GetIdField(id))
+	if err := result.Err(); err != nil {
+		return nil, err
+	}
+
+	for _, key := range result.Val() {
+		refreshSession, err := r.GetRefreshSession(ctx, key)
+		if err != nil {
+			return nil, err
+		}
+		refreshSessions = append(refreshSessions, refreshSession)
+	}
+
+	return refreshSessions, nil
 }
 
-func (r *repository) DeleteRefreshSession(ctx context.Context, key string) error {
-	return r.rdb.Del(ctx, key).Err()
+func (r *repository) DeleteRefreshSession(ctx context.Context, key, id string) error {
+	if err := r.rdb.Del(ctx, key).Err(); err != nil {
+		return err
+	}
+
+	if err := r.rdb.LRem(ctx, id, 0, key).Err(); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func (r *repository) CreateUser(ctx context.Context, user *UserDTO) (*UserDTO, error) {
