@@ -9,7 +9,7 @@ listen:
 
 storage:
   host: db
-  port: 5432
+  port: 5437
   database: postgres
   username: postgres
   password: 1324

@@ -4,7 +4,7 @@ services:
   postgres:
     image: 'postgres:14.2'
     ports:
-      - "5432:5432"
+      - "5437:5437"
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -26,8 +26,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    command:
-      - ./wait-for-postgres.sh db ./app
     environment:
       HTTP_ADDRESS: ":8000"
     ports:
