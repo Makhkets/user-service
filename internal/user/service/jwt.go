@@ -143,7 +143,7 @@ func (s *service) ParseToken(tokenString string, isAccessToken bool) (jwt.MapCla
 	} else {
 		// Check if the token is a refresh token and has the required claims
 		if _, ok := claims["sub"]; !ok {
-			return nil, fmt.Errorf("missing subject claim", true).(errors.NotLoggingErr)
+			return nil, fmt.Errorf("missing subject claim").(errors.NotLoggingErr)
 		}
 	}
 

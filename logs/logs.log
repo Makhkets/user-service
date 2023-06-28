@@ -170,3 +170,10 @@
 2023-06-17T15:56:59.555+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
 2023-06-17T15:56:59.555+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
 2023-06-17T15:57:00.003+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-17T15:59:27.931+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-06-17T15:59:27.931+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-06-17T15:59:27.931+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-06-17T15:59:27.932+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-06-17T15:59:28.379+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-06-17T16:09:33.751+0300	[35mDEBUG[0m	repository/sql.go:154	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-06-17T16:09:33.787+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "unique_username" (SQLSTATE 23505)	{"field": "97", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}

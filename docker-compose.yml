@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  #  start Postgres, and ensure that data is stored to a mounted volume
+  postgres:
+    image: 'postgres:14.2'
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1324
+      POSTGRES_DB: postgres
+    volumes:
+      - ./db-data/postgres/:/var/lib/postgresql/data/
+
+  redis:
+    image: 'redis:alpine'
+    ports:
+      - "6379:6379"
+    restart: always
+    volumes:
+      - ./db-data/redis/:/data
+
+
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command:
+      - ./wait-for-postgres.sh db ./app
+    environment:
+      HTTP_ADDRESS: ":8000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+

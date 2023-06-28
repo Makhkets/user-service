@@ -1,28 +1,16 @@
 package main
 
 import (
-	"context"
 	"fmt"
-	"time"
+	"unsafe"
 )
 
 func main() {
-	ctx, _ := context.WithTimeout(context.Background(), 2*time.Second)
-	doSomething(ctx)
-}
+	e := [...]uint8{11, 22, 33}
+	p := &e[0]
 
-func doSomething(ctx context.Context) {
-	for {
-		select {
-		case <-ctx.Done():
-			fmt.Println("Истекло время")
-			return
-		default:
-			go func() {
-				time.Sleep(2 * time.Second)
-				fmt.Println("Работаю")
-				return
-			}()
-		}
-	}
+	fmt.Println(*p)
+
+	c := (*byte)(unsafe.Pointer(uintptr(unsafe.Pointer((p))) + 1))
+	fmt.Println(*c)
 }

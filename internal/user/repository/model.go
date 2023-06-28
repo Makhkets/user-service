@@ -44,7 +44,7 @@ var Roles []string = []string{
 }
 
 var blackListFields []string = []string{
-	"Id", "Password", "PasswordHash", "status",
+	"Id", "Password", "PasswordHash", "Status",
 	"IsBanned", "CreatedAt", "UpdatedAt",
 }
 
