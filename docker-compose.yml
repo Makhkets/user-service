@@ -1,10 +1,9 @@
 version: '3.8'
 services:
-  #  start Postgres, and ensure that data is stored to a mounted volume
   postgres:
     image: 'postgres:14.2'
     ports:
-      - "5437:5437"
+      - "5432:5432"
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -12,6 +11,16 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - ./db-data/postgres/:/var/lib/postgresql/data/
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - my_network
 
   redis:
     image: 'redis:alpine'
@@ -20,7 +29,6 @@ services:
     restart: always
     volumes:
       - ./db-data/redis/:/data
-
 
   app:
     build:
@@ -31,6 +39,12 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - postgres
-      - redis
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - my_network
 
+networks:
+  my_network:
