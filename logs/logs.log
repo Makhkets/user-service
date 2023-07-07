@@ -229,3 +229,48 @@ main.main
 	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
 runtime.main
 	C:/Program Files/Go/src/runtime/proc.go:250
+2023-07-07T12:38:17.842+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-07T12:38:17.842+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-07T12:38:17.843+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-07T12:38:17.843+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-07T12:38:20.123+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=postgres user=postgres database=postgres`: hostname resolving error (lookup postgres: no such host)
+Makhkets/internal/database/postgres.InitDatabase
+	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
+main.run
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
+main.main
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:250
+2023-07-07T12:38:34.767+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-07T12:38:34.768+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-07T12:38:34.768+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-07T12:38:34.768+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-07T12:39:41.251+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-07T12:39:41.251+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-07T12:39:41.251+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-07T12:39:41.252+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-07T12:39:41.743+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-07T12:40:18.049+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-07T12:40:18.049+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-07T12:40:18.049+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-07T12:40:18.050+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-07T12:40:18.535+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-07T12:40:23.014+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-07T12:40:23.015+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-07T12:40:23.015+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-07T12:40:23.016+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-07T12:40:23.302+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=localhost user=postgres database=makhkets1`: server error (�����: ���� ������ "makhkets1" �� ���������� (SQLSTATE 3D000))
+Makhkets/internal/database/postgres.InitDatabase
+	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
+main.run
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
+main.main
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:250
+2023-07-07T12:40:27.812+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-07T12:40:27.814+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-07T12:40:27.814+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-07T12:40:27.815+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-07T12:40:28.260+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
