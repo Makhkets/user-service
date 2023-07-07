@@ -3,19 +3,32 @@ package user_service
 import (
 	"Makhkets/internal/configs"
 	user "Makhkets/internal/user/repository"
+	user2 "Makhkets/internal/user/repository"
 	"Makhkets/pkg/errors"
 	"Makhkets/pkg/utils"
 	"context"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
+	"net/http"
 	"runtime"
 	"strconv"
 	"time"
 )
 
 func (s *service) GenerateAccessToken(user *user.UserDTO) (string, error) {
-	cfg := configs.GetConfig()
+	// Проверяем id юзера
+	if id, err := strconv.Atoi(user.Id); err != nil {
+		return "", err
+	} else {
+		if id <= 0 {
+			return "", fmt.Errorf("zero ID")
+		}
+	}
+
+	// Проверяем роль
+	if !utils.ContainsStringInArray(user.Status, user2.Roles) {
+		return "", fmt.Errorf("unknown user role")
+	}
 
 	// Create the token
 	token := jwt.New(jwt.SigningMethodHS256)
@@ -26,10 +39,10 @@ func (s *service) GenerateAccessToken(user *user.UserDTO) (string, error) {
 	claims["username"] = user.Username
 	claims["status"] = user.Status
 	claims["isBanned"] = user.IsBanned
-	claims["exp"] = time.Now().Add(time.Minute * time.Duration(cfg.Jwt.Duration)).Unix()
+	claims["exp"] = time.Now().Add(time.Minute * time.Duration(s.config.Jwt.Duration)).Unix()
 
-	// Sign the token
-	accessToken, err := token.SignedString([]byte(cfg.Service.SecretKey))
+	// Подписываем токен
+	accessToken, err := token.SignedString([]byte(s.config.Service.SecretKey))
 	if err != nil {
 		return "", err
 	}
@@ -38,11 +51,18 @@ func (s *service) GenerateAccessToken(user *user.UserDTO) (string, error) {
 }
 
 func (s *service) GenerateRefreshToken(user *user.UserDTO) (string, int64, error) {
-	cfg := configs.GetConfig()
+	// Проверяем id юзера
+	if id, err := strconv.Atoi(user.Id); err != nil {
+		return "", 0, err
+	} else {
+		if id <= 0 {
+			return "", 0, fmt.Errorf("zero ID")
+		}
+	}
 
 	// Create the token
 	token := jwt.New(jwt.SigningMethodHS256)
-	exp := time.Now().Add(time.Minute * time.Duration(cfg.Jwt.Refresh)).Unix()
+	exp := time.Now().Add(time.Minute * time.Duration(s.config.Jwt.Refresh)).Unix()
 
 	// Set the claims
 	claims := token.Claims.(jwt.MapClaims)
@@ -50,7 +70,7 @@ func (s *service) GenerateRefreshToken(user *user.UserDTO) (string, int64, error
 	claims["exp"] = exp
 
 	// Sign the token
-	refreshToken, err := token.SignedString([]byte(cfg.Service.SecretKey))
+	refreshToken, err := token.SignedString([]byte(s.config.Service.SecretKey))
 	if err != nil {
 		return "", 0, err
 	}
@@ -58,7 +78,7 @@ func (s *service) GenerateRefreshToken(user *user.UserDTO) (string, int64, error
 	return refreshToken, exp, nil
 }
 
-func (s *service) CreateTokenPair(dto *user.UserDTO, c *gin.Context) (map[string]string, int64, *errors.CustomError) {
+func (s *service) CreateTokenPair(dto *user.UserDTO, req *http.Request) (map[string]string, int64, *errors.CustomError) {
 	// Создаем access токен
 	accessToken, err := s.GenerateAccessToken(dto)
 	if err != nil {
@@ -85,21 +105,23 @@ func (s *service) CreateTokenPair(dto *user.UserDTO, c *gin.Context) (map[string
 
 	// Обновляем refresh в Redis'e
 	ctx, _ := context.WithTimeout(context.Background(), 5*time.Second)
-	if err := s.repository.SaveRefreshSession(ctx, &user.RefreshSession{
+	err2 := s.repository.SaveRefreshSession(ctx, &user.RefreshSession{
 		RefreshToken: refreshToken,
 		UserId:       dto.Id,
-		Ua:           c.Request.UserAgent(),
-		Ip:           c.ClientIP(),
-		Fingerprint:  utils.GetFingerprint(c.Request.Header),
+		Ua:           req.UserAgent(),
+		Ip:           req.RemoteAddr,
+		Fingerprint:  utils.GetFingerprint(req.Header),
 		ExpiresIn:    time.Duration(exp),
 		CreatedAt:    time.Now(),
-	}); err != nil {
+	})
+
+	if err2 != nil {
 		_, file, line, _ := runtime.Caller(1)
 		return nil, 0, &errors.CustomError{
 			CustomErr: "",
 			Field:     strconv.Itoa(line),
 			File:      file,
-			Err:       err,
+			Err:       err2,
 		}
 	}
 

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"Makhkets/database/postgres"
-	"Makhkets/database/redis"
 	"Makhkets/internal/configs"
+	"Makhkets/internal/database/postgres"
+	"Makhkets/internal/database/redis"
 	"Makhkets/internal/user"
 	user2 "Makhkets/internal/user/repository"
 	user_service "Makhkets/internal/user/service"

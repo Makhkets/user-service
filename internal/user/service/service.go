@@ -81,7 +81,7 @@ func (s *service) LoginUser(c *gin.Context, username, password string) (map[stri
 		Password: utils.PasswordToHash(dto.PasswordHash, s.config.Service.SecretKey),
 		Status:   dto.Status,
 		IsBanned: dto.IsBanned,
-	}, c)
+	}, c.Request)
 	if error != nil {
 		return nil, error
 	}
@@ -104,7 +104,7 @@ func (s *service) CreateUser(ctx context.Context, c *gin.Context, u *user.UserDT
 	}
 
 	dto.Password = utils.PasswordToHash(dto.Password, s.config.Service.SecretKey)
-	tokenPair, exp, error := s.CreateTokenPair(dto, c)
+	tokenPair, exp, error := s.CreateTokenPair(dto, c.Request)
 	if error != nil {
 		return nil, error
 	}
@@ -203,7 +203,7 @@ func (s *service) RefreshAccessToken(c *gin.Context, refreshToken string) (map[s
 		Password: utils.PasswordToHash(dto.PasswordHash, cfg.Service.SecretKey),
 		Status:   dto.Status,
 		IsBanned: dto.IsBanned,
-	}, c)
+	}, c.Request)
 	if error != nil {
 		return nil, error
 	}

@@ -177,3 +177,55 @@
 2023-06-17T15:59:28.379+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
 2023-06-17T16:09:33.751+0300	[35mDEBUG[0m	repository/sql.go:154	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
 2023-06-17T16:09:33.787+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "unique_username" (SQLSTATE 23505)	{"field": "97", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
+2023-07-04T21:13:23.930+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-04T21:13:23.930+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-04T21:13:23.931+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
+2023-07-04T21:13:23.931+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-04T21:13:26.222+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=db user=postgres database=postgres`: hostname resolving error (lookup db: no such host)
+Makhkets/database/postgres.InitDatabase
+	C:/Users/makhkets/Desktop/makhkets/database/postgres/postgres.go:41
+main.run
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
+main.main
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:250
+2023-07-06T22:29:20.571+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-06T22:29:20.573+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-06T22:29:20.573+0300	[34mINFO[0m	configs/config.go:47	Read Application Config
+2023-07-06T22:29:20.574+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-06T22:29:22.873+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=db user=postgres database=postgres`: hostname resolving error (lookup db: no such host)
+Makhkets/internal/database/postgres.InitDatabase
+	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
+main.run
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
+main.main
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:250
+2023-07-06T22:30:10.155+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-06T22:30:10.156+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-06T22:30:10.156+0300	[34mINFO[0m	configs/config.go:47	Read Application Config
+2023-07-06T22:30:10.156+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-06T22:30:12.436+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=db user=postgres database=postgres`: hostname resolving error (lookup db: no such host)
+Makhkets/internal/database/postgres.InitDatabase
+	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
+main.run
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
+main.main
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:250
+2023-07-06T22:30:37.714+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-06T22:30:37.714+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-06T22:30:37.714+0300	[34mINFO[0m	configs/config.go:47	Read Application Config
+2023-07-06T22:30:37.715+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-06T22:30:39.997+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=db user=postgres database=postgres`: hostname resolving error (lookup db: no such host)
+Makhkets/internal/database/postgres.InitDatabase
+	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
+main.run
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
+main.main
+	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:250

@@ -1,4 +1,4 @@
-package user
+package repo
 
 import (
 	"strings"
@@ -33,11 +33,9 @@ type RefreshSession struct {
 	CreatedAt    time.Time     `json:"createdAt"`
 }
 
-//id SERIAL PRIMARY KEY,
-//username VARCHAR(20) NOT NULL,
-//password VARCHAR(50) NOT NULL,
-//created_at TIMESTAMP NOT NULL DEFAULT now(),
-//updated_at TIMESTAMP NOT NULL DEFAULT now()
+const StatusAdmin = "admin"
+const StatusModerator = "moderator"
+const StatusUser = "user"
 
 var Roles []string = []string{
 	"admin", "moderator", "user",

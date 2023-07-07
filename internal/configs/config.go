@@ -2,7 +2,9 @@ package configs
 
 import (
 	"Makhkets/pkg/logging"
+	"Makhkets/pkg/utils"
 	"github.com/ilyakaznacheev/cleanenv"
+	"os"
 	"sync"
 )
 
@@ -45,9 +47,26 @@ func GetConfig() *Config {
 		logger := logging.GetLogger()
 		logger.Info("Read Application Config")
 		instance = &Config{}
-		if err := cleanenv.ReadConfig("config.yaml", instance); err != nil {
-			help, _ := cleanenv.GetDescription(instance, nil)
-			logger.Fatal(help)
+
+		if _, err := os.Stat("config.yaml"); !os.IsExist(err) {
+			if err = cleanenv.ReadConfig("config.yaml", instance); err != nil {
+				help, _ := cleanenv.GetDescription(instance, nil)
+				logger.Error(err.Error())
+				logger.Fatal(help)
+			}
+		} else {
+			// Находим путь до корневого каталога, где и находится config.yaml
+			projectDirPath, err := utils.GetRootDirectory("config.yaml")
+			projectDirPath = projectDirPath + "\\"
+			if err != nil {
+				panic(err)
+			}
+
+			if err = cleanenv.ReadConfig(projectDirPath+"config.yaml", instance); err != nil {
+				help, _ := cleanenv.GetDescription(instance, nil)
+				logger.Error(err.Error())
+				logger.Fatal(help)
+			}
 		}
 	})
 

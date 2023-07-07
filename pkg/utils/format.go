@@ -5,6 +5,8 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
+	"os"
+	"path/filepath"
 	"reflect"
 	"strings"
 )
@@ -57,4 +59,25 @@ func ContainsStringInArray(substr string, arr []string) bool {
 
 func GetIdField(id any) string {
 	return fmt.Sprintf("user%v", id)
+}
+
+func GetRootDirectory(file string) (string, error) {
+	// Находим путь до корневого каталога, где и находится config.yaml
+	projectDirPath, err := filepath.Abs("")
+	if err != nil {
+		return "", err
+	}
+
+	// Проверяем есть ли файл в данном каталоге, если нет, то поднимаемся на каталог вверх
+	for i := 0; i <= 10; i++ {
+		if _, err = os.Stat(projectDirPath + "\\" + file); os.IsNotExist(err) {
+			projectDirPath = filepath.Dir(projectDirPath)
+		} else if err == nil {
+			break
+		} else {
+			return "", fmt.Errorf("not found root directory")
+		}
+	}
+
+	return projectDirPath, nil
 }

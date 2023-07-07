@@ -1,16 +1,28 @@
 package main
 
-import (
-	"fmt"
-	"unsafe"
-)
+import "fmt"
+
+type animal struct {
+	name string
+	age  uint
+}
+
+type Animal interface {
+	Go()
+}
+
+func (a *animal) Go() {
+	fmt.Println(a.name, a.age)
+}
+
+func GetAnimalStruct() Animal {
+	return &animal{
+		name: "dog",
+		age:  12,
+	}
+}
 
 func main() {
-	e := [...]uint8{11, 22, 33}
-	p := &e[0]
-
-	fmt.Println(*p)
-
-	c := (*byte)(unsafe.Pointer(uintptr(unsafe.Pointer((p))) + 1))
-	fmt.Println(*c)
+	animal := GetAnimalStruct()
+	animal.Go()
 }

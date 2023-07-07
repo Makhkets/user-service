@@ -1,5 +1,14 @@
 version: '3.8'
 services:
+  redis:
+    image: 'redis:alpine'
+    ports:
+      - "6379:6379"
+    restart: always
+    volumes:
+      - ./db-data/redis/:/data
+
+
   postgres:
     image: 'postgres:14.2'
     ports:
@@ -11,40 +20,20 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - ./db-data/postgres/:/var/lib/postgresql/data/
+    command: postgres -c max_wal_senders=0
     healthcheck:
-      test: ["CMD", "pg_isready", "-q", "-d", "postgres"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD-SHELL", "pg_isready -h localhost -p 5432 -U postgres"]
+      interval: 30s
+      timeout: 10s
       retries: 5
-    depends_on:
-      redis:
-        condition: service_healthy
-    networks:
-      - my_network
 
-  redis:
-    image: 'redis:alpine'
-    ports:
-      - "6379:6379"
-    restart: always
-    volumes:
-      - ./db-data/redis/:/data
 
   app:
     build:
       context: .
       dockerfile: ./Dockerfile
-    environment:
-      HTTP_ADDRESS: ":8000"
     ports:
       - "8000:8000"
     depends_on:
       postgres:
         condition: service_healthy
-      redis:
-        condition: service_healthy
-    networks:
-      - my_network
-
-networks:
-  my_network:

@@ -1,6 +1,7 @@
 package logging
 
 import (
+	"Makhkets/pkg/utils"
 	"fmt"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -21,8 +22,11 @@ func GetLogger() Logger {
 		config := zap.NewDevelopmentConfig()
 		config.EncoderConfig.EncodeLevel = zapcore.CapitalColorLevelEncoder
 
-		if _, err := os.Stat("logs"); os.IsNotExist(err) {
-			os.Mkdir("logs", 0755)
+		// Находим путь до корневого каталога, где и находится config.yaml
+		projectDirPath, err := utils.GetRootDirectory("config.yaml")
+
+		if _, err := os.Stat(projectDirPath + "\\logs"); os.IsNotExist(err) {
+			os.Mkdir(projectDirPath+"\\logs", 0755)
 		}
 		config.OutputPaths = append(config.OutputPaths, "logs/logs.log")
 

@@ -1,9 +1,9 @@
-package user
+package repo
 
 import (
-	"Makhkets/database/postgres"
-	rdb "Makhkets/database/redis"
 	"Makhkets/internal/configs"
+	"Makhkets/internal/database/postgres"
+	"Makhkets/internal/database/redis"
 	"Makhkets/pkg/logging"
 	"Makhkets/pkg/utils"
 	"context"
