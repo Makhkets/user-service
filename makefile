@@ -1,6 +1,6 @@
 
 MIGRATION_NAME = "none"
-DATABASE_URL = "postgres://postgres:1324@localhost/postgres"
+DATABASE_URL = "postgres://postgres:1324@postgres/postgres"
 
 create:
 	cd schema/migrations/ && goose create $(MIGRATION_NAME) sql

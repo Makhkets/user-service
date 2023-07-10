@@ -1,276 +1,93 @@
-2023-06-16T20:34:25.683+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-16T20:34:25.684+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-16T20:34:25.684+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-16T20:34:25.685+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-16T20:34:26.155+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-16T20:36:21.479+0300	[35mDEBUG[0m	repository/sql.go:149	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-16T20:36:21.527+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-16T20:38:30.516+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-16T20:38:30.517+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-16T20:38:30.517+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-16T20:38:30.519+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-16T20:38:30.975+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-16T20:38:35.247+0300	[35mDEBUG[0m	repository/sql.go:149	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-16T20:38:35.252+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-16T20:38:51.101+0300	[35mDEBUG[0m	repository/sql.go:149	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-16T20:38:51.106+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T11:20:22.933+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T11:20:22.935+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T11:20:22.935+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T11:20:22.936+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T11:20:23.450+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T11:20:58.542+0300	[35mDEBUG[0m	repository/sql.go:159	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T11:20:58.592+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T11:21:33.740+0300	[35mDEBUG[0m	repository/sql.go:159	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T11:21:33.744+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T11:25:27.324+0300	[35mDEBUG[0m	repository/sql.go:159	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T11:25:27.335+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T11:25:51.828+0300	[35mDEBUG[0m	repository/sql.go:159	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T11:25:51.836+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T12:59:06.122+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T12:59:06.123+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T12:59:06.123+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T12:59:06.124+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T12:59:06.564+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:01:34.971+0300	[35mDEBUG[0m	repository/sql.go:172	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T13:01:35.005+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T13:01:48.387+0300	[34mINFO[0m	errors/error.go:18	token is malformed: could not base64 decode header: illegal base64 data at input byte 0	{"field": "218", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:02:11.412+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:03:04.025+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:03:08.285+0300	[35mDEBUG[0m	repository/sql.go:172	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T13:03:08.291+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T13:03:15.480+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:04:24.901+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:04:24.902+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:04:24.902+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:04:24.903+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:04:25.327+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:04:25.941+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:06:58.214+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:06:58.214+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:06:58.214+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:06:58.216+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:06:58.669+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:07:00.555+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:07:03.421+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:07:19.831+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:07:19.832+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:07:19.832+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:07:19.833+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:07:20.257+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:09:21.465+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:09:21.466+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:09:21.467+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:09:21.467+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:09:22.032+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:11:22.103+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:12:14.885+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:12:14.885+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:12:14.885+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:12:14.886+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:12:15.316+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:12:18.099+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:16:23.994+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:16:23.994+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:16:23.995+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:16:23.996+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:16:24.440+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:16:31.914+0300	[35mDEBUG[0m	repository/sql.go:171	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T13:16:31.924+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T13:18:51.906+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:19:44.120+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:19:44.120+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:19:44.120+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:19:44.121+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:19:44.564+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:19:49.422+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:21:11.031+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:21:11.033+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:21:11.033+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:21:11.033+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:21:11.469+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:21:21.935+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:23:48.591+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:23:48.592+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:23:48.592+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:23:48.593+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:23:49.026+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:24:01.036+0300	[34mINFO[0m	errors/error.go:18	invalid character 'c' looking for beginning of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:39:56.775+0300	[34mINFO[0m	errors/error.go:18	invalid character 'c' looking for beginning of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:40:09.880+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T13:40:09.883+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T13:40:09.883+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T13:40:09.884+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T13:40:10.490+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T13:40:22.958+0300	[35mDEBUG[0m	repository/sql.go:165	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T13:40:22.964+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T13:40:37.136+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T13:42:53.296+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T15:12:31.977+0300	[34mINFO[0m	errors/error.go:18	WRONGTYPE Operation against a key holding the wrong kind of value	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T15:21:32.606+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:21:32.607+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:21:32.607+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:21:32.608+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:21:33.063+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:21:47.601+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:21:47.602+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:21:47.602+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:21:47.603+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:21:48.166+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:25:35.660+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:25:35.662+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:25:35.663+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:25:35.664+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:25:36.104+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:27:26.204+0300	[34mINFO[0m	errors/error.go:18	redis: ScanSlice index=0 value="c0b3205dc1e4f4907dac402562df64f945b08034019e96bb720c6a69cd64bcfc" failed: redis: can't unmarshal *interface {} (consider implementing BinaryUnmarshaler)	{"field": "435", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-06-17T15:29:34.039+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:29:34.041+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:29:34.041+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:29:34.041+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:29:34.659+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:33:19.704+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:33:19.705+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:33:19.705+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:33:19.706+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:33:20.141+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:33:43.642+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:33:43.643+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:33:43.643+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:33:43.644+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:33:44.183+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:34:02.636+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:34:02.636+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:34:02.637+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:34:02.638+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:34:03.073+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:35:01.400+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:35:01.401+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:35:01.401+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:35:01.402+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:35:01.832+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:44:51.020+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:44:51.020+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:44:51.020+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:44:51.023+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:44:51.445+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:51:03.801+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:51:03.802+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:51:03.802+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:51:03.804+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:51:04.373+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:51:51.531+0300	[35mDEBUG[0m	repository/sql.go:174	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
-2023-06-17T15:51:51.541+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
-2023-06-17T15:52:01.619+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:52:01.621+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:52:01.621+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:52:01.621+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:52:02.053+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:56:59.554+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:56:59.555+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:56:59.555+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:56:59.555+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:57:00.003+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T15:59:27.931+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-06-17T15:59:27.931+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-06-17T15:59:27.931+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-06-17T15:59:27.932+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-06-17T15:59:28.379+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-06-17T16:09:33.751+0300	[35mDEBUG[0m	repository/sql.go:154	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
-2023-06-17T16:09:33.787+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "unique_username" (SQLSTATE 23505)	{"field": "97", "file": "C:/Users/makhkets/GolandProjects/Makhkets/internal/user/service/service.go"}
-2023-07-04T21:13:23.930+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-04T21:13:23.930+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-04T21:13:23.931+0300	[34mINFO[0m	configs/config.go:46	Read Application Config
-2023-07-04T21:13:23.931+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-04T21:13:26.222+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=db user=postgres database=postgres`: hostname resolving error (lookup db: no such host)
-Makhkets/database/postgres.InitDatabase
-	C:/Users/makhkets/Desktop/makhkets/database/postgres/postgres.go:41
-main.run
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
-main.main
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-07-06T22:29:20.571+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-06T22:29:20.573+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-06T22:29:20.573+0300	[34mINFO[0m	configs/config.go:47	Read Application Config
-2023-07-06T22:29:20.574+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-06T22:29:22.873+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=db user=postgres database=postgres`: hostname resolving error (lookup db: no such host)
-Makhkets/internal/database/postgres.InitDatabase
-	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
-main.run
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
-main.main
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-07-06T22:30:10.155+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-06T22:30:10.156+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-06T22:30:10.156+0300	[34mINFO[0m	configs/config.go:47	Read Application Config
-2023-07-06T22:30:10.156+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-06T22:30:12.436+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=db user=postgres database=postgres`: hostname resolving error (lookup db: no such host)
-Makhkets/internal/database/postgres.InitDatabase
-	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
-main.run
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
-main.main
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-07-06T22:30:37.714+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-06T22:30:37.714+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-06T22:30:37.714+0300	[34mINFO[0m	configs/config.go:47	Read Application Config
-2023-07-06T22:30:37.715+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-06T22:30:39.997+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=db user=postgres database=postgres`: hostname resolving error (lookup db: no such host)
-Makhkets/internal/database/postgres.InitDatabase
-	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
-main.run
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
-main.main
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-07-07T12:38:17.842+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-07T12:38:17.842+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-07T12:38:17.843+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
-2023-07-07T12:38:17.843+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-07T12:38:20.123+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=postgres user=postgres database=postgres`: hostname resolving error (lookup postgres: no such host)
-Makhkets/internal/database/postgres.InitDatabase
-	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
-main.run
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
-main.main
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-07-07T12:38:34.767+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-07T12:38:34.768+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-07T12:38:34.768+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
-2023-07-07T12:38:34.768+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-07T12:39:41.251+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-07T12:39:41.251+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-07T12:39:41.251+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
-2023-07-07T12:39:41.252+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-07T12:39:41.743+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-07-07T12:40:18.049+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-07T12:40:18.049+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-07T12:40:18.049+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
-2023-07-07T12:40:18.050+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-07T12:40:18.535+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
-2023-07-07T12:40:23.014+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-07T12:40:23.015+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-07T12:40:23.015+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
-2023-07-07T12:40:23.016+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-07T12:40:23.302+0300	[31mFATAL[0m	postgres/postgres.go:41	Ошибка при создании пула соединений: failed to connect to `host=localhost user=postgres database=makhkets1`: server error (�����: ���� ������ "makhkets1" �� ���������� (SQLSTATE 3D000))
-Makhkets/internal/database/postgres.InitDatabase
-	C:/Users/makhkets/Desktop/makhkets/internal/database/postgres/postgres.go:41
-main.run
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:29
-main.main
-	C:/Users/makhkets/Desktop/makhkets/cmd/api/server.go:16
-runtime.main
-	C:/Program Files/Go/src/runtime/proc.go:250
-2023-07-07T12:40:27.812+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
-2023-07-07T12:40:27.814+0300	[34mINFO[0m	api/server.go:25	Get Config
-2023-07-07T12:40:27.814+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
-2023-07-07T12:40:27.815+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
-2023-07-07T12:40:28.260+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-07T23:11:46.464+0300	[35mDEBUG[0m	repository/sql.go:154	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-07-07T23:11:46.474+0300	[34mINFO[0m	errors/error.go:18	unknown user role	{"field": "107", "file": "D:/projects/makhkets/internal/user/service/service.go"}
+2023-07-07T23:13:56.541+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-07T23:13:56.542+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-07T23:13:56.542+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-07T23:13:56.542+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-07T23:13:57.156+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-07T23:14:01.736+0300	[35mDEBUG[0m	repository/sql.go:154	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-07-07T23:14:01.745+0300	[34mINFO[0m	errors/error.go:18	ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_username_key" (SQLSTATE 23505)	{"field": "97", "file": "D:/projects/makhkets/internal/user/service/service.go"}
+2023-07-07T23:15:57.825+0300	[35mDEBUG[0m	repository/sql.go:154	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-07-07T23:15:57.837+0300	[35mDEBUG[0m	user/handler.go:128	Successfully created user
+2023-07-07T23:16:33.615+0300	[35mDEBUG[0m	repository/sql.go:154	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-07-07T23:16:33.624+0300	[35mDEBUG[0m	user/handler.go:128	Successfully created user
+2023-07-10T22:21:11.182+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:21:11.183+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:21:11.184+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:21:11.185+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:21:11.771+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-10T22:52:12.341+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:52:12.342+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:52:12.343+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:52:12.343+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:52:46.442+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:52:46.443+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:52:46.445+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:52:46.446+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:54:16.037+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:54:16.038+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:54:16.038+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:54:16.039+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:55:03.918+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:55:03.919+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:55:03.919+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:55:03.920+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:55:44.870+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:55:44.871+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:55:44.871+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:55:44.872+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:56:32.586+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:56:32.588+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:56:32.588+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:56:32.589+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:57:03.033+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:57:03.033+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:57:03.034+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:57:03.034+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:57:13.980+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:57:13.981+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:57:13.981+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:57:13.981+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:58:57.511+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T22:58:57.511+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T22:58:57.511+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T22:58:57.512+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T22:58:58.052+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-10T23:00:00.081+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T23:00:00.083+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T23:00:00.085+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T23:00:00.087+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T23:00:10.997+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T23:00:10.998+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T23:00:10.998+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T23:00:10.999+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T23:01:50.895+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T23:01:50.897+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T23:01:50.897+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T23:01:50.898+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T23:01:51.423+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-10T23:02:38.240+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T23:02:38.242+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T23:02:38.242+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T23:02:38.243+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T23:02:38.864+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-10T23:03:11.625+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T23:03:11.626+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T23:03:11.626+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T23:03:11.626+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T23:03:12.260+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-10T23:03:44.852+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T23:03:44.853+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T23:03:44.853+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T23:03:44.853+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T23:03:45.346+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-10T23:05:52.397+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T23:05:52.397+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T23:05:52.397+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T23:05:52.398+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T23:05:52.932+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-10T23:06:58.346+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-10T23:06:58.347+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-10T23:06:58.348+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-10T23:06:58.348+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-10T23:06:58.848+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000

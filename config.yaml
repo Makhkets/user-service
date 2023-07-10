@@ -8,14 +8,14 @@ listen:
   port: 8000
 
 storage:
-  host: localhost # TODO: change to postgres
+  host: postgres  # TODO: change to postgres
   port: 5432
-  database: makhkets
+  database: postgres # TODO: change to postgres
   username: postgres
   password: 1324
 
 redis:
-  address: localhost:6379 # TODO: change to redis
+  address: redis:6379 # TODO: change to redis
   password:
   db: 0
 

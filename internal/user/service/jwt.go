@@ -26,6 +26,10 @@ func (s *service) GenerateAccessToken(user *user.UserDTO) (string, error) {
 	}
 
 	// Проверяем роль
+	if user.Status == "" {
+		user.Status = user2.StatusUser
+	}
+
 	if !utils.ContainsStringInArray(user.Status, user2.Roles) {
 		return "", fmt.Errorf("unknown user role")
 	}
