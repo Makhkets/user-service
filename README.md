@@ -33,15 +33,8 @@
 
 ![Postman_SsREk2Br10.png](pkg/images/Postman_SsREk2Br10.png)
 
-
-
-![Postman_SCWCC2jOAx.png](D:/projects/makhkets/pkg/images/Postman_SCWCC2jOAx.png)
-
-
-
-
+![Postman_SCWCC2jOAx.png](pkg/images/Postman_SCWCC2jOAx.png)
 ![Postman_TZAc4BszEX.png](pkg/images/Postman_TZAc4BszEX.png)
-
 
 
 
