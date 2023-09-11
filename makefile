@@ -18,8 +18,8 @@ build:
 	docker-compose build
 	docker-compose up
 
-rebuild:
-	docker-compose down --rmi all --volumes --remove-orphans && docker-compose up --build --force-recreate -d
+restart:
+	docker-compose restart app
 
 .PHONY: cover
 cover:
@@ -27,4 +27,5 @@ cover:
 	go tool cover -html=coverage.out
 	del coverage.out
 
-
+swaginit:
+	swag init --parseDependency --parseInternal --parseDepth 2 -g cmd\api\server.go

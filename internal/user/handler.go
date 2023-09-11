@@ -10,6 +10,8 @@ import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 	"net/http"
 	"time"
 )
@@ -48,6 +50,7 @@ func (h *handler) Register(r *gin.Engine) {
 	{
 		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers) // Под себя реализовать надо с offset'ами
 		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
+		api.GET(userMeURL, h.AuthMiddleware(), h.AboutMyInfo)
 
 		api.Handle(http.MethodDelete, userURL, h.SelfUserMiddleware(), h.DeleteUser)
 		api.Handle(http.MethodGet, userSessionUrl, h.SelfUserMiddleware(), h.GetSessions)
@@ -60,12 +63,12 @@ func (h *handler) Register(r *gin.Engine) {
 		// Тест админского Middleware
 		api.Handle(http.MethodGet, "/user/test", h.AdminMiddleware())
 
-		api.GET(userMeURL, h.AboutMyInfo)
 		api.POST(usersURL, h.CreateUser)
 		api.POST(userLoginURL, h.Login)
 		api.POST(userRefreshTokenURL, h.RefreshToken)
-
 	}
+
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 }
 
 func (h *handler) AboutMyInfo(c *gin.Context) {

@@ -91,3 +91,52 @@
 2023-07-10T23:06:58.348+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
 2023-07-10T23:06:58.348+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
 2023-07-10T23:06:58.848+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-11T00:22:06.819+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-07-11T00:22:06.824+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-07-11T00:22:06.825+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-07-11T00:22:06.826+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-07-11T00:22:07.426+0300	[35mDEBUG[0m	api/server.go:39	Listening this host: http://localhost:8000
+2023-07-11T00:24:00.141+0300	[34mINFO[0m	errors/error.go:18	token signature is invalid: signature is invalid	{"field": "141", "file": "D:/projects/makhkets/internal/user/service/service.go"}
+2023-07-11T00:24:13.929+0300	[35mDEBUG[0m	repository/sql.go:174	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-07-11T00:24:13.949+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "56", "file": "D:/projects/makhkets/internal/user/service/service.go"}
+2023-07-11T00:24:17.480+0300	[35mDEBUG[0m	repository/sql.go:154	SQL Query: INSERT INTO users (username, password) VALUES ($1, $2) RETURNING id
+2023-07-11T00:24:17.512+0300	[35mDEBUG[0m	user/handler.go:128	Successfully created user
+2023-07-11T00:24:20.331+0300	[35mDEBUG[0m	repository/sql.go:174	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-07-11T00:24:20.332+0300	[34mINFO[0m	errors/error.go:18	no rows in result set	{"field": "56", "file": "D:/projects/makhkets/internal/user/service/service.go"}
+2023-07-11T00:24:31.010+0300	[35mDEBUG[0m	repository/sql.go:174	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-07-11T00:24:31.018+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
+2023-07-11T00:24:42.303+0300	[35mDEBUG[0m	repository/sql.go:165	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE id=$1
+2023-07-11T00:24:42.318+0300	[34mINFO[0m	user/handler.go:106	Successfully refreshed access token
+2023-07-11T00:25:06.900+0300	[34mINFO[0m	user/handler.go:79	Received data from token
+2023-07-11T00:25:35.181+0300	[34mINFO[0m	errors/error.go:18	token signature is invalid: signature is invalid	{"field": "218", "file": "D:/projects/makhkets/internal/user/service/service.go"}
+2023-07-11T00:25:41.506+0300	[34mINFO[0m	errors/error.go:18	token signature is invalid: signature is invalid	{"field": "218", "file": "D:/projects/makhkets/internal/user/service/service.go"}
+2023-07-11T00:25:47.516+0300	[35mDEBUG[0m	repository/sql.go:174	SQL Query: SELECT id, username, password, created_at, updated_at, status, is_banned FROM users WHERE username=$1 AND password=$2
+2023-07-11T00:25:47.522+0300	[34mINFO[0m	user/handler.go:149	Successfully Login in Account
+2023-07-11T00:26:52.998+0300	[35mDEBUG[0m	repository/sql.go:190	SQL Query: DELETE FROM users WHERE id = $1 RETURNING id
+2023-07-11T00:26:53.012+0300	[34mINFO[0m	user/handler.go:161	Deleted User with id: 1
+2023-08-10T19:16:31.434+0300	[34mINFO[0m	api/server.go:23	Initialize Logger
+2023-08-10T19:16:31.449+0300	[34mINFO[0m	api/server.go:25	Get Config
+2023-08-10T19:16:31.450+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-08-10T19:16:31.450+0300	[34mINFO[0m	api/server.go:28	Initialize Databases
+2023-08-10T19:16:33.787+0300	[31mFATAL[0m	postgres/postgres.go:48	Ошибка при создании пула соединений: failed to connect to `host=postgres user=postgres database=postgres`: hostname resolving error (lookup postgres: no such host)
+Makhkets/internal/database/postgres.InitDatabase
+	D:/projects/SERVICE/jwt/internal/database/postgres/postgres.go:48
+main.run
+	D:/projects/SERVICE/jwt/cmd/api/server.go:29
+main.main
+	D:/projects/SERVICE/jwt/cmd/api/server.go:16
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:250
+2023-08-18T11:17:07.316+0300	[34mINFO[0m	api/server.go:42	Initialize Logger
+2023-08-18T11:17:07.317+0300	[34mINFO[0m	api/server.go:44	Get Config
+2023-08-18T11:17:07.317+0300	[34mINFO[0m	configs/config.go:48	Read Application Config
+2023-08-18T11:17:07.318+0300	[34mINFO[0m	api/server.go:47	Initialize Databases
+2023-08-18T11:17:09.617+0300	[31mFATAL[0m	postgres/postgres.go:48	Ошибка при создании пула соединений: failed to connect to `host=postgres user=postgres database=postgres`: hostname resolving error (lookup postgres: no such host)
+Makhkets/internal/database/postgres.InitDatabase
+	D:/projects/SERVICE/jwt/internal/database/postgres/postgres.go:48
+main.run
+	D:/projects/SERVICE/jwt/cmd/api/server.go:48
+main.main
+	D:/projects/SERVICE/jwt/cmd/api/server.go:35
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:250

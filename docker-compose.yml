@@ -37,6 +37,3 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-
-#    command:
-#      - cd ./app/schema/ && goose postgres 'postgres://postgres:1324@postgres:5432/postgres' up
