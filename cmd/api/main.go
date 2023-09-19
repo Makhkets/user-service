@@ -57,6 +57,7 @@ func run() error {
 	userHandler.Register(r)
 
 	logger.Debug("Listening this host: http://localhost:" + cfg.Listen.Port)
+	logger.Debug("LIGHT WEIGHT V4")
 	if err := r.Run(fmt.Sprintf("%s:%s", cfg.Listen.Address, cfg.Listen.Port)); err != nil {
 		panic(err)
 	}

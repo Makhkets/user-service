@@ -1,20 +1,21 @@
-FROM golang:1.20-alpine
+# Build stage (ELEGANT)
+FROM golang:1.21.0-alpine AS builder
 
-RUN apk add build-base
+WORKDIR /build
 
-EXPOSE 8000
-
-WORKDIR /app
-COPY . /app
-
-# RUN go mod download && go mod verify && go build -o ./cmd/api/server.go
+COPY go.mod go.sum ./
 RUN go mod download
-RUN go mod verify
-RUN go install github.com/pressly/goose/v3/cmd/goose@latest
 
-RUN chmod +x ./cmd/api/main.go
-RUN chmod +x ./app
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o jwtserver ./cmd/api/main.go
 
-RUN go build -o jwtserver ./cmd/api/main.go
+# Final stage (ELEGANT)
+FROM alpine:latest
+
+WORKDIR /go/src/app
+
+COPY --from=builder /build/ .
 
 CMD ["./jwtserver"]
+
+
