@@ -32,4 +32,4 @@ cover:
 	del coverage.out
 
 swaginit:
-	swag init --parseDependency --parseInternal --parseDepth 2 -g cmd\api\server.go
+	swag init --parseDependency --parseInternal --parseDepth 2 -g cmd\api\main.go

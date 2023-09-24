@@ -10,6 +10,8 @@ import (
 	"Makhkets/pkg/logging"
 	"fmt"
 	"github.com/gin-gonic/gin"
+
+	_ "Makhkets/docs"
 )
 
 // @title           User Service
@@ -25,9 +27,10 @@ import (
 // @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
 
 // @host      localhost:8000
-// @BasePath  /api/v1
 
-// @securityDefinitions.basic  BasicAuth
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
 
 // @externalDocs.description  OpenAPI
 // @externalDocs.url          https://swagger.io/resources/open-api/
@@ -50,6 +53,7 @@ func run() error {
 	rpool := rdb.InitRedis()
 
 	r := gin.Default()
+	r.Use(corsMiddleware())
 
 	userStorage := user2.NewStorage(&logger, pool, rpool)
 	userService := user_service.NewUserService(userStorage, &logger, cfg)
@@ -57,10 +61,24 @@ func run() error {
 	userHandler.Register(r)
 
 	logger.Debug("Listening this host: http://localhost:" + cfg.Listen.Port)
-	logger.Debug("LIGHT WEIGHT V4")
 	if err := r.Run(fmt.Sprintf("%s:%s", cfg.Listen.Address, cfg.Listen.Port)); err != nil {
 		panic(err)
 	}
 
 	return nil
+}
+
+func corsMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.Header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+		c.Header("Access-Control-Allow-Headers", "Content-Type, Authorization")
+		c.Header("Access-Control-Allow-Credentials", "true")
+
+		if c.Request.Method == "OPTIONS" {
+			c.AbortWithStatus(200)
+		} else {
+			c.Next()
+		}
+	}
 }

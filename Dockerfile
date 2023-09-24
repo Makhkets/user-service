@@ -18,4 +18,3 @@ COPY --from=builder /build/ .
 
 CMD ["./jwtserver"]
 
-

@@ -14,6 +14,8 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"net/http"
 	"time"
+
+	_ "Makhkets/docs"
 )
 
 const (
@@ -71,6 +73,16 @@ func (h *handler) Register(r *gin.Engine) {
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 }
 
+// AboutMyInfo godoc
+// @Summary About My Info
+// @Tags         jwt
+// @Description  Get My Info
+// @Security     ApiKeyAuth
+// @Accept       json
+// @Produce      json
+// @Success      200   {object}  user.AboutAccessToken
+// @Failure      400   {object}  errors.CustomError
+// @Router       /api/user/me [get]
 func (h *handler) AboutMyInfo(c *gin.Context) {
 	token := c.GetHeader("Authorization")
 	if token != "" {
@@ -86,6 +98,7 @@ func (h *handler) AboutMyInfo(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "None \"Authorization\" key in your headers",
 		})
+
 	}
 }
 

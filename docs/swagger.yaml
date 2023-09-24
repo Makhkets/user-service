@@ -1,4 +1,29 @@
-basePath: /api/v1
+definitions:
+  Makhkets_internal_user_repository.AboutAccessToken:
+    properties:
+      id:
+        type: integer
+      isBanned:
+        type: boolean
+      status:
+        type: string
+      username:
+        type: string
+    type: object
+  Makhkets_pkg_errors.CustomError:
+    properties:
+      customErr:
+        type: string
+      err: {}
+      field:
+        type: string
+      file:
+        type: string
+      isNotWriteError:
+        type: boolean
+      isNotWriteMessage:
+        type: boolean
+    type: object
 externalDocs:
   description: OpenAPI
   url: https://swagger.io/resources/open-api/
@@ -15,8 +40,31 @@ info:
   termsOfService: http://swagger.io/terms/
   title: User Service
   version: "1.0"
-paths: {}
+paths:
+  /api/user/me:
+    get:
+      consumes:
+      - application/json
+      description: Get My Info
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.AboutAccessToken'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_pkg_errors.CustomError'
+      security:
+      - ApiKeyAuth: []
+      summary: About My Info
+      tags:
+      - jwt
 securityDefinitions:
-  BasicAuth:
-    type: basic
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
 swagger: "2.0"
