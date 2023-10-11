@@ -10,19 +10,130 @@ definitions:
       username:
         type: string
     type: object
-  Makhkets_pkg_errors.CustomError:
+  Makhkets_internal_user_repository.CreateUserResponseForm:
     properties:
-      customErr:
+      access:
         type: string
-      err: {}
-      field:
+      refresh:
         type: string
-      file:
+    type: object
+  Makhkets_internal_user_repository.GenerateTokenForm:
+    properties:
+      password:
+        minLength: 8
         type: string
-      isNotWriteError:
+      username:
+        minLength: 4
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  Makhkets_internal_user_repository.GetUserForm:
+    properties:
+      id:
+        type: string
+      isBanned:
         type: boolean
-      isNotWriteMessage:
+      status:
+        type: string
+      username:
+        type: string
+    type: object
+  Makhkets_internal_user_repository.MessageResponseForm:
+    properties:
+      message:
+        type: string
+    type: object
+  Makhkets_internal_user_repository.PasswordForm:
+    properties:
+      new_password:
+        minLength: 8
+        type: string
+      old_password:
+        minLength: 8
+        type: string
+    required:
+    - new_password
+    - old_password
+    type: object
+  Makhkets_internal_user_repository.PasswordResponseForm:
+    properties:
+      new_password:
+        type: string
+      old_password:
+        type: string
+    type: object
+  Makhkets_internal_user_repository.PermissionForm:
+    properties:
+      permission:
         type: boolean
+    required:
+    - permission
+    type: object
+  Makhkets_internal_user_repository.RefreshTokenForm:
+    properties:
+      refresh:
+        type: string
+    type: object
+  Makhkets_internal_user_repository.ResponseAccessToken:
+    properties:
+      access:
+        type: string
+    type: object
+  Makhkets_internal_user_repository.ResponseError:
+    properties:
+      error:
+        type: string
+    type: object
+  Makhkets_internal_user_repository.StatusForm:
+    properties:
+      status:
+        minLength: 4
+        type: string
+    required:
+    - status
+    type: object
+  Makhkets_internal_user_repository.UserDTOForm:
+    properties:
+      password:
+        minLength: 8
+        type: string
+      username:
+        minLength: 4
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  Makhkets_internal_user_repository.UserSessionsForm:
+    properties:
+      createdAt:
+        type: string
+      expiresIn:
+        type: string
+      fingerPrint:
+        type: string
+      id:
+        type: string
+      ip:
+        type: string
+      refreshToken:
+        type: string
+      userAgent:
+        type: string
+    type: object
+  Makhkets_internal_user_repository.UsernameForm:
+    properties:
+      username:
+        type: string
+    type: object
+  Makhkets_internal_user_repository.UsernameResponseForm:
+    properties:
+      new:
+        type: string
+      old:
+        type: string
     type: object
 externalDocs:
   description: OpenAPI
@@ -41,6 +152,236 @@ info:
   title: User Service
   version: "1.0"
 paths:
+  /api/user/{id}:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.MessageResponseForm'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      summary: Deleting user handler
+      tags:
+      - user
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.GetUserForm'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      summary: Gettings user
+      tags:
+      - user
+  /api/user/{id}/change_password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Data
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/Makhkets_internal_user_repository.PasswordForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.PasswordResponseForm'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      summary: Password Update
+      tags:
+      - user
+  /api/user/{id}/change_permission:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Data
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/Makhkets_internal_user_repository.PermissionForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.PermissionForm'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      summary: User Permission Change
+      tags:
+      - user
+  /api/user/{id}/change_status:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Data
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/Makhkets_internal_user_repository.StatusForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.StatusForm'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      summary: User Status Update
+      tags:
+      - user
+  /api/user/{id}/change_username:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Data
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/Makhkets_internal_user_repository.UsernameForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.UsernameResponseForm'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      summary: Username Update
+      tags:
+      - user
+  /api/user/{id}/sessions:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.UserSessionsForm'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      summary: Getting user sessions
+      tags:
+      - user
+  /api/user/login:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: REFRESH TOKEN
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/Makhkets_internal_user_repository.GenerateTokenForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseAccessToken'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      summary: Login Handler
+      tags:
+      - user
   /api/user/me:
     get:
       consumes:
@@ -56,12 +397,91 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/Makhkets_pkg_errors.CustomError'
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
       security:
       - ApiKeyAuth: []
       summary: About My Info
       tags:
       - jwt
+  /api/user/refresh:
+    post:
+      consumes:
+      - application/json
+      description: Refreshing pair tokens
+      parameters:
+      - description: REFRESH TOKEN
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/Makhkets_internal_user_repository.RefreshTokenForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseAccessToken'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      security:
+      - ApiKeyAuth: []
+      summary: Refreshing token pair
+      tags:
+      - jwt
+  /api/users:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: User Data
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/Makhkets_internal_user_repository.UserDTOForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.CreateUserResponseForm'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      summary: Creating User Handler
+      tags:
+      - user
+  /api/users/admin:
+    post:
+      consumes:
+      - application/json
+      description: Getting admin permissions
+      parameters:
+      - description: account info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/Makhkets_internal_user_repository.GenerateTokenForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseAccessToken'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/Makhkets_internal_user_repository.ResponseError'
+      summary: Getting admin permissions
+      tags:
+      - user
 securityDefinitions:
   ApiKeyAuth:
     in: header

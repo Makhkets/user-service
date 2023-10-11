@@ -32,6 +32,8 @@ type Service interface {
 	PasswordUpdate(old_password, new_password, accessToken string) (map[string]any, *errors.CustomError)
 	StatusUpdate(accessToken, status string) (map[string]string, *errors.CustomError)
 	PermissionUpdate(id string, permission bool) (map[string]bool, *errors.CustomError)
+
+	GetAdminTokens(c *gin.Context, refreshToken string) (string, *errors.CustomError)
 }
 
 type service struct {
@@ -458,4 +460,90 @@ func (s *service) GetUserSessions(id string) (map[string][]map[string]any, *erro
 	}
 
 	return data, nil
+}
+
+func (s *service) GetAdminTokens(c *gin.Context, refreshToken string) (string, *errors.CustomError) {
+	// Проверяем на валидность refresh token и вытаскиваем id юзера
+	cfg := configs.GetConfig()
+	fingerprint := utils.GetFingerprint(c.Request.Header)
+	jwt, err := s.ParseToken(refreshToken, false)
+	if err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		switch err.(type) {
+		case error:
+			return "", &errors.CustomError{
+				CustomErr: "",
+				Field:     strconv.Itoa(line),
+				File:      file,
+				Err:       err,
+			}
+		case errors.NotLoggingErr:
+			return "", &errors.CustomError{
+				CustomErr:       "",
+				Field:           strconv.Itoa(line),
+				File:            file,
+				Err:             err,
+				IsNotWriteError: true,
+			}
+		}
+	}
+
+	// Проверяем fingerprint, user-agent и т.п юзера
+	ctx, _ := context.WithTimeout(context.Background(), 3*time.Second)
+	refreshSession, err := s.repository.GetRefreshSession(ctx, utils.GetFingerprint(c.Request.Header))
+	if err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return "", &errors.CustomError{
+			CustomErr:         "",
+			Field:             strconv.Itoa(line),
+			File:              file,
+			Err:               err,
+			IsNotWriteMessage: true,
+		}
+	}
+
+	// Проверяем FingerPrint, если они не равны, то возвращаем ошибку
+	if refreshSession.Fingerprint != fingerprint || refreshSession.RefreshToken != refreshToken {
+		_, file, line, _ := runtime.Caller(0)
+		return "", &errors.CustomError{
+			CustomErr: "Fingerprint or refresh token invalid",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       nil,
+		}
+	}
+
+	// Находим юзера для создания пары ключей
+	ctx, _ = context.WithTimeout(context.Background(), 3*time.Second)
+	dto, err := s.repository.FindOne(ctx, jwt["sub"].(string))
+	if err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return "", &errors.CustomError{
+			CustomErr: "Token is invalid",
+			Field:     strconv.Itoa(line),
+			File:      file,
+			Err:       err,
+		}
+	}
+
+	// Обновляем access и refresh токен
+	accessToken, err := s.GenerateAccessToken(&user.UserDTO{
+		Id:       strconv.Itoa(dto.Id),
+		Username: dto.Username,
+		Password: utils.PasswordToHash(dto.PasswordHash, cfg.Service.SecretKey),
+		Status:   dto.Status,
+		IsBanned: dto.IsBanned,
+	})
+	if err != nil {
+		_, file, line, _ := runtime.Caller(0)
+		return "", &errors.CustomError{
+			CustomErr:         err.Error(),
+			Field:             strconv.Itoa(line),
+			File:              file,
+			Err:               err,
+			IsNotWriteMessage: true,
+		}
+	}
+
+	return accessToken, nil
 }

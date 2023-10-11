@@ -3,7 +3,7 @@ package user
 import (
 	"Makhkets/internal/configs"
 	"Makhkets/internal/handlers"
-	user "Makhkets/internal/user/repository"
+	user_repo "Makhkets/internal/user/repository"
 	user_service "Makhkets/internal/user/service"
 	"Makhkets/pkg/errors"
 	"Makhkets/pkg/logging"
@@ -19,6 +19,8 @@ import (
 )
 
 const (
+	adminURL = "/users/admin"
+
 	usersURL            = "/users"
 	userMeURL           = "/user/me"
 	userRefreshTokenURL = "/user/refresh"
@@ -50,6 +52,8 @@ func NewHandler(l *logging.Logger, c *configs.Config, s user_service.Service) ha
 func (h *handler) Register(r *gin.Engine) {
 	api := r.Group("/api")
 	{
+		api.Handle(http.MethodPost, adminURL, h.GetAdminPermission)
+
 		api.Handle(http.MethodGet, usersURL, h.AuthMiddleware(), h.GetUsers) // Под себя реализовать надо с offset'ами
 		api.Handle(http.MethodGet, userURL, h.AuthMiddleware(), h.GetUser)
 		api.GET(userMeURL, h.AuthMiddleware(), h.AboutMyInfo)
@@ -73,6 +77,49 @@ func (h *handler) Register(r *gin.Engine) {
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 }
 
+// GetAdminPermission godoc
+// @Summary Getting admin permissions
+// @Description  Getting admin permissions
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param 		 input body 	 user_repo.GenerateTokenForm true "account info"
+// @Success      200   {object}  user_repo.ResponseAccessToken
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/users/admin [post]
+func (h *handler) GetAdminPermission(c *gin.Context) {
+	if *h.cfg.Service.IsDebug {
+		var data struct {
+			Username string `binding:"required,min=4"`
+			Password string `binding:"required,min=8"`
+		}
+
+		if err := c.BindJSON(&data); err != nil {
+			h.logger.Error("dsadasdsa")
+			c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+			return
+		}
+
+		response, err := h.service.LoginUser(c, data.Username, data.Password)
+		if err != nil {
+			errors.NewResponseError(h.logger, c, err)
+			return
+		}
+
+		refreshToken := response["refresh"]
+		accessToken, err := h.service.GetAdminTokens(c, refreshToken)
+		if err != nil {
+			errors.NewResponseError(h.logger, c, err)
+			return
+		}
+
+		c.JSON(http.StatusCreated, gin.H{"access": accessToken})
+	} else {
+		c.AbortWithStatusJSON(400, gin.H{"error": "is not debug mode"})
+		return
+	}
+}
+
 // AboutMyInfo godoc
 // @Summary About My Info
 // @Tags         jwt
@@ -80,8 +127,8 @@ func (h *handler) Register(r *gin.Engine) {
 // @Security     ApiKeyAuth
 // @Accept       json
 // @Produce      json
-// @Success      200   {object}  user.AboutAccessToken
-// @Failure      400   {object}  errors.CustomError
+// @Success      200   {object}  user_repo.AboutAccessToken
+// @Failure      400   {object}  user_repo.ResponseError
 // @Router       /api/user/me [get]
 func (h *handler) AboutMyInfo(c *gin.Context) {
 	token := c.GetHeader("Authorization")
@@ -102,6 +149,17 @@ func (h *handler) AboutMyInfo(c *gin.Context) {
 	}
 }
 
+// RefreshToken godoc
+// @Summary Refreshing token pair
+// @Security     ApiKeyAuth
+// @Description  Refreshing pair tokens
+// @Tags         jwt
+// @Accept       json
+// @Produce      json
+// @Param 		 input body 	 user_repo.RefreshTokenForm true "REFRESH TOKEN"
+// @Success      200   {object}  user_repo.ResponseAccessToken
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/refresh [post]
 func (h *handler) RefreshToken(c *gin.Context) {
 	c.Header("Content-Type", "application/json; charset=utf-8")
 	var data struct {
@@ -123,8 +181,17 @@ func (h *handler) RefreshToken(c *gin.Context) {
 	c.JSON(http.StatusAccepted, response)
 }
 
+// CreateUser godoc
+// @Summary Creating User Handler
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param 		 input body 	 user_repo.UserDTOForm true "User Data"
+// @Success      200   {object}  user_repo.CreateUserResponseForm
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/users [post]
 func (h *handler) CreateUser(c *gin.Context) {
-	var userDTO user.UserDTO
+	var userDTO user_repo.UserDTO
 	c.Header("Content-Type", "application/json; charset=utf-8")
 	if err := c.BindJSON(&userDTO); err != nil {
 		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
@@ -145,6 +212,15 @@ func (h *handler) CreateUser(c *gin.Context) {
 	c.JSON(http.StatusCreated, tokenData)
 }
 
+// Login godoc
+// @Summary Login Handler
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param 		 input body 	 user_repo.GenerateTokenForm true "REFRESH TOKEN"
+// @Success      200   {object}  user_repo.ResponseAccessToken
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/login [post]
 func (h *handler) Login(c *gin.Context) {
 	var data struct {
 		Username string `binding:"required,min=4"`
@@ -166,6 +242,16 @@ func (h *handler) Login(c *gin.Context) {
 	c.JSON(http.StatusCreated, response)
 }
 
+// DeleteUser godoc
+// @Summary Deleting user handler
+// @Security     ApiKeyAuth
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param        id   path      int  true  "ID"
+// @Success      200   {object}  user_repo.MessageResponseForm
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/{id} [delete]
 func (h *handler) DeleteUser(c *gin.Context) {
 	id := c.Param("id")
 	response, err := h.service.DeleteAccount(id)
@@ -178,27 +264,37 @@ func (h *handler) DeleteUser(c *gin.Context) {
 	c.JSON(http.StatusOK, response)
 }
 
-func (h *handler) PartialUpdateUser(c *gin.Context) {
-	// Извлекаем идентификатор пользователя из пути запроса
-	// Привязываем JSON-запрос к структуре пользователя
-	id := c.Param("id")
-	var u user.User
-	if err := c.BindJSON(&u); err != nil {
-		c.AbortWithStatusJSON(http.StatusBadRequest, ResponseErrors(err.Error()))
-		return
-	}
+//func (h *handler) PartialUpdateUser(c *gin.Context) {
+//	// Извлекаем идентификатор пользователя из пути запроса
+//	// Привязываем JSON-запрос к структуре пользователя
+//	id := c.Param("id")
+//	var u user.User
+//	if err := c.BindJSON(&u); err != nil {
+//		c.AbortWithStatusJSON(http.StatusBadRequest, ResponseErrors(err.Error()))
+//		return
+//	}
+//
+//	// Обновляем данные пользователя
+//	response, err := h.service.UpdateAccount(id, &u)
+//	if err != nil {
+//		errors.NewResponseError(h.logger, c, err)
+//		return
+//	}
+//
+//	// Возвращаем успешный ответ
+//	c.JSON(http.StatusAccepted, response)
+//}
 
-	// Обновляем данные пользователя
-	response, err := h.service.UpdateAccount(id, &u)
-	if err != nil {
-		errors.NewResponseError(h.logger, c, err)
-		return
-	}
-
-	// Возвращаем успешный ответ
-	c.JSON(http.StatusAccepted, response)
-}
-
+// GetUser godoc
+// @Summary Gettings user
+// @Security     ApiKeyAuth
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param        id   path      int  true  "ID"
+// @Success      200   {object}  user_repo.GetUserForm
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/{id} [get]
 func (h *handler) GetUser(c *gin.Context) {
 	id := c.Param("id")
 
@@ -211,6 +307,16 @@ func (h *handler) GetUser(c *gin.Context) {
 	c.JSON(http.StatusOK, response)
 }
 
+// GetSessions godoc
+// @Summary Getting user sessions
+// @Security     ApiKeyAuth
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param        id   path      int  true  "ID"
+// @Success      200   {object}  user_repo.UserSessionsForm
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/{id}/sessions [get]
 func (h *handler) GetSessions(c *gin.Context) {
 	id := c.Param("id")
 
@@ -223,18 +329,32 @@ func (h *handler) GetSessions(c *gin.Context) {
 	c.JSON(http.StatusOK, response)
 }
 
+// UsernameUpdate godoc
+// @Summary Username Update
+// @Security     ApiKeyAuth
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param        id   path      int  true  "ID"
+// @Param 		 input body 	 user_repo.UsernameForm true "Data"
+// @Success      200   {object}  user_repo.UsernameResponseForm
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/{id}/change_username [post]
 func (h *handler) UsernameUpdate(c *gin.Context) {
 	accessToken := c.GetHeader("Authorization")
-	var data struct {
+
+	type Data struct {
 		Username string `json:"username" binding:"required,min=4"`
 	}
 
-	if err := c.BindJSON(&data); err != nil {
+	var d Data
+
+	if err := c.BindJSON(&d); err != nil {
 		c.JSON(http.StatusBadRequest, ResponseErrors(err.Error()))
 		return
 	}
 
-	response, err := h.service.UsernameUpdate(data.Username, accessToken)
+	response, err := h.service.UsernameUpdate(d.Username, accessToken)
 	if err != nil {
 		errors.NewResponseError(h.logger, c, err)
 		return
@@ -244,6 +364,17 @@ func (h *handler) UsernameUpdate(c *gin.Context) {
 	c.JSON(http.StatusAccepted, response)
 }
 
+// PasswordUpdate godoc
+// @Summary Password Update
+// @Security     ApiKeyAuth
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param        id   path      int  true  "ID"
+// @Param 		 input body 	 user_repo.PasswordForm true "Data"
+// @Success      200   {object}  user_repo.PasswordResponseForm
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/{id}/change_password [post]
 func (h *handler) PasswordUpdate(c *gin.Context) {
 	accessToken := c.GetHeader("Authorization")
 	var data struct {
@@ -266,6 +397,17 @@ func (h *handler) PasswordUpdate(c *gin.Context) {
 	c.JSON(http.StatusAccepted, response)
 }
 
+// StatusChange godoc
+// @Summary User Status Update
+// @Security     ApiKeyAuth
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param        id   path      int  true  "ID"
+// @Param 		 input body 	 user_repo.StatusForm true "Data"
+// @Success      200   {object}  user_repo.StatusForm
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/{id}/change_status [post]
 func (h *handler) StatusChange(c *gin.Context) {
 	id := c.Param("id")
 	var data struct {
@@ -287,6 +429,17 @@ func (h *handler) StatusChange(c *gin.Context) {
 	c.JSON(http.StatusAccepted, response)
 }
 
+// PermissionChange godoc
+// @Summary User Permission Change
+// @Security     ApiKeyAuth
+// @Tags         user
+// @Accept       json
+// @Produce      json
+// @Param        id   path      int  true  "ID"
+// @Param 		 input body 	 user_repo.PermissionForm true "Data"
+// @Success      200   {object}  user_repo.PermissionForm
+// @Failure      400   {object}  user_repo.ResponseError
+// @Router       /api/user/{id}/change_permission [post]
 func (h *handler) PermissionChange(c *gin.Context) {
 	id := c.Param("id")
 	var data struct {
