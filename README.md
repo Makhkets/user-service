@@ -1,4 +1,4 @@
-## User Service based on -> Golang (Gin framework) \ Postgresql (goose migrator) \ Redis \ Docker \ Makefile \ Unit Tests
+## User Service based on -> Golang (Gin framework) \ Postgresql (goose migrator) \ Redis \ Docker \ Swagger \ Makefile \ Unit Tests
 
 - [X]  ⚡ Высокопроизводительный фреймворк - Gin
 - [X]  ⚡ Высокопроизводительный логгер - Uber Zap Logger
