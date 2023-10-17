@@ -15,7 +15,7 @@
 - [X]  Высокая защита аккаунта от кражи access / refresh токенов (при авторизации сверяется fingerprint устрйоства у которого украли токены)
 - [X]  Сохранение логов
 
-![swagger.png](pkg/images/swagger.png)
+![swagger.png](pkg/images/image.png)
 
 ## URLS:
 
